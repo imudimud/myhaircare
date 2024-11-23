@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { Calendar, Clock, Send } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -35,16 +35,20 @@ export default function ConsultationForm() {
     'Russian',
   ];
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = useCallback(async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Implement form submission logic
-    console.log('Form submitted:', formData);
-  };
+    try {
+      // TODO: Implement form submission logic
+      console.log('Form submitted:', formData);
+    } catch (error) {
+      console.error('Form submission error:', error);
+    }
+  }, [formData]);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
-  };
+  }, []);
 
   return (
     <motion.div

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback, memo, Suspense, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Calendar, Users, Activity, Sparkles, Timer, Droplets, Brain, ChevronLeft, ChevronRight, X } from 'lucide-react';
 
@@ -131,15 +131,119 @@ const MINOXIDIL_INFO = {
   ]
 };
 
-function GalleryFilter({
-  categories,
-  activeCategory,
-  onCategoryChange,
-}: {
+const preloadImage = (src: string): Promise<void> => 
+  new Promise((resolve, reject) => {
+    const img = new Image();
+    img.onload = () => resolve();
+    img.onerror = reject;
+    img.src = src;
+  });
+
+const ImageComparison = memo(({ beforeImage, afterImage, beforeAlt, afterAlt, loading = 'lazy' }: {
+  beforeImage: string;
+  afterImage: string;
+  beforeAlt: string;
+  afterAlt: string;
+  loading?: 'lazy' | 'eager';
+}) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    Promise.all([
+      preloadImage(beforeImage),
+      preloadImage(afterImage)
+    ]).then(() => setIsLoaded(true));
+  }, [beforeImage, afterImage]);
+
+  if (!isLoaded) {
+    return <div className="w-full h-full bg-gray-100 animate-pulse rounded-lg" />;
+  }
+
+  return (
+    <div className="relative w-full h-full">
+      <img
+        src={beforeImage}
+        alt={beforeAlt}
+        loading={loading}
+        className="w-full h-full object-cover"
+      />
+      <img
+        src={afterImage}
+        alt={afterAlt}
+        loading={loading}
+        className="w-full h-full object-cover absolute top-0 left-0 opacity-0 hover:opacity-100 transition-opacity duration-300"
+      />
+    </div>
+  );
+});
+
+ImageComparison.displayName = 'ImageComparison';
+
+const ResultModal = memo(({ result, onClose }: { result: typeof RESULTS[0]; onClose: () => void }) => {
+  const handleContentClick = useCallback((e: React.MouseEvent) => {
+    e.stopPropagation();
+  }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, []);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.2 }}
+      className="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4"
+      onClick={onClose}
+    >
+      <motion.div
+        initial={{ scale: 0.95, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        exit={{ scale: 0.95, opacity: 0 }}
+        transition={{ duration: 0.2 }}
+        className="bg-white rounded-2xl max-w-4xl w-full p-6 overflow-auto max-h-[90vh]"
+        onClick={handleContentClick}
+      >
+        <Suspense fallback={<div className="animate-pulse bg-gray-200 h-64 w-full rounded-lg"/>}>
+          <div className="sticky top-0 flex justify-between items-center mb-4 bg-white z-10">
+            <h3 className="text-2xl font-bold text-gray-900">Patient Results</h3>
+            <button
+              onClick={onClose}
+              className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+              aria-label="Close modal"
+            >
+              <X className="w-6 h-6" />
+            </button>
+          </div>
+          <div className="flex flex-col gap-4">
+            <h4 className="text-lg font-bold">{result.description}</h4>
+            <p className="text-gray-600">{result.details}</p>
+            <div className="flex items-center justify-between text-sm text-gray-600">
+              <span>{result.procedureType}</span>
+              <span>{result.grafts} grafts</span>
+            </div>
+            <div className="flex items-center justify-between text-sm text-gray-600">
+              <span>Age: {result.patientAge}</span>
+              <span>Months after: {result.monthsAfter}</span>
+            </div>
+          </div>
+        </Suspense>
+      </motion.div>
+    </motion.div>
+  );
+});
+
+ResultModal.displayName = 'ResultModal';
+
+const GalleryFilter = memo(({ categories, activeCategory, onCategoryChange }: {
   categories: string[];
   activeCategory: string;
   onCategoryChange: (category: string) => void;
-}) {
+}) => {
   return (
     <div className="flex flex-wrap gap-2 justify-center mb-8" role="tablist">
       {categories.map((category) => (
@@ -163,7 +267,139 @@ function GalleryFilter({
       ))}
     </div>
   );
-}
+});
+
+GalleryFilter.displayName = 'GalleryFilter';
+
+const ResultCard = memo(({ result }: { result: typeof RESULTS[0] }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleClick = useCallback(() => {
+    setIsModalOpen(true);
+  }, []);
+
+  const handleClose = useCallback(() => {
+    setIsModalOpen(false);
+  }, []);
+
+  return (
+    <>
+      <div 
+        className="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer transform transition-transform hover:scale-105"
+        onClick={handleClick}
+      >
+        <div className="relative aspect-[4/3]">
+          <Suspense fallback={<div className="absolute inset-0 bg-gray-100 animate-pulse" />}>
+            <ImageComparison
+              beforeImage={result.before}
+              afterImage={result.after}
+              beforeAlt="Before procedure"
+              afterAlt="After procedure"
+              loading="lazy"
+            />
+          </Suspense>
+        </div>
+        <div className="p-4">
+          <h3 className="font-semibold text-lg mb-2">{result.description}</h3>
+          <div className="flex items-center justify-between text-sm text-gray-600">
+            <span>{result.procedureType}</span>
+            <span>{result.grafts} grafts</span>
+          </div>
+        </div>
+      </div>
+
+      {isModalOpen && (
+        <Suspense fallback={
+          <div className="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center">
+            <div className="bg-white rounded-2xl p-6 w-full max-w-4xl">
+              <div className="animate-pulse space-y-4">
+                <div className="h-8 bg-gray-200 rounded w-1/3" />
+                <div className="h-64 bg-gray-200 rounded" />
+                <div className="h-24 bg-gray-200 rounded" />
+              </div>
+            </div>
+          </div>
+        }>
+          <ResultModal result={result} onClose={handleClose} />
+        </Suspense>
+      )}
+    </>
+  );
+});
+
+ResultCard.displayName = 'ResultCard';
+
+const TimelineCard = memo(({ title, icon, points }: {
+  title: string;
+  icon: React.ReactNode;
+  points: string[];
+}) => {
+  return (
+    <div className="bg-gray-50 rounded-2xl p-8">
+      <div className="flex items-center gap-4 mb-6">
+        {icon}
+        <h4 className="text-xl font-semibold">{title}</h4>
+      </div>
+      <ul className="space-y-3">
+        {points.map((point, index) => (
+          <li key={index} className="flex items-start gap-3">
+            <div className="mt-1.5">•</div>
+            <span className="text-gray-600">{point}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+});
+
+TimelineCard.displayName = 'TimelineCard';
+
+const InfoCard = memo(({ title, icon, content, points }: {
+  title: string;
+  icon: React.ReactNode;
+  content: string;
+  points: string[];
+}) => {
+  return (
+    <div className="bg-gray-50 rounded-2xl p-8">
+      <div className="flex items-center gap-4 mb-6">
+        {icon}
+        <h4 className="text-xl font-semibold">{title}</h4>
+      </div>
+      <p className="text-gray-600 mb-6">{content}</p>
+      <ul className="space-y-3">
+        {points.map((point, index) => (
+          <li key={index} className="flex items-start gap-3">
+            <div className="mt-1.5">•</div>
+            <span className="text-gray-600">{point}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+});
+
+InfoCard.displayName = 'InfoCard';
+
+const CheckIcon = memo((props: React.SVGProps<SVGSVGElement>) => {
+  return (
+    <svg
+      {...props}
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      strokeWidth={2}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M5 13l4 4L19 7"
+      />
+    </svg>
+  );
+});
+
+CheckIcon.displayName = 'CheckIcon';
 
 export default function Results() {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -270,290 +506,5 @@ export default function Results() {
         </div>
       </div>
     </section>
-  );
-}
-
-function ImageComparison({
-  beforeImage,
-  afterImage,
-  beforeAlt,
-  afterAlt
-}: {
-  beforeImage: string;
-  afterImage: string;
-  beforeAlt: string;
-  afterAlt: string;
-}) {
-  const [isLoading, setIsLoading] = useState(true);
-  const [sliderPosition, setSliderPosition] = useState(50);
-  const containerRef = React.useRef<HTMLDivElement>(null);
-
-  React.useEffect(() => {
-    const loadImages = async () => {
-      const images = [beforeImage, afterImage];
-      await Promise.all(
-        images.map((src) => {
-          return new Promise((resolve) => {
-            const img = new Image();
-            img.src = src;
-            img.onload = resolve;
-          });
-        })
-      );
-      setIsLoading(false);
-    };
-    loadImages();
-  }, [beforeImage, afterImage]);
-
-  const handleMove = (event: React.MouseEvent | React.TouchEvent) => {
-    if (!containerRef.current) return;
-
-    const rect = containerRef.current.getBoundingClientRect();
-    let clientX: number;
-
-    if ('touches' in event) {
-      clientX = event.touches[0].clientX;
-    } else {
-      clientX = event.clientX;
-    }
-
-    const position = ((clientX - rect.left) / rect.width) * 100;
-    const clampedPosition = Math.min(Math.max(position, 0), 100);
-    setSliderPosition(clampedPosition);
-  };
-
-  const handleKeyboard = (event: React.KeyboardEvent) => {
-    const STEP = 5;
-    if (event.key === 'ArrowLeft') {
-      setSliderPosition((prev) => Math.max(prev - STEP, 0));
-    } else if (event.key === 'ArrowRight') {
-      setSliderPosition((prev) => Math.min(prev + STEP, 100));
-    }
-  };
-
-  return (
-    <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg shadow-lg">
-      <AnimatePresence>
-        {isLoading && (
-          <motion.div
-            initial={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="absolute inset-0 bg-gray-200 animate-pulse"
-          />
-        )}
-      </AnimatePresence>
-
-      <div
-        ref={containerRef}
-        className="relative h-full w-full cursor-ew-resize"
-        onMouseMove={handleMove}
-        onTouchMove={handleMove}
-        role="slider"
-        aria-label="Image comparison slider"
-        aria-valuemin={0}
-        aria-valuemax={100}
-        aria-valuenow={sliderPosition}
-        tabIndex={0}
-        onKeyDown={handleKeyboard}
-      >
-        <div className="absolute inset-0">
-          <img
-            src={afterImage}
-            alt={afterAlt}
-            className="h-full w-full object-cover"
-            loading="lazy"
-          />
-        </div>
-        <div
-          className="absolute inset-0 overflow-hidden"
-          style={{ width: `${sliderPosition}%` }}
-        >
-          <img
-            src={beforeImage}
-            alt={beforeAlt}
-            className="h-full w-full object-cover"
-            loading="lazy"
-          />
-        </div>
-        <div
-          className="absolute inset-y-0 bg-white"
-          style={{ left: `${sliderPosition}%`, width: '2px' }}
-        >
-          <div className="absolute top-1/2 left-1/2 h-8 w-8 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white shadow-lg">
-            <div className="flex h-full items-center justify-center">
-              <ChevronLeft className="h-4 w-4 text-gray-600" />
-              <ChevronRight className="h-4 w-4 text-gray-600" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function ResultModal({ result, onClose }: { result: typeof RESULTS[0]; onClose: () => void }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4"
-      onClick={onClose}
-    >
-      <motion.div
-        initial={{ scale: 0.95 }}
-        animate={{ scale: 1 }}
-        exit={{ scale: 0.95 }}
-        className="bg-white rounded-2xl max-w-4xl w-full p-6"
-        onClick={(e) => e.stopPropagation()}
-      >
-        <div className="flex justify-between items-center mb-4">
-          <h3 className="text-2xl font-bold text-gray-900">Patient Results</h3>
-          <button
-            onClick={onClose}
-            className="p-2 hover:bg-gray-100 rounded-full"
-            aria-label="Close modal"
-          >
-            <X className="w-6 h-6" />
-          </button>
-        </div>
-        
-        <div className="mb-6">
-          <ImageComparison
-            beforeImage={result.before}
-            afterImage={result.after}
-            beforeAlt="Before procedure"
-            afterAlt="After procedure"
-          />
-        </div>
-
-        <div className="mt-6">
-          <h4 className="text-xl font-semibold mb-4">Patient Details</h4>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div>
-              <p className="text-sm text-gray-500">Age</p>
-              <p className="font-semibold">{result.patientAge} years</p>
-            </div>
-            <div>
-              <p className="text-sm text-gray-500">Procedure</p>
-              <p className="font-semibold">{result.procedureType}</p>
-            </div>
-            <div>
-              <p className="text-sm text-gray-500">Grafts</p>
-              <p className="font-semibold">{result.grafts}</p>
-            </div>
-            <div>
-              <p className="text-sm text-gray-500">Result After</p>
-              <p className="font-semibold">{result.monthsAfter} months</p>
-            </div>
-          </div>
-          <div className="mt-4">
-            <p className="text-sm text-gray-500">Details</p>
-            <p className="mt-1">{result.details}</p>
-          </div>
-        </div>
-      </motion.div>
-    </motion.div>
-  );
-}
-
-function ResultCard({ result }: { result: typeof RESULTS[0] }) {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  return (
-    <>
-      <div 
-        className="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer transform transition-transform hover:scale-105"
-        onClick={() => setIsModalOpen(true)}
-      >
-        <div className="relative aspect-[4/3]">
-          <ImageComparison
-            beforeImage={result.before}
-            afterImage={result.after}
-            beforeAlt="Before procedure"
-            afterAlt="After procedure"
-          />
-        </div>
-        <div className="p-4">
-          <h3 className="font-semibold text-lg mb-2">{result.description}</h3>
-          <div className="flex items-center justify-between text-sm text-gray-600">
-            <span>{result.procedureType}</span>
-            <span>{result.grafts} grafts</span>
-          </div>
-        </div>
-      </div>
-
-      <AnimatePresence>
-        {isModalOpen && (
-          <ResultModal result={result} onClose={() => setIsModalOpen(false)} />
-        )}
-      </AnimatePresence>
-    </>
-  );
-}
-
-function TimelineCard({ title, icon, points }: {
-  title: string;
-  icon: React.ReactNode;
-  points: string[];
-}) {
-  return (
-    <div className="bg-gray-50 rounded-2xl p-8">
-      <div className="flex items-center gap-4 mb-6">
-        {icon}
-        <h4 className="text-xl font-semibold">{title}</h4>
-      </div>
-      <ul className="space-y-3">
-        {points.map((point, index) => (
-          <li key={index} className="flex items-start gap-3">
-            <div className="mt-1.5">•</div>
-            <span className="text-gray-600">{point}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-function InfoCard({ title, icon, content, points }: {
-  title: string;
-  icon: React.ReactNode;
-  content: string;
-  points: string[];
-}) {
-  return (
-    <div className="bg-gray-50 rounded-2xl p-8">
-      <div className="flex items-center gap-4 mb-6">
-        {icon}
-        <h4 className="text-xl font-semibold">{title}</h4>
-      </div>
-      <p className="text-gray-600 mb-6">{content}</p>
-      <ul className="space-y-3">
-        {points.map((point, index) => (
-          <li key={index} className="flex items-start gap-3">
-            <div className="mt-1.5">•</div>
-            <span className="text-gray-600">{point}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-function CheckIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M5 13l4 4L19 7"
-      />
-    </svg>
   );
 }
