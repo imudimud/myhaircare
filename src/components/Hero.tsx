@@ -55,7 +55,7 @@ export default function Hero() {
   };
 
   return (
-    <div className="relative min-h-screen bg-navy-900 text-white overflow-hidden">
+    <div className="relative min-h-screen overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <motion.div
@@ -69,7 +69,7 @@ export default function Hero() {
             alt="Hospital background"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-navy-900/70" />
+          <div className="absolute inset-0 bg-blue-950/70" />
         </motion.div>
       </div>
 
@@ -117,15 +117,14 @@ export default function Hero() {
           ))}
         </div>
 
-        {/* Scroll Down Button */}
+        {/* Scroll Button */}
         <motion.button
           onClick={scrollToNextSection}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white flex flex-col items-center gap-2"
+          className="scroll-button absolute bottom-8 left-1/2 transform -translate-x-1/2"
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 2 }}
         >
-          <span className="text-sm font-medium">{t('buttons.scrollDown')}</span>
-          <ArrowDown className="w-6 h-6" />
+          <ArrowDown className="w-8 h-8" />
         </motion.button>
       </div>
     </div>

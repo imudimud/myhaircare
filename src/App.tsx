@@ -1,9 +1,9 @@
 import React, { Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Loader2 } from 'lucide-react';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 import SEO from './components/SEO';
 import SchemaMarkup from './components/seo/SchemaMarkup';
 import UnifiedSEO from './components/seo/UnifiedSEO';
@@ -131,130 +131,126 @@ function App() {
   const { t } = useTranslation();
 
   return (
-    <HelmetProvider>
+    <>
       <Helmet>
         <html lang="en" />
         <meta name="theme-color" content="#ffffff" />
+        <title>Estenove Hair Clinic - Advanced Hair Restoration in Istanbul</title>
+        <meta
+          name="description"
+          content="Experience world-class hair restoration at Estenove Hair Clinic in Istanbul. Advanced FUE techniques, experienced surgeons, and natural results."
+        />
       </Helmet>
-      <Router>
-        <div className="min-h-screen bg-white">
-          <Helmet>
-            <title>Estenove Hair Clinic - Advanced Hair Restoration in Istanbul</title>
-            <meta
-              name="description"
-              content="Experience world-class hair restoration at Estenove Hair Clinic in Istanbul. Advanced FUE techniques, experienced surgeons, and natural results."
-            />
-          </Helmet>
-          <SEO 
-            title={t('seo.pages.home.title')}
-            description={t('seo.pages.home.description')}
-            keywords={t('seo.pages.home.keywords', { returnObjects: true }) as string[]}
-            path="/home"
-          />
-          <SchemaMarkup />
-          <Header />
-          <Layout>
-            <Suspense fallback={<LoadingSpinner />}>
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/about" element={<AboutPage />} />
-                <Route path="/about/team" element={
-                  <PageTransition>
-                    <OurTeam />
-                  </PageTransition>
-                } />
-                <Route path="/procedures" element={
-                  <PageTransition>
-                    <ProceduresPage />
-                  </PageTransition>
-                } />
-                <Route path="/procedures/sapphire-fue" element={
-                  <PageTransition>
-                    <SapphireFue />
-                  </PageTransition>
-                } />
-                <Route path="/procedures/stem-cell" element={
-                  <PageTransition>
-                    <StemCell />
-                  </PageTransition>
-                } />
-                <Route path="/procedures/dhi" element={
-                  <PageTransition>
-                    <DHI />
-                  </PageTransition>
-                } />
-                <Route path="/education" element={
-                  <PageTransition>
-                    <EducationPage />
-                  </PageTransition>
-                } />
-                <Route path="/consultation" element={
-                  <PageTransition>
-                    <ConsultationPage />
-                  </PageTransition>
-                } />
-                <Route path="/medical" element={
-                  <PageTransition>
-                    <MedicalInformationPage />
-                  </PageTransition>
-                } />
-                <Route path="/gallery" element={
-                  <PageTransition>
-                    <GalleryPage />
-                  </PageTransition>
-                } />
-                <Route path="/patient" element={
-                  <PageTransition>
-                    <PatientResourcesPage />
-                  </PageTransition>
-                } />
-                <Route path="/why-estenove" element={
-                  <PageTransition>
-                    <WhyEstenovePage />
-                  </PageTransition>
-                } />
-                <Route path="/safety" element={
-                  <PageTransition>
-                    <SafetyStandards />
-                  </PageTransition>
-                } />
-                <Route path="/care" element={
-                  <PageTransition>
-                    <CareProtocols />
-                  </PageTransition>
-                } />
-                <Route path="/procedure-details" element={
-                  <PageTransition>
-                    <ProcedureDetails />
-                  </PageTransition>
-                } />
-                <Route path="/blog" element={
-                  <PageTransition>
-                    <Blog />
-                  </PageTransition>
-                } />
-                <Route path="/results" element={
-                  <PageTransition>
-                    <Results />
-                  </PageTransition>
-                } />
-                <Route path="/contact" element={
-                  <PageTransition>
-                    <Contact />
-                  </PageTransition>
-                } />
-                <Route path="/trust" element={
-                  <PageTransition>
-                    <TrustAndSafety />
-                  </PageTransition>
-                } />
-              </Routes>
-            </Suspense>
-          </Layout>
+      <SEO 
+        title={t('seo.pages.home.title')}
+        description={t('seo.pages.home.description')}
+        keywords={t('seo.pages.home.keywords', { returnObjects: true }) as string[]}
+        path="/home"
+      />
+      <SchemaMarkup />
+      <div className="min-h-screen bg-white">
+        <Header />
+        <Layout>
+          <Suspense fallback={<LoadingSpinner />}>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/about/team" element={
+                <PageTransition>
+                  <OurTeam />
+                </PageTransition>
+              } />
+              <Route path="/procedures" element={
+                <PageTransition>
+                  <ProceduresPage />
+                </PageTransition>
+              } />
+              <Route path="/procedures/sapphire-fue" element={
+                <PageTransition>
+                  <SapphireFue />
+                </PageTransition>
+              } />
+              <Route path="/procedures/stem-cell" element={
+                <PageTransition>
+                  <StemCell />
+                </PageTransition>
+              } />
+              <Route path="/procedures/dhi" element={
+                <PageTransition>
+                  <DHI />
+                </PageTransition>
+              } />
+              <Route path="/education" element={
+                <PageTransition>
+                  <EducationPage />
+                </PageTransition>
+              } />
+              <Route path="/consultation" element={
+                <PageTransition>
+                  <ConsultationPage />
+                </PageTransition>
+              } />
+              <Route path="/medical" element={
+                <PageTransition>
+                  <MedicalInformationPage />
+                </PageTransition>
+              } />
+              <Route path="/gallery" element={
+                <PageTransition>
+                  <GalleryPage />
+                </PageTransition>
+              } />
+              <Route path="/patient" element={
+                <PageTransition>
+                  <PatientResourcesPage />
+                </PageTransition>
+              } />
+              <Route path="/why-estenove" element={
+                <PageTransition>
+                  <WhyEstenovePage />
+                </PageTransition>
+              } />
+              <Route path="/safety" element={
+                <PageTransition>
+                  <SafetyStandards />
+                </PageTransition>
+              } />
+              <Route path="/care" element={
+                <PageTransition>
+                  <CareProtocols />
+                </PageTransition>
+              } />
+              <Route path="/procedure-details" element={
+                <PageTransition>
+                  <ProcedureDetails />
+                </PageTransition>
+              } />
+              <Route path="/blog" element={
+                <PageTransition>
+                  <Blog />
+                </PageTransition>
+              } />
+              <Route path="/results" element={
+                <PageTransition>
+                  <Results />
+                </PageTransition>
+              } />
+              <Route path="/contact" element={
+                <PageTransition>
+                  <Contact />
+                </PageTransition>
+              } />
+              <Route path="/trust" element={
+                <PageTransition>
+                  <TrustAndSafety />
+                </PageTransition>
+              } />
+            </Routes>
+          </Suspense>
           <BackToTop />
-        </div>
-      </Router>
-    </HelmetProvider>
+        </Layout>
+      </div>
+    </>
   );
 }
 

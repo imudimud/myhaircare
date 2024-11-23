@@ -7,27 +7,25 @@ export default {
   theme: {
     extend: {
       colors: {
-        'navy': {
-          900: '#1a365d', // Darker navy for better contrast
-          800: '#1e429f',
-          700: '#1a56db',
-          600: '#3b82f6',
-        },
-        'gold': {
-          400: '#f59e0b', // Accessible gold color
-          500: '#d97706',
-        },
+        blue: {
+          '950': '#0c1e47', // Darkest blue - main background
+          '900': '#1a365d', // Navbar and secondary backgrounds
+          '800': '#1e429f', // Accent color
+          '700': '#1a56db', // Links and interactive elements
+          '600': '#3b82f6', // Primary buttons and highlights
+          '500': '#60a5fa', // Secondary buttons
+          '400': '#93c5fd', // Icons and small accents
+          '300': '#bfdbfe',
+          '200': '#dbeafe',
+          '100': '#e0e7ff',
+          '50': '#f0f5ff',
+        }
       },
-      backgroundColor: {
-        'primary': 'var(--color-bg-primary)',
-        'secondary': 'var(--color-bg-secondary)',
-        'tertiary': 'var(--color-bg-tertiary)',
-      },
-      textColor: {
-        'primary': 'var(--color-text-primary)',
-        'secondary': 'var(--color-text-secondary)',
-        'tertiary': 'var(--color-text-tertiary)',
-      },
+      backgroundImage: {
+        'hero-gradient': 'linear-gradient(to bottom right, var(--tw-colors-blue-950), var(--tw-colors-blue-900))',
+        'navbar-gradient': 'linear-gradient(to bottom, var(--tw-colors-blue-950), var(--tw-colors-blue-900))',
+        'section-gradient': 'linear-gradient(to bottom, var(--tw-colors-blue-900), var(--tw-colors-blue-800))'
+      }
     },
   },
   plugins: [],
