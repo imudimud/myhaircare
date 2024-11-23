@@ -4,6 +4,7 @@ import { MapPin, Award, Users, Star, ChevronDown, Microscope, Heart, Clock, Shie
 import SEO from '../../components/SEO';
 import { generateLocalBusinessSchema } from '../../utils/structuredData';
 import GlobalReach from '../../components/map/GlobalReach';
+import { GradientSection } from '../../components/ui/GradientSection'; // Import the GradientSection component
 
 const stats = [
   { label: 'Years Experience', value: '20+' },
@@ -456,34 +457,38 @@ export default function WhyEstenovePage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-900 to-blue-800 text-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-4xl font-bold mb-6">
-              Start Your Journey with Este Nove Today
-            </h2>
-            <p className="text-xl mb-8 text-blue-100">
-              Take the first step towards restoring your confidence
-            </p>
-            <div className="flex justify-center space-x-4">
-              <motion.a
-                href="/consultation"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center px-8 py-3 border-2 border-white bg-white text-blue-900 rounded-full text-lg font-medium hover:bg-transparent hover:text-white transition-colors"
-              >
-                Book Free Consultation
-              </motion.a>
-              <motion.a
-                href="/contact"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center px-8 py-3 border-2 border-white rounded-full text-lg font-medium hover:bg-white hover:text-blue-900 transition-colors"
-              >
-                Contact Us
-              </motion.a>
-            </div>
+        <GradientSection
+          className="py-20"
+          backgroundImage="/images/clinic-hero.jpg"
+          containerClassName="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+        >
+          <h2 className="text-4xl font-bold mb-6">
+            Start Your Journey with Este Nove Today
+          </h2>
+          <p className="text-xl mb-8 text-blue-100">
+            Take the first step towards restoring your confidence
+          </p>
+          <div className="flex justify-center space-x-4">
+            <motion.a
+              href="/consultation"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center px-8 py-3 border-2 border-white bg-white text-navy-900 rounded-full text-lg font-medium shadow-lg hover:bg-opacity-90 hover:border-opacity-90 transition-all"
+            >
+              Book Free Consultation
+            </motion.a>
+            <motion.a
+              href="/contact"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center px-8 py-3 border-2 border-white rounded-full text-lg font-medium shadow-lg hover:bg-white hover:text-navy-900 transition-all"
+            >
+              Contact Us
+            </motion.a>
           </div>
-        </section>
+        </GradientSection>
+
+        {/* Rest of the code remains the same */}
       </div>
     </>
   );
