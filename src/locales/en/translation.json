@@ -1,0 +1,214 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "whyEstenove": "Why Este Nove",
+    "ourTeam": "Our Team",
+    "trustAndSafety": "Trust & Safety",
+    "procedures": "Procedures",
+    "allProcedures": "All Procedures",
+    "stemCellTherapy": "Stem Cell Therapy",
+    "dhiTechnique": "DHI Technique",
+    "sapphireFue": "Sapphire FUE",
+    "results": "Results",
+    "patientResources": "Patient Resources",
+    "educationCenter": "Education Center",
+    "medicalGuidelines": "Medical Guidelines",
+    "patientJourney": "Patient Journey",
+    "careProtocols": "Care Protocols"
+  },
+  "buttons": {
+    "bookConsultation": "Book Free Consultation",
+    "language": "FR",
+    "learnMore": "Learn More",
+    "viewAll": "View All",
+    "previous": "Previous",
+    "next": "Next",
+    "scrollDown": "Scroll Down",
+    "readMore": "Read More",
+    "contactUs": "Contact Us"
+  },
+  "header": {
+    "openMenu": "Open Menu",
+    "closeMenu": "Close Menu"
+  },
+  "hero": {
+    "title": "Transform Your Look with Advanced Hair Restoration",
+    "subtitle": "Experience the latest in hair transplant technology with our expert team",
+    "cta": "Start Your Journey",
+    "features": {
+      "expertise": {
+        "title": "Harvard-affiliated Expertise",
+        "description": "Benefit from our partnership with world-renowned medical institutions"
+      },
+      "technology": {
+        "title": "Latest FUE Technology",
+        "description": "Advanced techniques for natural-looking, permanent results"
+      },
+      "ethics": {
+        "title": "Ethical Practices",
+        "description": "Transparent, patient-focused approach to hair restoration"
+      },
+      "results": {
+        "title": "Proven Results",
+        "description": "97% success rate with over 15,000 satisfied patients"
+      }
+    }
+  },
+  "results": {
+    "title": "Real Patient Results",
+    "subtitle": "See the transformations we've achieved for our satisfied patients",
+    "filters": {
+      "all": "All",
+      "hairTransplant": "Hair Transplant",
+      "beardTransplant": "Beard Transplant",
+      "stemCell": "Stem Cell"
+    },
+    "details": {
+      "age": "Age",
+      "procedure": "Procedure",
+      "grafts": "Grafts",
+      "duration": "Duration"
+    }
+  },
+  "beforeAfter": {
+    "beforeLabel": "Before",
+    "afterLabel": "After",
+    "months": "months"
+  },
+  "procedures": {
+    "title": "Our Procedures",
+    "subtitle": "Advanced hair restoration techniques tailored to your needs",
+    "readMore": "Read More",
+    "sapphireFue": {
+      "title": "Sapphire FUE",
+      "description": "Advanced follicular extraction using precision sapphire blades for minimal scarring and faster healing",
+      "features": [
+        "No linear scarring",
+        "Quick recovery",
+        "Natural hairline",
+        "Maximum density",
+        "Minimal trauma",
+        "Faster healing"
+      ],
+      "details": {
+        "duration": "Duration",
+        "recovery": "Recovery",
+        "results": "Results",
+        "technique": "Technique"
+      }
+    },
+    "dhi": {
+      "title": "DHI Technique",
+      "description": "Direct Hair Implantation for precise, natural-looking results",
+      "features": [
+        "No shaving required",
+        "Minimal downtime",
+        "Custom hairline design",
+        "Dense packing possible",
+        "Quick recovery",
+        "Natural results"
+      ]
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "Estenove",
+      "description": "Leading the way in hair transplantation with cutting-edge technology and personalized care"
+    },
+    "quickLinks": {
+      "title": "Quick Links",
+      "about": "About Us",
+      "procedures": "Our Procedures",
+      "testimonials": "Testimonials",
+      "faq": "FAQ",
+      "contact": "Contact"
+    },
+    "contact": {
+      "title": "Contact Info",
+      "phone": "+90 (212) 345-6789",
+      "email": "info@estenove.com",
+      "address": "Istanbul, Turkey"
+    },
+    "rights": "All rights reserved",
+    "socialMedia": {
+      "facebook": "Follow us on Facebook",
+      "instagram": "Follow us on Instagram",
+      "twitter": "Follow us on Twitter",
+      "youtube": "Subscribe to our YouTube channel"
+    }
+  },
+  "seo": {
+    "defaultTitle": "Este Nove - Advanced Hair Transplant & Restoration Clinic",
+    "defaultDescription": "Este Nove offers cutting-edge hair transplant procedures including FUE, DHI, and stem cell therapy. Harvard-affiliated expertise with proven results.",
+    "defaultKeywords": [
+      "hair transplant",
+      "hair restoration",
+      "FUE hair transplant",
+      "DHI technique",
+      "stem cell therapy",
+      "hair clinic Istanbul",
+      "best hair transplant Turkey",
+      "natural hair restoration",
+      "permanent hair solution",
+      "hair loss treatment"
+    ],
+    "pages": {
+      "home": {
+        "title": "Home",
+        "description": "Discover advanced hair transplant solutions at Este Nove. Expert doctors, cutting-edge technology, and natural-looking results.",
+        "keywords": ["hair transplant clinic", "hair restoration center", "hair loss solution"]
+      },
+      "procedures": {
+        "title": "Hair Transplant Procedures",
+        "description": "Advanced hair transplant procedures including FUE, DHI, and stem cell therapy. Choose the best solution for your needs.",
+        "keywords": ["FUE hair transplant", "DHI technique", "stem cell therapy", "hair restoration procedures"]
+      },
+      "results": {
+        "title": "Patient Results",
+        "description": "View our gallery of successful hair transplant results. Real patients, real transformations.",
+        "keywords": ["hair transplant results", "before after photos", "hair restoration success", "patient transformations"]
+      }
+    }
+  },
+  "gallery": {
+    "title": "Patient Success Stories",
+    "subtitle": "Real results from our satisfied patients",
+    "loading": "Loading images...",
+    "before": "Before",
+    "after": "After",
+    "beforeAlt": "Before {{procedure}} procedure",
+    "afterAlt": "After {{procedure}} procedure",
+    "months": "months",
+    "years": "years",
+    "grafts": "grafts",
+    "categories": {
+      "all": "All Results",
+      "fue": "FUE Results",
+      "dhi": "DHI Results",
+      "combined": "Combined Procedures"
+    },
+    "details": {
+      "age": "Patient Age",
+      "procedure": "Procedure Type",
+      "grafts": "Total Grafts",
+      "monthsAfter": "Months After",
+      "description": "Result Description",
+      "additionalInfo": "Additional Details"
+    },
+    "results": {
+      "fue1": {
+        "description": "Significant improvement in frontal hairline and density",
+        "details": "Patient received 4400 grafts using FUE technique. The procedure focused on rebuilding the frontal hairline and increasing overall density."
+      },
+      "dhi1": {
+        "description": "Natural hairline restoration with DHI technique",
+        "details": "DHI technique was used to achieve maximum density and natural-looking hairline. The procedure included 4000 grafts with custom angle control."
+      },
+      "combined1": {
+        "description": "Crown and mid-scalp density restoration",
+        "details": "Combined approach using FUE and DHI techniques to address both crown area and hairline. Treatment included PRP therapy for enhanced results."
+      }
+    }
+  }
+}

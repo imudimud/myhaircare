@@ -1,0 +1,10 @@
+# Allow OpenAI Search Bot to crawl the site for search results
+User-agent: OAI-SearchBot
+Allow: /
+
+# Allow all other crawlers
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://estenove.com/sitemap.xml

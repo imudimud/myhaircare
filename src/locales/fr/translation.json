@@ -1,0 +1,214 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "whyEstenove": "Pourquoi Este Nove",
+    "ourTeam": "Notre équipe",
+    "trustAndSafety": "Confiance et sécurité",
+    "procedures": "Procédures",
+    "allProcedures": "Toutes les procédures",
+    "stemCellTherapy": "Thérapie par cellules souches",
+    "dhiTechnique": "Technique DHI",
+    "sapphireFue": "FUE Saphir",
+    "results": "Résultats",
+    "patientResources": "Ressources patients",
+    "educationCenter": "Centre d'éducation",
+    "medicalGuidelines": "Directives médicales",
+    "patientJourney": "Parcours du patient",
+    "careProtocols": "Protocoles de soins"
+  },
+  "buttons": {
+    "bookConsultation": "Réserver une consultation gratuite",
+    "language": "EN",
+    "learnMore": "En savoir plus",
+    "viewAll": "Voir tout",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "scrollDown": "Défiler vers le bas",
+    "readMore": "Lire la suite",
+    "contactUs": "Nous contacter"
+  },
+  "header": {
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu"
+  },
+  "hero": {
+    "title": "Transformez votre apparence avec la restauration capillaire avancée",
+    "subtitle": "Découvrez les dernières technologies de greffe de cheveux avec notre équipe d'experts",
+    "cta": "Commencez votre parcours",
+    "features": {
+      "expertise": {
+        "title": "Expertise affiliée à Harvard",
+        "description": "Bénéficiez de notre partenariat avec des institutions médicales de renommée mondiale"
+      },
+      "technology": {
+        "title": "Dernière technologie FUE",
+        "description": "Techniques avancées pour des résultats naturels et permanents"
+      },
+      "ethics": {
+        "title": "Pratiques éthiques",
+        "description": "Approche transparente axée sur le patient pour la restauration capillaire"
+      },
+      "results": {
+        "title": "Résultats prouvés",
+        "description": "Taux de réussite de 97% avec plus de 15 000 patients satisfaits"
+      }
+    }
+  },
+  "results": {
+    "title": "Résultats réels des patients",
+    "subtitle": "Découvrez les transformations que nous avons réalisées pour nos patients satisfaits",
+    "filters": {
+      "all": "Tout",
+      "hairTransplant": "Greffe de cheveux",
+      "beardTransplant": "Greffe de barbe",
+      "stemCell": "Cellules souches"
+    },
+    "details": {
+      "age": "Âge",
+      "procedure": "Procédure",
+      "grafts": "Greffons",
+      "duration": "Durée"
+    }
+  },
+  "beforeAfter": {
+    "beforeLabel": "Avant",
+    "afterLabel": "Après",
+    "months": "mois"
+  },
+  "procedures": {
+    "title": "Nos procédures",
+    "subtitle": "Techniques de restauration capillaire avancées adaptées à vos besoins",
+    "readMore": "Lire la suite",
+    "sapphireFue": {
+      "title": "FUE Saphir",
+      "description": "Extraction folliculaire avancée utilisant des lames en saphir de précision pour une cicatrisation minimale et plus rapide",
+      "features": [
+        "Pas de cicatrice linéaire",
+        "Récupération rapide",
+        "Ligne frontale naturelle",
+        "Densité maximale",
+        "Traumatisme minimal",
+        "Guérison plus rapide"
+      ],
+      "details": {
+        "duration": "Durée",
+        "recovery": "Récupération",
+        "results": "Résultats",
+        "technique": "Technique"
+      }
+    },
+    "dhi": {
+      "title": "Technique DHI",
+      "description": "Implantation directe des cheveux pour des résultats précis et naturels",
+      "features": [
+        "Pas de rasage nécessaire",
+        "Temps d'arrêt minimal",
+        "Design personnalisé",
+        "Densité maximale possible",
+        "Récupération rapide",
+        "Résultats naturels"
+      ]
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "Estenove",
+      "description": "Leader dans la transplantation capillaire avec une technologie de pointe et des soins personnalisés"
+    },
+    "quickLinks": {
+      "title": "Liens rapides",
+      "about": "À propos de nous",
+      "procedures": "Nos procédures",
+      "testimonials": "Témoignages",
+      "faq": "FAQ",
+      "contact": "Contact"
+    },
+    "contact": {
+      "title": "Coordonnées",
+      "phone": "+90 (212) 345-6789",
+      "email": "info@estenove.com",
+      "address": "Istanbul, Turquie"
+    },
+    "rights": "Tous droits réservés",
+    "socialMedia": {
+      "facebook": "Suivez-nous sur Facebook",
+      "instagram": "Suivez-nous sur Instagram",
+      "twitter": "Suivez-nous sur Twitter",
+      "youtube": "Abonnez-vous à notre chaîne YouTube"
+    }
+  },
+  "seo": {
+    "defaultTitle": "Este Nove - Clinique Avancée de Greffe et Restauration Capillaire",
+    "defaultDescription": "Este Nove propose des procédures de greffe de cheveux de pointe, notamment FUE, DHI et thérapie par cellules souches. Expertise affiliée à Harvard avec des résultats prouvés.",
+    "defaultKeywords": [
+      "greffe de cheveux",
+      "restauration capillaire",
+      "greffe de cheveux FUE",
+      "technique DHI",
+      "thérapie cellules souches",
+      "clinique capillaire Istanbul",
+      "meilleure greffe cheveux Turquie",
+      "restauration capillaire naturelle",
+      "solution capillaire permanente",
+      "traitement perte de cheveux"
+    ],
+    "pages": {
+      "home": {
+        "title": "Accueil",
+        "description": "Découvrez des solutions avancées de greffe de cheveux chez Este Nove. Médecins experts, technologie de pointe et résultats naturels.",
+        "keywords": ["clinique greffe cheveux", "centre restauration capillaire", "solution perte cheveux"]
+      },
+      "procedures": {
+        "title": "Procédures de Greffe de Cheveux",
+        "description": "Procédures avancées de greffe de cheveux incluant FUE, DHI et thérapie par cellules souches. Choisissez la meilleure solution pour vos besoins.",
+        "keywords": ["greffe cheveux FUE", "technique DHI", "thérapie cellules souches", "procédures restauration capillaire"]
+      },
+      "results": {
+        "title": "Résultats Patients",
+        "description": "Consultez notre galerie de résultats réussis de greffe de cheveux. Vrais patients, vraies transformations.",
+        "keywords": ["résultats greffe cheveux", "photos avant après", "succès restauration capillaire", "transformations patients"]
+      }
+    }
+  },
+  "gallery": {
+    "title": "Histoires de Réussite des Patients",
+    "subtitle": "Résultats réels de nos patients satisfaits",
+    "loading": "Chargement des images...",
+    "before": "Avant",
+    "after": "Après",
+    "beforeAlt": "Avant la procédure {{procedure}}",
+    "afterAlt": "Après la procédure {{procedure}}",
+    "months": "mois",
+    "years": "ans",
+    "grafts": "greffons",
+    "categories": {
+      "all": "Tous les Résultats",
+      "fue": "Résultats FUE",
+      "dhi": "Résultats DHI",
+      "combined": "Procédures Combinées"
+    },
+    "details": {
+      "age": "Âge du Patient",
+      "procedure": "Type de Procédure",
+      "grafts": "Total des Greffons",
+      "monthsAfter": "Mois Après",
+      "description": "Description du Résultat",
+      "additionalInfo": "Détails Supplémentaires"
+    },
+    "results": {
+      "fue1": {
+        "description": "Amélioration significative de la ligne frontale et de la densité",
+        "details": "Le patient a reçu 4400 greffons en utilisant la technique FUE. La procédure s'est concentrée sur la reconstruction de la ligne frontale et l'augmentation de la densité globale."
+      },
+      "dhi1": {
+        "description": "Restauration naturelle de la ligne frontale avec la technique DHI",
+        "details": "La technique DHI a été utilisée pour obtenir une densité maximale et une ligne frontale naturelle. La procédure comprenait 4000 greffons avec un contrôle personnalisé de l'angle."
+      },
+      "combined1": {
+        "description": "Restauration de la densité de la couronne et du cuir chevelu",
+        "details": "Approche combinée utilisant les techniques FUE et DHI pour traiter à la fois la zone de la couronne et la ligne frontale. Le traitement incluait une thérapie PRP pour des résultats améliorés."
+      }
+    }
+  }
+}
