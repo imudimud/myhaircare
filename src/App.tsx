@@ -55,13 +55,6 @@ function LoadingFallback() {
   );
 }
 
-// Loading spinner component
-const LoadingSpinner = () => (
-  <div className="fixed inset-0 flex items-center justify-center bg-white">
-    <Loader2 className="w-8 h-8 animate-spin text-blue-600" />
-  </div>
-);
-
 function PageTransition({ children }: { children: React.ReactNode }) {
   const location = useLocation();
 
@@ -132,10 +125,6 @@ function App() {
 
   return (
     <HelmetProvider>
-      <Helmet>
-        <html lang="en" />
-        <meta name="theme-color" content="#ffffff" />
-      </Helmet>
       <Router>
         <div className="min-h-screen bg-white">
           <Helmet>
@@ -154,7 +143,7 @@ function App() {
           <SchemaMarkup />
           <Header />
           <Layout>
-            <Suspense fallback={<LoadingSpinner />}>
+            <Suspense fallback={<LoadingFallback />}>
               <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />

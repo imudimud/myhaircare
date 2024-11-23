@@ -2,80 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  /* Primary colors with improved contrast */
-  --color-primary: #1a56db; /* Darker blue for better contrast */
-  --color-primary-light: #3b82f6;
-  --color-primary-dark: #1e40af;
-  
-  /* Text colors with WCAG 2.1 compliant contrast ratios */
-  --color-text-primary: #111827; /* Dark gray for main text */
-  --color-text-secondary: #374151; /* Medium gray for secondary text */
-  --color-text-tertiary: #6b7280; /* Light gray for tertiary text */
-  
-  /* Background colors */
-  --color-bg-primary: #ffffff;
-  --color-bg-secondary: #f3f4f6;
-  --color-bg-tertiary: #e5e7eb;
-}
-
-/* Base styles with accessibility improvements */
 @layer base {
   html {
-    @apply antialiased;
+    scroll-behavior: smooth;
   }
   
   body {
-    @apply bg-white text-gray-900;
-    color: var(--color-text-primary);
-  }
-
-  /* Improved focus styles for keyboard navigation */
-  *:focus-visible {
-    @apply outline-none ring-2 ring-blue-600 ring-offset-2;
-  }
-
-  /* Improved text contrast for links */
-  a {
-    @apply text-blue-700 hover:text-blue-900;
-  }
-
-  /* Improved button contrast */
-  button, 
-  [type='button'],
-  [type='submit'] {
-    @apply bg-blue-700 text-white hover:bg-blue-800 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
-  }
-
-  /* Improved form input contrast */
-  input,
-  textarea,
-  select {
-    @apply border-gray-300 focus:border-blue-500 focus:ring-blue-500;
-  }
-
-  /* Improved heading contrast */
-  h1, h2, h3, h4, h5, h6 {
-    @apply text-gray-900 font-bold;
+    @apply antialiased text-gray-900;
   }
 }
 
-/* Utility classes for accessible text */
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent;
+  }
+}
+
 @layer utilities {
-  .text-accessible {
-    @apply text-gray-900;
-  }
-  
-  .text-accessible-secondary {
-    @apply text-gray-700;
-  }
-
-  /* Skip to main content link - visible only when focused */
-  .skip-to-content {
-    @apply sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 
-           focus:bg-white focus:p-4 focus:text-blue-700;
-  }
-
   .animate-fade-in {
     animation: fadeIn 0.8s ease-out;
   }
