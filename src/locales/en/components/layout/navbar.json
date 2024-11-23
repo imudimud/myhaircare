@@ -1,0 +1,29 @@
+{
+  "main": {
+    "home": "Home",
+    "procedures": "Hair Procedures",
+    "patient": "Patient Resources",
+    "about": "About Us",
+    "education": "Education",
+    "contact": "Contact"
+  },
+  "procedures": {
+    "title": "Hair Procedures",
+    "sapphire": "Sapphire FUE",
+    "stemCell": "Stem Cell Therapy",
+    "dhi": "DHI Transplant"
+  },
+  "patient": {
+    "title": "Patient Resources",
+    "beforeAfter": "Before & After",
+    "testimonials": "Testimonials"
+  },
+  "consultation": {
+    "book": "Book Consultation",
+    "free": "Free Consultation"
+  },
+  "language": {
+    "switch": "Switch Language",
+    "current": "EN"
+  }
+}

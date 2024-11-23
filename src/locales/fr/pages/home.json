@@ -1,0 +1,26 @@
+{
+  "hero": {
+    "backgroundImage": "/images/hospital.jpg",
+    "title": "Transformez Votre Look avec la Restauration Capillaire Avancée",
+    "subtitle": "Découvrez les dernières technologies de greffe de cheveux avec notre équipe d'experts",
+    "cta": "Commencez Votre Parcours",
+    "features": {
+      "expertise": {
+        "title": "Expertise Affiliée à Harvard",
+        "description": "Bénéficiez de notre partenariat avec des institutions médicales de renommée mondiale"
+      },
+      "technology": {
+        "title": "Dernière Technologie FUE",
+        "description": "Techniques avancées pour des résultats naturels et permanents"
+      },
+      "ethics": {
+        "title": "Pratiques Éthiques",
+        "description": "Approche transparente de la restauration capillaire centrée sur le patient"
+      },
+      "results": {
+        "title": "Résultats Prouvés",
+        "description": "Taux de réussite de 97% avec plus de 15 000 patients satisfaits"
+      }
+    }
+  }
+}

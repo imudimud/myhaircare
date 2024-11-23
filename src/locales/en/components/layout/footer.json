@@ -1,0 +1,40 @@
+{
+  "company": {
+    "title": "Company",
+    "about": "About Us",
+    "careers": "Careers",
+    "contact": "Contact Us",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "services": {
+    "title": "Services",
+    "procedures": "Hair Procedures",
+    "consultation": "Free Consultation",
+    "aftercare": "Aftercare Services",
+    "support": "Patient Support"
+  },
+  "contact": {
+    "title": "Contact",
+    "address": "123 Hair Care Street, Istanbul, Turkey",
+    "phone": "+90 123 456 7890",
+    "email": "info@myhaircare.com",
+    "hours": "Mon-Fri: 9:00 AM - 6:00 PM"
+  },
+  "social": {
+    "title": "Follow Us",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "twitter": "Twitter",
+    "youtube": "YouTube"
+  },
+  "newsletter": {
+    "title": "Newsletter",
+    "subtitle": "Subscribe to our newsletter for updates and special offers",
+    "placeholder": "Enter your email",
+    "button": "Subscribe",
+    "success": "Thank you for subscribing!",
+    "error": "Something went wrong. Please try again."
+  },
+  "copyright": "© {{year}} MyHairCare. All rights reserved."
+}

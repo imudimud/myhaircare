@@ -1,4 +1,6 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { useTranslation } from '../../hooks/useTranslation';
 import { Clock, Calendar, Activity, Heart, AlertCircle } from 'lucide-react';
 
 const recoveryPhases = [
@@ -92,37 +94,46 @@ const medicationSchedule = [
 ];
 
 export default function RecoveryGuide() {
+  const { t } = useTranslation();
+
   return (
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Recovery Timeline & Guidelines
+            {t('patient.recovery.title')}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Understanding your recovery timeline and following proper care instructions
-            are crucial for achieving optimal results.
+            {t('patient.recovery.subtitle')}
           </p>
         </div>
 
         <div className="grid gap-8 md:grid-cols-2">
-          {recoveryPhases.map((phase) => (
-            <div
-              key={phase.title}
+          {recoveryPhases.map((phase, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -5 }}
               className="bg-white rounded-xl shadow-sm p-6 border border-gray-100"
             >
               <div className="flex items-center mb-4">
                 <div className="p-2 bg-blue-50 rounded-lg">
                   <phase.icon className="h-6 w-6 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-semibold ml-3">{phase.title}</h3>
+                <h3 className="text-xl font-semibold ml-3">
+                  {t(`patient.recovery.phases.${idx}.title`)}
+                </h3>
               </div>
-              
-              <p className="text-gray-600 mb-4">{phase.description}</p>
+              <p className="text-gray-600 mb-4">
+                {t(`patient.recovery.phases.${idx}.description`)}
+              </p>
 
               <div className="space-y-4">
                 <div>
-                  <h4 className="font-medium text-gray-900 mb-2">Instructions:</h4>
+                  <h4 className="font-medium text-gray-900 mb-2">
+                    {t('patient.recovery.instructions')}
+                  </h4>
                   <ul className="space-y-2">
                     {phase.instructions.map((instruction, idx) => (
                       <li key={idx} className="flex items-start">
@@ -146,7 +157,9 @@ export default function RecoveryGuide() {
                 </div>
 
                 <div>
-                  <h4 className="font-medium text-gray-900 mb-2">Restrictions:</h4>
+                  <h4 className="font-medium text-gray-900 mb-2">
+                    {t('patient.recovery.restrictions')}
+                  </h4>
                   <ul className="space-y-2">
                     {phase.restrictions.map((restriction, idx) => (
                       <li key={idx} className="flex items-start">
@@ -169,7 +182,7 @@ export default function RecoveryGuide() {
                   </ul>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
@@ -177,7 +190,7 @@ export default function RecoveryGuide() {
           <div className="flex items-center mb-6">
             <AlertCircle className="h-8 w-8 text-blue-600 mr-3" />
             <h3 className="text-2xl font-bold text-gray-900">
-              Medication Guidelines
+              {t('patient.recovery.medications')}
             </h3>
           </div>
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Calendar, Clock, Ban, Utensils, Pill, Sun } from 'lucide-react';
+import { useTranslation } from '../../hooks/useTranslation';
 
 const preparationSteps = [
   {
@@ -95,16 +96,17 @@ const preparationSteps = [
 ];
 
 export default function PreparationGuide() {
+  const { t } = useTranslation();
+
   return (
     <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Pre-Procedure Preparation Guide
+            {t('patient.preparation.title')}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Follow these guidelines to ensure you're fully prepared for your
-            hair restoration procedure and optimal results.
+            {t('patient.preparation.subtitle')}
           </p>
         </div>
 
@@ -118,17 +120,17 @@ export default function PreparationGuide() {
                 <div className="p-2 bg-blue-50 rounded-lg">
                   <step.icon className="h-6 w-6 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-semibold ml-3">{step.title}</h3>
+                <h3 className="text-xl font-semibold ml-3">{t(`patient.preparation.steps.${step.title}.title`)}</h3>
               </div>
 
               <div className="space-y-4">
                 {step.guidelines.map((guideline, idx) => (
                   <div key={idx} className="border-b border-gray-100 pb-4 last:border-0 last:pb-0">
                     <h4 className="font-medium text-gray-900 mb-2">
-                      {guideline.instruction}
+                      {t(`patient.preparation.steps.${step.title}.guidelines.${guideline.instruction}`)}
                     </h4>
                     <p className="text-gray-600 text-sm">
-                      {guideline.details}
+                      {t(`patient.preparation.steps.${step.title}.guidelines.${guideline.details}`)}
                     </p>
                   </div>
                 ))}
@@ -142,7 +144,7 @@ export default function PreparationGuide() {
             <Ban className="h-8 w-8 text-red-500 mr-4 flex-shrink-0" />
             <div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                Important Restrictions
+                {t('patient.preparation.restrictions.title')}
               </h3>
               <ul className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
                 {[
@@ -155,7 +157,7 @@ export default function PreparationGuide() {
                 ].map((restriction, index) => (
                   <li key={index} className="flex items-center">
                     <span className="h-2 w-2 bg-red-500 rounded-full mr-2" />
-                    <span className="text-gray-700">{restriction}</span>
+                    <span className="text-gray-700">{t(`patient.preparation.restrictions.${restriction}`)}</span>
                   </li>
                 ))}
               </ul>

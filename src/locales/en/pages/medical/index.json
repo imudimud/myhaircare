@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "title": "Medical Information - Hair Restoration Procedures and Guidelines",
+    "description": "Detailed medical information about our hair restoration procedures, protocols, and safety guidelines.",
+    "keywords": ["hair restoration medical info", "transplant procedures", "medical guidelines", "safety protocols"]
+  },
+  "hero": {
+    "title": "Medical Information Center",
+    "subtitle": "Understanding the Medical Aspects of Hair Restoration",
+    "description": "Comprehensive medical information about our procedures and protocols"
+  },
+  "procedures": {
+    "title": "Medical Procedures",
+    "overview": {
+      "title": "Procedure Overview",
+      "description": "Detailed information about our hair restoration procedures"
+    },
+    "types": {
+      "sapphireFue": {
+        "title": "Sapphire FUE",
+        "description": "Advanced follicular unit extraction using sapphire blades",
+        "benefits": ["Minimal scarring", "Natural results", "Quick recovery"]
+      },
+      "dhi": {
+        "title": "DHI Technique",
+        "description": "Direct hair implantation for precise placement",
+        "benefits": ["No incisions", "Dense packing", "Natural angles"]
+      },
+      "stemCell": {
+        "title": "Stem Cell Treatment",
+        "description": "Innovative regenerative therapy",
+        "benefits": ["Natural growth", "Minimal invasion", "Long-lasting results"]
+      }
+    }
+  },
+  "guidelines": {
+    "title": "Medical Guidelines",
+    "preOperation": {
+      "title": "Pre-Operation Guidelines",
+      "instructions": [
+        "Medical evaluation requirements",
+        "Medication restrictions",
+        "Lifestyle adjustments",
+        "Diet recommendations"
+      ]
+    },
+    "postOperation": {
+      "title": "Post-Operation Care",
+      "instructions": [
+        "Immediate aftercare",
+        "Recovery timeline",
+        "Activity restrictions",
+        "Follow-up schedule"
+      ]
+    }
+  },
+  "safety": {
+    "title": "Safety Protocols",
+    "sections": {
+      "standards": {
+        "title": "Medical Standards",
+        "description": "Our adherence to international medical standards"
+      },
+      "sterilization": {
+        "title": "Sterilization Procedures",
+        "description": "Advanced sterilization protocols"
+      },
+      "monitoring": {
+        "title": "Patient Monitoring",
+        "description": "Continuous health monitoring systems"
+      }
+    }
+  },
+  "team": {
+    "title": "Medical Team",
+    "roles": {
+      "surgeons": {
+        "title": "Hair Restoration Surgeons",
+        "description": "Expert physicians specialized in hair restoration"
+      },
+      "technicians": {
+        "title": "Medical Technicians",
+        "description": "Skilled technical support staff"
+      },
+      "nurses": {
+        "title": "Specialized Nurses",
+        "description": "Dedicated nursing care team"
+      }
+    }
+  },
+  "research": {
+    "title": "Medical Research",
+    "sections": {
+      "studies": "Clinical Studies",
+      "innovations": "Technical Innovations",
+      "publications": "Medical Publications"
+    }
+  },
+  "emergency": {
+    "title": "Emergency Information",
+    "contact": "24/7 Medical Support",
+    "hotline": "Emergency Hotline"
+  }
+}

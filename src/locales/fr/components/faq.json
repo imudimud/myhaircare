@@ -1,0 +1,70 @@
+{
+  "section": {
+    "title": "Questions Fréquemment Posées",
+    "subtitle": "Trouvez des Réponses aux Questions Courantes",
+    "description": "Tout ce que vous devez savoir sur les procédures de restauration capillaire"
+  },
+  "categories": {
+    "general": {
+      "title": "Questions Générales",
+      "items": {
+        "what": {
+          "question": "Qu'est-ce que la greffe de cheveux ?",
+          "answer": "La greffe de cheveux est une procédure chirurgicale qui déplace les follicules pileux d'une zone donneuse vers une zone dégarnie."
+        },
+        "candidate": {
+          "question": "Suis-je un bon candidat ?",
+          "answer": "Les bons candidats ont généralement suffisamment de cheveux donneurs et des attentes réalistes concernant les résultats."
+        },
+        "age": {
+          "question": "Quel est l'âge idéal pour le traitement ?",
+          "answer": "Bien qu'il n'y ait pas de limite d'âge stricte, la plupart des patients ont entre 25 et 65 ans avec des schémas établis de perte de cheveux."
+        }
+      }
+    },
+    "procedure": {
+      "title": "Détails de la Procédure",
+      "items": {
+        "duration": {
+          "question": "Combien de temps dure la procédure ?",
+          "answer": "La procédure dure généralement 6 à 8 heures, selon le nombre de greffons."
+        },
+        "pain": {
+          "question": "La procédure est-elle douloureuse ?",
+          "answer": "Une anesthésie locale est utilisée, rendant la procédure pratiquement indolore."
+        },
+        "recovery": {
+          "question": "Quel est le temps de récupération ?",
+          "answer": "La plupart des patients reprennent le travail dans les 3 à 5 jours, avec une récupération complète en 2 semaines."
+        }
+      }
+    },
+    "results": {
+      "title": "Résultats et Soins Post-opératoires",
+      "items": {
+        "visible": {
+          "question": "Quand verrai-je les résultats ?",
+          "answer": "La croissance initiale commence à 3-4 mois, avec des résultats finaux visibles à 12-18 mois."
+        },
+        "permanent": {
+          "question": "Les résultats sont-ils permanents ?",
+          "answer": "Oui, les cheveux transplantés sont permanents, bien que la perte naturelle des cheveux puisse continuer."
+        },
+        "care": {
+          "question": "Quels soins post-opératoires sont nécessaires ?",
+          "answer": "Des techniques de lavage spécifiques et des médicaments sont prescrits pour des résultats optimaux."
+        }
+      }
+    }
+  },
+  "cta": {
+    "more": "Voir Plus de FAQ",
+    "ask": "Poser une Question",
+    "contact": "Nous Contacter"
+  },
+  "search": {
+    "placeholder": "Rechercher dans la FAQ",
+    "noResults": "Aucune question correspondante trouvée",
+    "popular": "Questions Populaires"
+  }
+}

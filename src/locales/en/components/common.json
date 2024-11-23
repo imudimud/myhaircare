@@ -1,0 +1,35 @@
+{
+  "buttons": {
+    "learnMore": "Learn More",
+    "readMore": "Read More",
+    "viewAll": "View All",
+    "getStarted": "Get Started",
+    "submit": "Submit",
+    "close": "Close",
+    "whatsapp": "Contact via WhatsApp",
+    "scrollDown": "Scroll Down",
+    "previous": "Previous",
+    "next": "Next",
+    "backToTop": "Back to Top",
+    "contactUs": "Contact Us",
+    "viewGallery": "View Gallery",
+    "backToHome": "Back to Home",
+    "goBack": "Go Back"
+  },
+  "loading": {
+    "text": "Loading...",
+    "please_wait": "Please wait"
+  },
+  "errors": {
+    "general": "Something went wrong",
+    "try_again": "Please try again",
+    "not_found": "Page not found",
+    "form_invalid": "Please check your input"
+  },
+  "meta": {
+    "site_name": "MyHairCare",
+    "separator": " | ",
+    "default_description": "Advanced hair restoration solutions with cutting-edge technology",
+    "default_keywords": ["hair restoration", "hair transplant", "hair care", "medical tourism"]
+  }
+}

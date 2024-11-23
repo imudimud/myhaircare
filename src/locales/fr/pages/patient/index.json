@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "title": "Information Patient - Votre Parcours de Restauration Capillaire",
+    "description": "Informations essentielles pour les patients concernant les procédures de restauration capillaire, la préparation et les soins post-traitement.",
+    "keywords": ["info patient", "soins restauration capillaire", "préparation traitement", "soins post-traitement"]
+  },
+  "hero": {
+    "title": "Centre d'Information Patient",
+    "subtitle": "Votre Guide de Restauration Capillaire",
+    "description": "Tout ce que vous devez savoir sur votre parcours de traitement"
+  },
+  "journey": {
+    "title": "Votre Parcours de Traitement",
+    "steps": {
+      "consultation": {
+        "title": "Consultation Initiale",
+        "description": "Comprendre vos besoins et planifier votre traitement"
+      },
+      "preparation": {
+        "title": "Préparation au Traitement",
+        "description": "Se préparer pour votre procédure"
+      },
+      "procedure": {
+        "title": "Jour de la Procédure",
+        "description": "À quoi s'attendre pendant le traitement"
+      },
+      "recovery": {
+        "title": "Période de Récupération",
+        "description": "Soins post-traitement et guérison"
+      },
+      "results": {
+        "title": "Résultats et Suivi",
+        "description": "Suivi de vos progrès"
+      }
+    }
+  },
+  "preparation": {
+    "title": "Préparation au Traitement",
+    "sections": {
+      "lifestyle": {
+        "title": "Ajustements du Mode de Vie",
+        "items": [
+          "Recommandations alimentaires",
+          "Directives d'exercice",
+          "Ajustements médicamenteux",
+          "Tabac et alcool"
+        ]
+      },
+      "medications": {
+        "title": "Directives Médicamenteuses",
+        "description": "Informations importantes sur les médicaments"
+      },
+      "timeline": {
+        "title": "Calendrier de Préparation",
+        "description": "Guide de préparation semaine par semaine"
+      }
+    }
+  },
+  "aftercare": {
+    "title": "Instructions de Soins Post-Traitement",
+    "sections": {
+      "immediate": {
+        "title": "Soins Immédiats",
+        "instructions": [
+          "Premières 24 heures",
+          "Position de sommeil",
+          "Restrictions d'activité",
+          "Soins des plaies"
+        ]
+      },
+      "weekly": {
+        "title": "Soins Hebdomadaires",
+        "instructions": [
+          "Routine de lavage",
+          "Reprise de l'exercice",
+          "Programme médicamenteux",
+          "Suivi des progrès"
+        ]
+      },
+      "longTerm": {
+        "title": "Soins à Long Terme",
+        "instructions": [
+          "Routine de soins capillaires",
+          "Maintien du mode de vie",
+          "Programme de suivi",
+          "Calendrier prévu"
+        ]
+      }
+    }
+  },
+  "expectations": {
+    "title": "Définir les Attentes",
+    "sections": {
+      "timeline": {
+        "title": "Calendrier de Croissance",
+        "description": "Comprendre le processus de croissance des cheveux"
+      },
+      "results": {
+        "title": "Résultats Attendus",
+        "description": "Ce à quoi s'attendre à différentes étapes"
+      },
+      "maintenance": {
+        "title": "Entretien à Long Terme",
+        "description": "Maintenir vos résultats"
+      }
+    }
+  },
+  "support": {
+    "title": "Support Patient",
+    "sections": {
+      "contact": {
+        "title": "Coordonnées",
+        "description": "Comment contacter notre équipe de support"
+      },
+      "resources": {
+        "title": "Ressources Supplémentaires",
+        "description": "Informations et guides utiles"
+      },
+      "faq": {
+        "title": "Questions Fréquentes",
+        "description": "Réponses aux questions fréquentes des patients"
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Expériences des Patients",
+    "description": "Histoires réelles de nos patients"
+  }
+}

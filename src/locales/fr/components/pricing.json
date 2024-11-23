@@ -1,0 +1,66 @@
+{
+  "section": {
+    "title": "Tarifs des Traitements",
+    "subtitle": "Prix Transparents pour des Soins de Qualité",
+    "description": "Découvrez nos options de prix compétitifs pour les procédures de restauration capillaire"
+  },
+  "packages": {
+    "basic": {
+      "name": "Forfait Basique",
+      "price": "€2,500",
+      "description": "Forfait essentiel de greffe de cheveux",
+      "features": [
+        "Jusqu'à 2000 greffons",
+        "Anesthésie locale",
+        "Kit de soins post-opératoires basique",
+        "Suivi pendant 1 an"
+      ]
+    },
+    "premium": {
+      "name": "Forfait Premium",
+      "price": "€3,500",
+      "description": "Expérience améliorée de greffe de cheveux",
+      "features": [
+        "Jusqu'à 3000 greffons",
+        "Traitement PRP inclus",
+        "Kit de soins post-opératoires premium",
+        "Suivi pendant 2 ans",
+        "Hébergement hôtelier"
+      ]
+    },
+    "vip": {
+      "name": "Forfait VIP",
+      "price": "€5,000",
+      "description": "Expérience ultime de restauration capillaire",
+      "features": [
+        "Greffons illimités",
+        "Traitement PRP inclus",
+        "Thérapie par cellules souches",
+        "Suivi à vie",
+        "Hébergement en hôtel 5 étoiles",
+        "Service de transfert privé"
+      ]
+    }
+  },
+  "features": {
+    "included": "Ce qui est Inclus",
+    "excluded": "Ce qui n'est pas Inclus",
+    "additional": "Services Supplémentaires"
+  },
+  "payment": {
+    "methods": "Modes de Paiement",
+    "installment": "Options de Paiement Échelonné",
+    "currency": "Prix en Euros",
+    "guarantee": "Garantie Satisfait ou Remboursé"
+  },
+  "cta": {
+    "contact": "Contactez-nous pour plus de Détails",
+    "customize": "Personnaliser le Forfait",
+    "book": "Réserver Maintenant"
+  },
+  "notes": {
+    "consultation": "Consultation gratuite incluse",
+    "customization": "Les forfaits peuvent être personnalisés",
+    "validity": "Prix valables jusqu'au {{date}}"
+  }
+}

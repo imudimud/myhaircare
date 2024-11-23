@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import {
   Diamond,
@@ -13,323 +12,211 @@ import {
   ChevronRight,
   MessageSquare
 } from 'lucide-react';
+import { useTranslation } from '../../hooks/useTranslation';
+import { SEOHelmet } from '../../components/SEOHelmet';
+import Layout from '../../components/layout/Layout';
+import { generateMedicalProcedureSchema, generateFAQSchema } from '../../utils/schemaMarkup';
+import { TranslationKeys } from '../../types/translationKeys';
 
 const benefits = [
   {
-    title: 'Natural-Looking Results',
-    description: 'Achieve seamless, natural hairline with precise implantation',
+    key: 'naturalResults',
     icon: Star
   },
   {
-    title: 'Minimal Scarring',
-    description: 'Advanced sapphire blades reduce tissue damage and visible scarring',
+    key: 'minimalScarring',
     icon: Diamond
   },
   {
-    title: 'Faster Recovery',
-    description: 'Return to daily activities sooner with reduced healing time',
+    key: 'fasterRecovery',
     icon: Clock
   },
   {
-    title: 'High Density',
-    description: 'Achieve optimal hair density with precise implantation',
+    key: 'highDensity',
     icon: CheckCircle2
   }
 ];
 
 const steps = [
   {
-    title: 'Follicle Extraction',
-    description: 'Precise extraction using sapphire blades for minimal tissue damage',
-    duration: '2-3 hours'
+    key: 'extraction',
   },
   {
-    title: 'Site Preparation',
-    description: 'Creation of recipient sites with optimal angle and direction',
-    duration: '1-2 hours'
+    key: 'preparation',
   },
   {
-    title: 'Follicle Implantation',
-    description: 'Careful placement of follicles for natural growth pattern',
-    duration: '2-3 hours'
+    key: 'implantation',
+  },
+  {
+    key: 'aftercare',
   }
 ];
 
 const faqs = [
   {
-    question: 'How long does the Sapphire FUE procedure take?',
-    answer: 'The procedure typically takes 6-8 hours, depending on the number of grafts needed. It\'s performed under local anesthesia in a single session.'
+    key: 'procedure',
   },
   {
-    question: 'When will I see results?',
-    answer: 'Initial growth begins around 3-4 months after the procedure, with full results visible between 12-18 months.'
+    key: 'recovery',
   },
   {
-    question: 'Is Sapphire FUE painful?',
-    answer: 'The procedure is performed under local anesthesia, ensuring minimal discomfort. Most patients report little to no pain during and after the treatment.'
+    key: 'results',
   },
   {
-    question: 'How long is the recovery period?',
-    answer: 'Most patients return to work within 3-5 days. The donor area typically heals within 7-10 days, with minimal visible signs of the procedure.'
+    key: 'difference',
   }
 ];
 
-export default function SapphireFue() {
+const SapphireFuePage: React.FC = () => {
+  const { t } = useTranslation('pages/procedures/sapphire-fue');
+
+  // Generate medical procedure schema
+  const procedureSchema = generateMedicalProcedureSchema({
+    name: t('title' as TranslationKeys),
+    description: t('description' as TranslationKeys),
+    benefits: t('benefits' as TranslationKeys, { returnObjects: true }) as string[],
+    risks: t('risks' as TranslationKeys, { returnObjects: true }) as string[],
+    preparation: t('preparation' as TranslationKeys, { returnObjects: true }) as string[],
+    recovery: t('recovery' as TranslationKeys, { returnObjects: true }) as string[],
+    image: '/images/procedures/sapphire-fue.jpg',
+    performedBy: {
+      name: "Dr. John Smith",
+      specialty: "Hair Transplant Surgeon",
+      certifications: ["ISHRS", "ABHRS"],
+      image: "/images/doctors/john-smith.jpg",
+      description: "Leading expert in Sapphire FUE with over 15 years of experience."
+    },
+    cost: {
+      currency: "USD",
+      value: 4500
+    }
+  });
+
+  // Generate FAQ schema
+  const faqItems = t('faq.items' as TranslationKeys, { returnObjects: true });
+  const faqSchema = generateFAQSchema(
+    Array.isArray(faqItems) ? faqItems.map(faq => ({
+      question: faq.question,
+      answer: faq.answer,
+    })) : []
+  );
+
+  // Generate breadcrumbs
+  const breadcrumbs = [
+    { name: t('breadcrumbs.home' as TranslationKeys), url: '/' },
+    { name: t('breadcrumbs.procedures' as TranslationKeys), url: '/procedures' },
+    { name: t('breadcrumbs.sapphireFue' as TranslationKeys), url: '/procedures/sapphire-fue' },
+  ];
+
   return (
-    <div className="min-h-screen pt-20 pb-12 bg-gray-50">
-      <Helmet>
-        <title>Sapphire FUE Hair Transplant - Estenove Hair Clinic</title>
-        <meta
-          name="description"
-          content="Experience the latest in hair transplant technology with Sapphire FUE at Estenove. Achieve natural-looking results with minimal recovery time."
-        />
-      </Helmet>
-
+    <Layout heroBackground="/images/procedures/sapphire-fue-hero.jpg">
+      <SEOHelmet
+        titleKey="meta.title"
+        descriptionKey="meta.description"
+        keywordsKey="meta.keywords"
+        image="/images/procedures/sapphire-fue.jpg"
+        breadcrumbs={breadcrumbs}
+        structuredData={[procedureSchema, faqSchema]}
+      />
+      
       {/* Hero Section */}
-      <div className="relative h-[80vh] min-h-[600px] w-full bg-gradient-to-br from-blue-900 to-blue-950 text-white">
-        <div className="container mx-auto h-full px-4 flex items-center">
-          <div className="max-w-3xl">
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-             animate={{ opacity: 1, y: 0 }}
-              className="text-5xl md:text-6xl font-bold mb-6"
-            >
-             Sapphire FUE: Precision, Comfort, and Natural Results
-           </motion.h1>
-           <motion.p
-              initial={{ opacity: 0, y: 20 }}
-             animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto"
-           >
-             Revolutionizing Hair Restoration with Advanced Technology
-           </motion.p>
-           <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-             transition={{ delay: 0.4 }}
-             className="flex flex-col sm:flex-row gap-4"
-             >
-                <a href="#learn-more" className="btn-primary">
-                  Learn More About Sapphire FUE
-                </a>
-                <a href="/consultation" className="btn-secondary">
-                  Book Your Free Consultation
-                </a>
-            </motion.div>
-          </div>
-        </div>
-      </div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* What Is Sapphire FUE Section */}
-        <section id="learn-more" className="py-20 bg-white">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">What Is Sapphire FUE?</h2>
-            <p className="text-lg text-gray-600 mb-12">
-              Sapphire FUE represents the latest advancement in hair transplantation technology, 
-              utilizing precision-engineered sapphire blades for unparalleled accuracy and natural-looking results.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-2xl font-semibold mb-4">The Sapphire Advantage</h3>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <CheckCircle2 className="w-6 h-6 text-navy-800 mt-1 mr-2" />
-                  <span>Smoother, more precise incisions</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle2 className="w-6 h-6 text-navy-800 mt-1 mr-2" />
-                  <span>Faster healing and recovery</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle2 className="w-6 h-6 text-navy-800 mt-1 mr-2" />
-                  <span>Minimal scarring and natural results</span>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold mb-4">Why Choose Sapphire FUE?</h3>
-              <p className="text-gray-600 mb-4">
-                The sapphire blade's superior edge quality and durability enable our surgeons to create 
-                smaller, more precise incisions. This results in:
-              </p>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <CheckCircle2 className="w-6 h-6 text-navy-800 mt-1 mr-2" />
-                  <span>Higher graft survival rate</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle2 className="w-6 h-6 text-navy-800 mt-1 mr-2" />
-                  <span>More natural-looking hairline</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle2 className="w-6 h-6 text-navy-800 mt-1 mr-2" />
-                  <span>Reduced recovery time</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <div className="bg-white rounded-2xl p-8 mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Key Benefits</h2>
-            <p className="text-xl text-gray-600">Experience the advantages of advanced hair restoration</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={benefit.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 + index * 0.1 }}
-                className="text-center"
-              >
-                <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-6">
-                  <benefit.icon className="h-8 w-8 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  {benefit.title}
-                </h3>
-                <p className="text-gray-600">{benefit.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        {/* Procedure Steps */}
-        <div className="bg-gray-100 rounded-2xl p-8 mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">The Procedure</h2>
-            <p className="text-xl text-gray-600">Understanding your journey to hair restoration</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {steps.map((step, index) => (
-              <motion.div
-                key={step.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-xl p-6"
-              >
-                <div className="flex items-center mb-4">
-                  <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                    <span className="text-blue-600 font-semibold">{index + 1}</span>
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900">{step.title}</h3>
-                </div>
-                <p className="text-gray-600 mb-4">{step.description}</p>
-                <div className="flex items-center text-gray-500">
-                  <Clock className="h-5 w-5 mr-2" />
-                  <span>{step.duration}</span>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        {/* Ideal Candidates */}
-        <div className="bg-blue-50 rounded-2xl p-8 mb-16">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Is Sapphire FUE Right for You?</h2>
-              <p className="text-xl text-gray-600">
-                Ideal candidates for Sapphire FUE include:
-              </p>
-            </div>
-            <ul className="space-y-4">
-              {[
-                'Men and women experiencing pattern baldness',
-                'Individuals with sufficient donor hair availability',
-                'Those seeking a minimally invasive hair restoration solution',
-                'Patients looking for quick recovery and natural results'
-              ].map((item, index) => (
-                <motion.li
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.1 * index }}
-                  className="flex items-center"
-                >
-                  <CheckCircle2 className="h-6 w-6 text-green-500 mr-3" />
-                  <span className="text-gray-700">{item}</span>
-                </motion.li>
-              ))}
-            </ul>
-            <div className="text-center mt-8">
-              <a
-                href="/consultation"
-                className="inline-flex items-center text-blue-600 hover:text-blue-700"
-              >
-                Take our free assessment
-                <ChevronRight className="h-5 w-5 ml-1" />
-              </a>
-            </div>
-          </div>
-        </div>
-
-        {/* FAQ Section */}
-        <div className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-            <p className="text-xl text-gray-600">Find answers to common questions about Sapphire FUE</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {faqs.map((faq, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-xl p-6"
-              >
-                <div className="flex items-start mb-4">
-                  <HelpCircle className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" />
-                  <h3 className="text-lg font-semibold text-gray-900">{faq.question}</h3>
-                </div>
-                <p className="text-gray-600 ml-9">{faq.answer}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        {/* Final CTA */}
-        <motion.div
+      <section className="pt-32 pb-16 text-white">
+        <motion.h1 
+          className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="py-20 bg-gradient-to-br from-blue-900 to-blue-950 text-white"
+          transition={{ duration: 0.5 }}
         >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold mb-6">
-              Ready to Transform Your Appearance?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Take the first step towards restoring your natural hair with Sapphire FUE.
-              Schedule a consultation with our expert team to discuss your personalized treatment plan.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-              <a
-                href="/consultation"
-                className="inline-flex items-center px-8 py-4 border border-transparent rounded-full text-lg font-medium text-blue-600 bg-white hover:bg-blue-50"
+          {t('title' as TranslationKeys)}
+        </motion.h1>
+        <motion.p 
+          className="text-lg md:text-xl max-w-2xl"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          {t('description' as TranslationKeys)}
+        </motion.p>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-16 bg-white rounded-t-3xl -mt-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {benefits.map((benefit, index) => {
+            const Icon = benefit.icon;
+            return (
+              <motion.div
+                key={benefit.key}
+                className="flex flex-col items-center text-center p-6"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                Book Free Consultation
-              </a>
-              <a
-                href="/contact"
-                className="inline-flex items-center px-8 py-4 border-2 border-white rounded-full text-lg font-medium text-white hover:bg-white/10"
-              >
-                <MessageSquare className="h-5 w-5 mr-2" />
-                Chat with Us
-              </a>
+                <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center mb-4">
+                  <Icon className="w-8 h-8 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">
+                  {t(`benefits.${benefit.key}.title` as TranslationKeys)}
+                </h3>
+                <p className="text-gray-600">
+                  {t(`benefits.${benefit.key}.description` as TranslationKeys)}
+                </p>
+              </motion.div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="py-16 bg-white">
+        <h2 className="text-3xl font-bold text-center mb-12">
+          {t('process.title' as TranslationKeys)}
+        </h2>
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          {steps.map((step, index) => (
+            <motion.div
+              key={step.key}
+              className="relative"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <div className="flex items-center mb-4">
+                <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">
+                  {index + 1}
+                </div>
+                <h3 className="text-lg font-semibold ml-3">
+                  {t(`process.steps.${step.key}.title` as TranslationKeys)}
+                </h3>
+              </div>
+              <p className="text-gray-600">
+                {t(`process.steps.${step.key}.description` as TranslationKeys)}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16 bg-white">
+        <h2 className="text-3xl font-bold text-center mb-12">
+          {t('faq.title' as TranslationKeys)}
+        </h2>
+        <div className="max-w-3xl mx-auto divide-y">
+          {faqs.map((faq) => (
+            <div key={faq.key} className="py-6">
+              <h3 className="text-lg font-medium text-gray-900">
+                {t(`faq.items.${faq.key}.question` as TranslationKeys)}
+              </h3>
+              <p className="mt-2 text-gray-600">
+                {t(`faq.items.${faq.key}.answer` as TranslationKeys)}
+              </p>
             </div>
-          </div>
-        </motion.div>
-      </div>
-    </div>
+          ))}
+        </div>
+      </section>
+    </Layout>
   );
-}
+};
+
+export default SapphireFuePage;

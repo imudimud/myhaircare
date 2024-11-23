@@ -1,0 +1,76 @@
+{
+  "meta": {
+    "title": "About MyHairCare - Leading Hair Restoration Clinic",
+    "description": "Learn about our world-class hair restoration clinic, expert team, and commitment to excellence in hair transplantation.",
+    "keywords": ["hair restoration clinic", "hair transplant experts", "medical tourism", "hair care specialists"]
+  },
+  "hero": {
+    "title": "About MyHairCare",
+    "subtitle": "Leading the Way in Hair Restoration",
+    "description": "Combining medical excellence with cutting-edge technology for optimal results"
+  },
+  "mission": {
+    "title": "Our Mission",
+    "description": "To provide world-class hair restoration solutions with unmatched care and expertise",
+    "values": {
+      "excellence": {
+        "title": "Medical Excellence",
+        "description": "Maintaining the highest standards in hair restoration"
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Embracing cutting-edge technologies and techniques"
+      },
+      "care": {
+        "title": "Patient Care",
+        "description": "Providing personalized attention and support"
+      },
+      "results": {
+        "title": "Results",
+        "description": "Delivering natural-looking, lasting outcomes"
+      }
+    }
+  },
+  "team": {
+    "title": "Our Expert Team",
+    "description": "Meet our highly qualified medical professionals",
+    "members": {
+      "doctors": "Hair Restoration Specialists",
+      "technicians": "Medical Technicians",
+      "coordinators": "Patient Coordinators",
+      "support": "Support Staff"
+    }
+  },
+  "facility": {
+    "title": "State-of-the-Art Facility",
+    "description": "Experience hair restoration in our modern medical center",
+    "features": {
+      "technology": "Latest Medical Technology",
+      "comfort": "Patient Comfort",
+      "hygiene": "Highest Hygiene Standards",
+      "location": "Prime Location"
+    }
+  },
+  "certifications": {
+    "title": "Certifications & Accreditations",
+    "description": "Recognized by leading medical institutions",
+    "list": {
+      "jci": "Joint Commission International",
+      "iso": "ISO Certified",
+      "medical": "Ministry of Health Licensed",
+      "quality": "Quality Management Certified"
+    }
+  },
+  "stats": {
+    "title": "Our Impact",
+    "patients": "{{count}}+ Satisfied Patients",
+    "experience": "{{years}} Years Experience",
+    "procedures": "{{count}}+ Successful Procedures",
+    "countries": "Patients from {{count}}+ Countries"
+  },
+  "cta": {
+    "consultation": "Book a Free Consultation",
+    "contact": "Contact Our Team",
+    "tour": "Virtual Clinic Tour"
+  }
+}

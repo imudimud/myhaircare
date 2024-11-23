@@ -1,0 +1,82 @@
+{
+  "section": {
+    "title": "Résultats des Traitements",
+    "subtitle": "Histoires de Réussite et Résultats",
+    "description": "Découvrez notre bilan éprouvé de procédures réussies de restauration capillaire"
+  },
+  "statistics": {
+    "title": "Nos Indicateurs de Réussite",
+    "patients": {
+      "title": "Patients Satisfaits",
+      "count": "15,000+",
+      "description": "Patients satisfaits dans le monde"
+    },
+    "success": {
+      "title": "Taux de Réussite",
+      "rate": "97%",
+      "description": "Procédures réussies"
+    },
+    "experience": {
+      "title": "Années d'Expérience",
+      "years": "20+",
+      "description": "En restauration capillaire"
+    },
+    "grafts": {
+      "title": "Greffons Transplantés",
+      "count": "10M+",
+      "description": "Transplantés avec succès"
+    }
+  },
+  "timeline": {
+    "title": "Chronologie de Récupération",
+    "stages": {
+      "day1": {
+        "title": "Jour 1",
+        "description": "Début de la phase de récupération initiale"
+      },
+      "week1": {
+        "title": "Semaine 1",
+        "description": "Les croûtes commencent à guérir"
+      },
+      "month1": {
+        "title": "Mois 1",
+        "description": "Chute des cheveux transplantés"
+      },
+      "month3": {
+        "title": "Mois 3",
+        "description": "Les nouveaux cheveux commencent à pousser"
+      },
+      "month6": {
+        "title": "Mois 6",
+        "description": "Croissance significative visible"
+      },
+      "month12": {
+        "title": "Mois 12",
+        "description": "Résultats finaux apparaissent"
+      }
+    }
+  },
+  "gallery": {
+    "title": "Galerie des Résultats",
+    "filters": {
+      "procedure": "Filtrer par Procédure",
+      "timeline": "Filtrer par Chronologie",
+      "gender": "Filtrer par Genre"
+    },
+    "categories": {
+      "sapphireFue": "Résultats FUE Saphir",
+      "dhi": "Résultats DHI",
+      "stemCell": "Résultats Cellules Souches"
+    }
+  },
+  "testimonials": {
+    "title": "Témoignages de Patients",
+    "featured": "Histoires en Vedette",
+    "readMore": "Lire Plus d'Histoires"
+  },
+  "cta": {
+    "consultation": "Réservez Votre Consultation Gratuite",
+    "gallery": "Voir la Galerie Complète",
+    "contact": "Contactez-Nous pour Plus d'Informations"
+  }
+}

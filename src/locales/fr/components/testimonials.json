@@ -1,0 +1,44 @@
+{
+  "section": {
+    "title": "Témoignages de Patients",
+    "subtitle": "Histoires Réelles de Patients Réels",
+    "description": "Découvrez ce que nos patients disent de leur parcours de restauration capillaire"
+  },
+  "filters": {
+    "all": "Tous les Témoignages",
+    "video": "Témoignages Vidéo",
+    "written": "Avis Écrits",
+    "recent": "Plus Récents",
+    "popular": "Plus Populaires"
+  },
+  "card": {
+    "verified": "Patient Vérifié",
+    "readMore": "Lire l'Histoire Complète",
+    "watchVideo": "Regarder la Vidéo",
+    "shareStory": "Partagez Votre Histoire",
+    "postedOn": "Publié le {{date}}",
+    "procedure": "Procédure: {{name}}"
+  },
+  "rating": {
+    "overall": "Note Globale",
+    "service": "Qualité du Service",
+    "result": "Satisfaction des Résultats",
+    "care": "Soins aux Patients",
+    "outOf": "{{rating}} sur 5"
+  },
+  "cta": {
+    "share": "Partagez Votre Expérience",
+    "write": "Écrire un Avis",
+    "record": "Enregistrer un Avis Vidéo"
+  },
+  "form": {
+    "title": "Partagez Votre Histoire",
+    "name": "Votre Nom",
+    "procedure": "Type de Procédure",
+    "rating": "Votre Note",
+    "review": "Votre Avis",
+    "media": "Ajouter Photos/Vidéos",
+    "consent": "Je consens à partager mon histoire",
+    "submit": "Soumettre l'Avis"
+  }
+}

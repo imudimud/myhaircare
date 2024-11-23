@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "title": "Informations Médicales - Procédures et Directives de Restauration Capillaire",
+    "description": "Informations médicales détaillées sur nos procédures de restauration capillaire, protocoles et directives de sécurité.",
+    "keywords": ["info médicale restauration capillaire", "procédures de greffe", "directives médicales", "protocoles de sécurité"]
+  },
+  "hero": {
+    "title": "Centre d'Information Médicale",
+    "subtitle": "Comprendre les Aspects Médicaux de la Restauration Capillaire",
+    "description": "Informations médicales complètes sur nos procédures et protocoles"
+  },
+  "procedures": {
+    "title": "Procédures Médicales",
+    "overview": {
+      "title": "Aperçu des Procédures",
+      "description": "Informations détaillées sur nos procédures de restauration capillaire"
+    },
+    "types": {
+      "sapphireFue": {
+        "title": "FUE Saphir",
+        "description": "Extraction d'unités folliculaires avancée utilisant des lames en saphir",
+        "benefits": ["Cicatrisation minimale", "Résultats naturels", "Récupération rapide"]
+      },
+      "dhi": {
+        "title": "Technique DHI",
+        "description": "Implantation directe des cheveux",
+        "benefits": ["Pas d'incisions", "Densité élevée", "Angles naturels"]
+      },
+      "stemCell": {
+        "title": "Traitement par Cellules Souches",
+        "description": "Thérapie régénérative innovante",
+        "benefits": ["Croissance naturelle", "Invasion minimale", "Résultats durables"]
+      }
+    }
+  },
+  "guidelines": {
+    "title": "Directives Médicales",
+    "preOperation": {
+      "title": "Directives Pré-Opératoires",
+      "instructions": [
+        "Exigences d'évaluation médicale",
+        "Restrictions médicamenteuses",
+        "Ajustements du mode de vie",
+        "Recommandations alimentaires"
+      ]
+    },
+    "postOperation": {
+      "title": "Soins Post-Opératoires",
+      "instructions": [
+        "Soins immédiats",
+        "Calendrier de récupération",
+        "Restrictions d'activité",
+        "Programme de suivi"
+      ]
+    }
+  },
+  "safety": {
+    "title": "Protocoles de Sécurité",
+    "sections": {
+      "standards": {
+        "title": "Normes Médicales",
+        "description": "Notre adhésion aux normes médicales internationales"
+      },
+      "sterilization": {
+        "title": "Procédures de Stérilisation",
+        "description": "Protocoles de stérilisation avancés"
+      },
+      "monitoring": {
+        "title": "Surveillance des Patients",
+        "description": "Systèmes de surveillance continue de la santé"
+      }
+    }
+  },
+  "team": {
+    "title": "Équipe Médicale",
+    "roles": {
+      "surgeons": {
+        "title": "Chirurgiens en Restauration Capillaire",
+        "description": "Médecins experts spécialisés en restauration capillaire"
+      },
+      "technicians": {
+        "title": "Techniciens Médicaux",
+        "description": "Personnel de soutien technique qualifié"
+      },
+      "nurses": {
+        "title": "Infirmières Spécialisées",
+        "description": "Équipe de soins infirmiers dédiée"
+      }
+    }
+  },
+  "research": {
+    "title": "Recherche Médicale",
+    "sections": {
+      "studies": "Études Cliniques",
+      "innovations": "Innovations Techniques",
+      "publications": "Publications Médicales"
+    }
+  },
+  "emergency": {
+    "title": "Informations d'Urgence",
+    "contact": "Support Médical 24/7",
+    "hotline": "Ligne d'Urgence"
+  }
+}

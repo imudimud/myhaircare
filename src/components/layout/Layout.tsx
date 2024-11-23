@@ -1,31 +1,49 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useLocation } from 'react-router-dom';
 import Header from '../Header';
 import Navbar from '../Navbar';
-import { Menu } from 'lucide-react';
+import Footer from '../Footer';
 
 interface LayoutProps {
   children: React.ReactNode;
+  heroBackground?: string;
+  fullWidth?: boolean;
 }
 
-export default function Layout({ children }: LayoutProps) {
-  const [isNavOpen, setIsNavOpen] = useState(true);
+const Layout = ({ children, heroBackground, fullWidth = false }: LayoutProps) => {
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Header />
-      <button
-        onClick={() => setIsNavOpen(!isNavOpen)}
-        className="fixed top-20 left-4 z-40 p-2 rounded-full bg-navy-900 text-white hover:bg-navy-800 lg:hidden"
-        aria-label="Toggle navigation menu"
-      >
-        <Menu size={20} aria-hidden="true" />
-      </button>
-      <div className="flex pt-[72px]">
-        <Navbar isOpen={isNavOpen} setIsOpen={setIsNavOpen} />
-        <main className={`flex-1 transition-all duration-300 ${isNavOpen ? 'lg:pl-64' : ''} px-4 sm:px-6 lg:px-8`}>
+    <div className="min-h-screen flex flex-col">
+      {/* Header & Navigation */}
+      <header className="fixed w-full top-0 z-50 bg-white shadow-sm">
+        <Header onMenuClick={() => null} />
+        <Navbar />
+      </header>
+
+      {/* Main Content */}
+      <main className={`flex-grow pt-[120px] ${isHomePage ? 'pt-0' : ''}`}>
+        {/* Hero Background (for non-home pages) */}
+        {!isHomePage && heroBackground && (
+          <div 
+            className="absolute top-0 left-0 right-0 h-[50vh] min-h-[400px] -z-10 bg-cover bg-center bg-no-repeat"
+            style={{ 
+              backgroundImage: `linear-gradient(to bottom right, rgba(30, 58, 138, 0.9), rgba(30, 58, 138, 0.95)), url(${heroBackground})` 
+            }}
+          />
+        )}
+
+        {/* Content Container */}
+        <div className={fullWidth ? 'w-full' : 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'}>
           {children}
-        </main>
-      </div>
+        </div>
+      </main>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
-}
+};
+
+export default Layout;

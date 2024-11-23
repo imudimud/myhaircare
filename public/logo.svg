@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="256" cy="256" r="248" fill="#1e3a8a"/>
+  
+  <!-- Hair Strands Design -->
+  <path d="M256 120C180 120 120 180 120 256C120 332 180 392 256 392C332 392 392 332 392 256" 
+        stroke="white" stroke-width="24" stroke-linecap="round"/>
+  
+  <!-- Curved Lines Representing Hair -->
+  <path d="M256 160C200 160 160 200 160 256C160 312 200 352 256 352C312 352 352 312 352 256" 
+        stroke="white" stroke-width="20" stroke-linecap="round"/>
+  
+  <!-- Central Design Element -->
+  <circle cx="256" cy="256" r="48" fill="white"/>
+  
+  <!-- Additional Hair Strands -->
+  <path d="M304 208C290 194 274 184 256 184C220 184 184 220 184 256" 
+        stroke="white" stroke-width="16" stroke-linecap="round"/>
+</svg>

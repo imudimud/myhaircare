@@ -1,0 +1,176 @@
+{
+  "meta": {
+    "title": "Réservez Votre Consultation de Restauration Capillaire",
+    "description": "Planifiez votre consultation personnalisée de restauration capillaire avec notre équipe d'experts.",
+    "keywords": ["réservation consultation", "consultation restauration capillaire", "évaluation expert", "planification traitement"]
+  },
+  "hero": {
+    "title": "Réservez Votre Consultation",
+    "subtitle": "Faites le Premier Pas vers la Restauration Capillaire",
+    "description": "Planifiez une consultation personnalisée avec nos experts"
+  },
+  "booking": {
+    "title": "Réservation de Consultation",
+    "sections": {
+      "types": {
+        "title": "Types de Consultation",
+        "options": {
+          "inPerson": {
+            "title": "Consultation en Personne",
+            "description": "Visitez notre clinique pour une évaluation complète",
+            "duration": "45-60 minutes",
+            "includes": [
+              "Examen physique",
+              "Planification du traitement",
+              "Estimation des coûts",
+              "Discussion du calendrier"
+            ]
+          },
+          "virtual": {
+            "title": "Consultation Virtuelle",
+            "description": "Consultation en ligne pratique depuis chez vous",
+            "duration": "30-45 minutes",
+            "includes": [
+              "Évaluation vidéo",
+              "Recommandations initiales",
+              "Options de traitement",
+              "Tarification générale"
+            ]
+          }
+        }
+      },
+      "process": {
+        "title": "Processus de Consultation",
+        "steps": [
+          "Évaluation initiale",
+          "Examen des antécédents médicaux",
+          "Discussion des options de traitement",
+          "Création d'un plan personnalisé",
+          "Révision des coûts et du calendrier"
+        ]
+      }
+    }
+  },
+  "form": {
+    "title": "Formulaire de Demande de Consultation",
+    "sections": {
+      "personal": {
+        "title": "Informations Personnelles",
+        "fields": {
+          "name": {
+            "label": "Nom Complet",
+            "placeholder": "Entrez votre nom complet"
+          },
+          "email": {
+            "label": "Adresse Email",
+            "placeholder": "Entrez votre adresse email"
+          },
+          "phone": {
+            "label": "Numéro de Téléphone",
+            "placeholder": "Entrez votre numéro de téléphone"
+          },
+          "age": {
+            "label": "Âge",
+            "placeholder": "Entrez votre âge"
+          }
+        }
+      },
+      "medical": {
+        "title": "Informations Médicales",
+        "fields": {
+          "conditions": {
+            "label": "Conditions Médicales",
+            "placeholder": "Listez les conditions médicales pertinentes"
+          },
+          "medications": {
+            "label": "Médicaments Actuels",
+            "placeholder": "Listez les médicaments actuels"
+          }
+        }
+      },
+      "preferences": {
+        "title": "Préférences de Consultation",
+        "fields": {
+          "type": {
+            "label": "Type de Consultation",
+            "options": [
+              "En Personne",
+              "Virtuelle"
+            ]
+          },
+          "date": {
+            "label": "Date Préférée",
+            "placeholder": "Sélectionnez la date préférée"
+          },
+          "time": {
+            "label": "Heure Préférée",
+            "placeholder": "Sélectionnez l'heure préférée"
+          }
+        }
+      }
+    }
+  },
+  "preparation": {
+    "title": "Préparation à la Consultation",
+    "sections": {
+      "documents": {
+        "title": "Documents Requis",
+        "items": [
+          "Pièce d'identité avec photo",
+          "Historique médical",
+          "Dossiers de traitements antérieurs",
+          "Liste des médicaments actuels"
+        ]
+      },
+      "photos": {
+        "title": "Photos Requises",
+        "description": "Directives pour prendre des photos de perte de cheveux",
+        "angles": [
+          "Vue de face",
+          "Vue du dessus",
+          "Zone de la couronne",
+          "Les deux côtés",
+          "Arrière de la tête"
+        ]
+      }
+    }
+  },
+  "faq": {
+    "title": "FAQ sur la Consultation",
+    "questions": {
+      "duration": {
+        "question": "Combien de temps dure la consultation ?",
+        "answer": "Les consultations durent généralement 45-60 minutes en personne et 30-45 minutes pour les rendez-vous virtuels"
+      },
+      "cost": {
+        "question": "Y a-t-il des frais de consultation ?",
+        "answer": "Veuillez contacter notre clinique pour les frais et politiques de consultation actuels"
+      },
+      "preparation": {
+        "question": "Comment dois-je me préparer ?",
+        "answer": "Consultez nos directives de préparation et rassemblez les documents requis"
+      }
+    }
+  },
+  "contact": {
+    "title": "Coordonnées",
+    "sections": {
+      "clinic": {
+        "title": "Détails de la Clinique",
+        "address": "Adresse de la Clinique",
+        "phone": "Numéro de Contact",
+        "email": "Adresse Email"
+      },
+      "hours": {
+        "title": "Heures de Consultation",
+        "weekdays": "Lundi à Vendredi",
+        "weekend": "Samedi"
+      }
+    }
+  },
+  "cta": {
+    "submit": "Soumettre la Demande de Consultation",
+    "call": "Appeler pour Réserver",
+    "email": "Nous Envoyer un Email"
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "meta": {
+    "title": "Book Your Hair Restoration Consultation",
+    "description": "Schedule your personalized hair restoration consultation with our expert team.",
+    "keywords": ["consultation booking", "hair restoration consultation", "expert assessment", "treatment planning"]
+  },
+  "hero": {
+    "title": "Book Your Consultation",
+    "subtitle": "Take the First Step Towards Hair Restoration",
+    "description": "Schedule a personalized consultation with our experts"
+  },
+  "booking": {
+    "title": "Consultation Booking",
+    "sections": {
+      "types": {
+        "title": "Consultation Types",
+        "options": {
+          "inPerson": {
+            "title": "In-Person Consultation",
+            "description": "Visit our clinic for a comprehensive assessment",
+            "duration": "45-60 minutes",
+            "includes": [
+              "Physical examination",
+              "Treatment planning",
+              "Cost estimation",
+              "Timeline discussion"
+            ]
+          },
+          "virtual": {
+            "title": "Virtual Consultation",
+            "description": "Convenient online consultation from home",
+            "duration": "30-45 minutes",
+            "includes": [
+              "Video assessment",
+              "Initial recommendations",
+              "Treatment options",
+              "General pricing"
+            ]
+          }
+        }
+      },
+      "process": {
+        "title": "Consultation Process",
+        "steps": [
+          "Initial assessment",
+          "Medical history review",
+          "Treatment options discussion",
+          "Personalized plan creation",
+          "Cost and timeline review"
+        ]
+      }
+    }
+  },
+  "form": {
+    "title": "Consultation Request Form",
+    "sections": {
+      "personal": {
+        "title": "Personal Information",
+        "fields": {
+          "name": {
+            "label": "Full Name",
+            "placeholder": "Enter your full name"
+          },
+          "email": {
+            "label": "Email Address",
+            "placeholder": "Enter your email address"
+          },
+          "phone": {
+            "label": "Phone Number",
+            "placeholder": "Enter your phone number"
+          },
+          "age": {
+            "label": "Age",
+            "placeholder": "Enter your age"
+          }
+        }
+      },
+      "medical": {
+        "title": "Medical Information",
+        "fields": {
+          "conditions": {
+            "label": "Medical Conditions",
+            "placeholder": "List any relevant medical conditions"
+          },
+          "medications": {
+            "label": "Current Medications",
+            "placeholder": "List current medications"
+          }
+        }
+      },
+      "preferences": {
+        "title": "Consultation Preferences",
+        "fields": {
+          "type": {
+            "label": "Consultation Type",
+            "options": [
+              "In-Person",
+              "Virtual"
+            ]
+          },
+          "date": {
+            "label": "Preferred Date",
+            "placeholder": "Select preferred date"
+          },
+          "time": {
+            "label": "Preferred Time",
+            "placeholder": "Select preferred time"
+          }
+        }
+      }
+    }
+  },
+  "preparation": {
+    "title": "Consultation Preparation",
+    "sections": {
+      "documents": {
+        "title": "Required Documents",
+        "items": [
+          "Photo ID",
+          "Medical history",
+          "Previous treatment records",
+          "Current medications list"
+        ]
+      },
+      "photos": {
+        "title": "Required Photos",
+        "description": "Guidelines for taking hair loss photos",
+        "angles": [
+          "Front view",
+          "Top view",
+          "Crown area",
+          "Both sides",
+          "Back of head"
+        ]
+      }
+    }
+  },
+  "faq": {
+    "title": "Consultation FAQs",
+    "questions": {
+      "duration": {
+        "question": "How long is the consultation?",
+        "answer": "Consultations typically last 45-60 minutes for in-person and 30-45 minutes for virtual appointments"
+      },
+      "cost": {
+        "question": "Is there a consultation fee?",
+        "answer": "Please contact our clinic for current consultation fees and policies"
+      },
+      "preparation": {
+        "question": "How should I prepare?",
+        "answer": "Review our preparation guidelines and gather required documents"
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact Information",
+    "sections": {
+      "clinic": {
+        "title": "Clinic Details",
+        "address": "Clinic Address",
+        "phone": "Contact Number",
+        "email": "Email Address"
+      },
+      "hours": {
+        "title": "Consultation Hours",
+        "weekdays": "Monday to Friday",
+        "weekend": "Saturday"
+      }
+    }
+  },
+  "cta": {
+    "submit": "Submit Consultation Request",
+    "call": "Call to Book",
+    "email": "Email Us"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "buttons": {
+    "learnMore": "En Savoir Plus",
+    "readMore": "Lire Plus",
+    "viewAll": "Voir Tout",
+    "getStarted": "Commencer",
+    "submit": "Soumettre",
+    "close": "Fermer",
+    "whatsapp": "Contacter via WhatsApp",
+    "scrollDown": "Défiler vers le Bas",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "backToTop": "Retour en Haut",
+    "contactUs": "Contactez-Nous",
+    "viewGallery": "Voir la Galerie",
+    "backToHome": "Retour à l'Accueil",
+    "goBack": "Retour"
+  },
+  "loading": {
+    "text": "Chargement...",
+    "please_wait": "Veuillez patienter"
+  },
+  "errors": {
+    "general": "Une erreur s'est produite",
+    "try_again": "Veuillez réessayer",
+    "not_found": "Page non trouvée",
+    "form_invalid": "Veuillez vérifier vos informations"
+  },
+  "meta": {
+    "site_name": "MyHairCare",
+    "separator": " | ",
+    "default_description": "Solutions avancées de restauration capillaire avec technologie de pointe",
+    "default_keywords": ["restauration capillaire", "greffe de cheveux", "soins capillaires", "tourisme médical"]
+  }
+}

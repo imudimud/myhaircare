@@ -1,0 +1,152 @@
+{
+  "meta": {
+    "title": "Hair Restoration Procedures - Advanced Treatment Options",
+    "description": "Explore our comprehensive range of hair restoration procedures and treatment options.",
+    "keywords": ["hair restoration procedures", "treatment options", "hair transplant techniques", "advanced hair care"]
+  },
+  "hero": {
+    "title": "Our Procedures",
+    "subtitle": "Advanced Hair Restoration Solutions",
+    "description": "Discover our range of cutting-edge hair restoration procedures"
+  },
+  "treatments": {
+    "title": "Treatment Options",
+    "categories": {
+      "surgical": {
+        "title": "Surgical Procedures",
+        "procedures": {
+          "sapphireFue": {
+            "title": "Sapphire FUE",
+            "description": "Advanced follicular unit extraction",
+            "benefits": [
+              "Minimal scarring",
+              "Natural-looking results",
+              "Quick recovery time",
+              "Precise implantation"
+            ],
+            "process": [
+              "Initial consultation",
+              "Donor area preparation",
+              "Graft extraction",
+              "Recipient site creation",
+              "Graft placement"
+            ]
+          },
+          "dhi": {
+            "title": "DHI Technique",
+            "description": "Direct hair implantation",
+            "benefits": [
+              "No incisions required",
+              "Minimal downtime",
+              "High density possible",
+              "Natural growth direction"
+            ],
+            "process": [
+              "Planning phase",
+              "Extraction process",
+              "Direct implantation",
+              "Recovery period"
+            ]
+          }
+        }
+      },
+      "nonsurgical": {
+        "title": "Non-Surgical Treatments",
+        "procedures": {
+          "prp": {
+            "title": "PRP Therapy",
+            "description": "Platelet-rich plasma treatment",
+            "benefits": [
+              "Natural growth stimulation",
+              "Minimal invasiveness",
+              "Quick procedure",
+              "No downtime"
+            ]
+          },
+          "mesotherapy": {
+            "title": "Mesotherapy",
+            "description": "Nutrient injection therapy",
+            "benefits": [
+              "Scalp rejuvenation",
+              "Enhanced blood circulation",
+              "Improved hair quality",
+              "Progressive results"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "technology": {
+    "title": "Advanced Technology",
+    "sections": {
+      "equipment": {
+        "title": "State-of-the-art Equipment",
+        "description": "Latest technological innovations"
+      },
+      "techniques": {
+        "title": "Advanced Techniques",
+        "description": "Cutting-edge procedural methods"
+      }
+    }
+  },
+  "process": {
+    "title": "Treatment Process",
+    "stages": {
+      "consultation": {
+        "title": "Initial Consultation",
+        "description": "Comprehensive assessment and planning"
+      },
+      "preparation": {
+        "title": "Pre-procedure Preparation",
+        "description": "Getting ready for treatment"
+      },
+      "procedure": {
+        "title": "During the Procedure",
+        "description": "Step-by-step procedure details"
+      },
+      "aftercare": {
+        "title": "Post-procedure Care",
+        "description": "Recovery and maintenance"
+      }
+    }
+  },
+  "results": {
+    "title": "Expected Results",
+    "sections": {
+      "timeline": {
+        "title": "Growth Timeline",
+        "stages": [
+          "Initial healing",
+          "Shedding phase",
+          "Growth phase",
+          "Final results"
+        ]
+      },
+      "maintenance": {
+        "title": "Long-term Maintenance",
+        "description": "Maintaining your results"
+      }
+    }
+  },
+  "comparison": {
+    "title": "Treatment Comparison",
+    "description": "Compare different treatment options",
+    "factors": [
+      "Procedure duration",
+      "Recovery time",
+      "Expected results",
+      "Cost considerations",
+      "Maintenance requirements"
+    ]
+  },
+  "faq": {
+    "title": "Procedure FAQs",
+    "description": "Common questions about our procedures"
+  },
+  "consultation": {
+    "title": "Book a Consultation",
+    "description": "Schedule your personal consultation",
+    "cta": "Book Now"
+  }
+}

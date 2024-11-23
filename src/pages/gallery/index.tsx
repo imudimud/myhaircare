@@ -1,8 +1,7 @@
 import React from 'react';
 import BeforeAfterGallery from '../../components/gallery/BeforeAfterGallery';
 import { motion } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
-import SEO from '../../components/SEO';
+import { SEOHelmet } from '../../components/SEOHelmet';
 import SchemaMarkup from '../../components/seo/SchemaMarkup';
 import { generateLocalBusinessSchema } from '../../utils/structuredData';
 import { useTranslation } from 'react-i18next';
@@ -11,7 +10,7 @@ export default function GalleryPage() {
   const { t } = useTranslation();
   const businessSchema = generateLocalBusinessSchema({
     name: "Estenove Hair Clinic",
-    description: "Leading hair transplant clinic in Istanbul offering advanced FUE techniques and natural results. View our extensive before & after gallery showcasing successful transformations.",
+    description: t('gallery.meta.description'),
     image: "https://estenove.com/images/clinic-exterior.jpg",
     telephone: "+90 XXX XXX XXXX",
     address: {
@@ -29,30 +28,17 @@ export default function GalleryPage() {
       "Mo-Fr 09:00-18:00",
       "Sa 09:00-14:00"
     ],
-    priceRange: "€€€"
   });
 
   return (
     <div className="min-h-screen pt-20 pb-12 bg-gray-50">
-      {/* Base SEO */}
-      <Helmet>
-        <title>Before & After Gallery - Estenove Hair Clinic</title>
-        <meta
-          name="description"
-          content="View our extensive gallery of successful hair transplant results. See real before and after photos from our satisfied patients at Estenove Hair Clinic."
-        />
-      </Helmet>
-
-      {/* Page-specific SEO */}
-      <SEO 
-        title={t('seo.pages.gallery.title', 'Before & After Gallery')}
-        description={t('seo.pages.gallery.description', 'View our extensive gallery of successful hair transplant results. See real before and after photos from our satisfied patients at Estenove Hair Clinic.')}
+      <SEOHelmet
+        titleKey="gallery.meta.title"
+        descriptionKey="gallery.meta.description"
+        keywordsKey="gallery.meta.keywords"
         path="/gallery"
-        structuredData={businessSchema}
       />
-
-      {/* Global Schema Markup */}
-      <SchemaMarkup />
+      <SchemaMarkup data={businessSchema} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">

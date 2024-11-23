@@ -1,0 +1,70 @@
+{
+  "section": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find Answers to Common Questions",
+    "description": "Everything you need to know about hair restoration procedures"
+  },
+  "categories": {
+    "general": {
+      "title": "General Questions",
+      "items": {
+        "what": {
+          "question": "What is hair transplantation?",
+          "answer": "Hair transplantation is a surgical procedure that moves hair follicles from a donor site to a balding area."
+        },
+        "candidate": {
+          "question": "Am I a good candidate?",
+          "answer": "Good candidates typically have sufficient donor hair and realistic expectations about the results."
+        },
+        "age": {
+          "question": "What is the ideal age for treatment?",
+          "answer": "While there's no strict age limit, most patients are between 25-65 years old with established hair loss patterns."
+        }
+      }
+    },
+    "procedure": {
+      "title": "Procedure Details",
+      "items": {
+        "duration": {
+          "question": "How long does the procedure take?",
+          "answer": "The procedure typically takes 6-8 hours, depending on the number of grafts."
+        },
+        "pain": {
+          "question": "Is the procedure painful?",
+          "answer": "Local anesthesia is used, making the procedure virtually painless."
+        },
+        "recovery": {
+          "question": "What is the recovery time?",
+          "answer": "Most patients return to work within 3-5 days, with full recovery in 2 weeks."
+        }
+      }
+    },
+    "results": {
+      "title": "Results & Aftercare",
+      "items": {
+        "visible": {
+          "question": "When will I see results?",
+          "answer": "Initial growth begins at 3-4 months, with final results visible at 12-18 months."
+        },
+        "permanent": {
+          "question": "Are the results permanent?",
+          "answer": "Yes, transplanted hair is permanent, though natural hair loss may continue."
+        },
+        "care": {
+          "question": "What aftercare is required?",
+          "answer": "Specific washing techniques and medications are prescribed for optimal results."
+        }
+      }
+    }
+  },
+  "cta": {
+    "more": "View More FAQs",
+    "ask": "Ask a Question",
+    "contact": "Contact Us"
+  },
+  "search": {
+    "placeholder": "Search FAQs",
+    "noResults": "No matching questions found",
+    "popular": "Popular Questions"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "main": {
+    "home": "Home",
+    "procedures": "Hair Procedures",
+    "patient": "Patient Resources",
+    "about": "About Us",
+    "education": "Education",
+    "contact": "Contact Us"
+  },
+  "procedures": {
+    "title": "Hair Procedures",
+    "sapphire": "Sapphire FUE",
+    "stemCell": "Stem Cell Therapy",
+    "dhi": "DHI Transplant",
+    "description": "Advanced hair restoration procedures"
+  },
+  "patient": {
+    "title": "Patient Resources",
+    "beforeAfter": "Before & After Gallery",
+    "testimonials": "Patient Testimonials",
+    "description": "Real results and patient experiences"
+  },
+  "about": {
+    "title": "About Us",
+    "main": "Our Story",
+    "why": "Why Choose Us",
+    "trust": "Trust & Safety",
+    "description": "Learn about our expertise and commitment"
+  },
+  "buttons": {
+    "bookConsultation": "Book Free Consultation",
+    "language": "EN",
+    "menu": "Menu",
+    "close": "Close"
+  }
+}

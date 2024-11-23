@@ -1,0 +1,50 @@
+{
+  "section": {
+    "title": "Before & After Gallery",
+    "subtitle": "Real Results from Real Patients",
+    "description": "Browse our collection of hair restoration success stories"
+  },
+  "filters": {
+    "all": "All Results",
+    "procedure": {
+      "title": "Procedure Type",
+      "sapphireFue": "Sapphire FUE",
+      "dhi": "DHI",
+      "stemCell": "Stem Cell"
+    },
+    "timeline": {
+      "title": "Timeline",
+      "month3": "3 Months",
+      "month6": "6 Months",
+      "month12": "12 Months",
+      "final": "Final Results"
+    },
+    "gender": {
+      "title": "Gender",
+      "male": "Male",
+      "female": "Female"
+    }
+  },
+  "image": {
+    "before": "Before",
+    "after": "After",
+    "months": "{{count}} Months Post-Procedure",
+    "procedure": "Procedure: {{name}}",
+    "zoom": "Click to Zoom",
+    "next": "Next Image",
+    "previous": "Previous Image"
+  },
+  "details": {
+    "patient": "Patient Details",
+    "age": "Age: {{age}}",
+    "gender": "Gender: {{gender}}",
+    "grafts": "Grafts: {{count}}",
+    "date": "Procedure Date: {{date}}",
+    "doctor": "Doctor: Dr. {{name}}"
+  },
+  "cta": {
+    "consultation": "Book Your Consultation",
+    "learn": "Learn More About {{procedure}}",
+    "share": "Share Your Results"
+  }
+}

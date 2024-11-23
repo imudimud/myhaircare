@@ -1,0 +1,41 @@
+{
+  "action": {
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "close": "Close",
+    "open": "Open",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous"
+  },
+  "navigation": {
+    "home": "Go to Home",
+    "top": "Back to Top",
+    "menu": "Toggle Menu",
+    "search": "Search",
+    "more": "Load More"
+  },
+  "consultation": {
+    "book": "Book Consultation",
+    "free": "Free Consultation",
+    "schedule": "Schedule Now",
+    "chat": "Chat with Us"
+  },
+  "social": {
+    "share": "Share",
+    "follow": "Follow Us",
+    "like": "Like",
+    "comment": "Comment"
+  },
+  "states": {
+    "loading": "Loading...",
+    "processing": "Processing...",
+    "sending": "Sending...",
+    "success": "Success!",
+    "error": "Error",
+    "disabled": "Not Available"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "section": {
+    "title": "Contact Us",
+    "subtitle": "Get in Touch",
+    "description": "We're here to answer your questions and provide support"
+  },
+  "form": {
+    "title": "Send us a Message",
+    "fields": {
+      "name": {
+        "label": "Full Name",
+        "placeholder": "Enter your full name"
+      },
+      "email": {
+        "label": "Email Address",
+        "placeholder": "Enter your email address"
+      },
+      "phone": {
+        "label": "Phone Number",
+        "placeholder": "Enter your phone number"
+      },
+      "subject": {
+        "label": "Subject",
+        "placeholder": "Select subject",
+        "options": {
+          "general": "General Inquiry",
+          "consultation": "Consultation Request",
+          "booking": "Booking Information",
+          "aftercare": "Aftercare Support",
+          "other": "Other"
+        }
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Type your message here"
+      }
+    },
+    "submit": "Send Message",
+    "success": "Message sent successfully",
+    "error": "Error sending message"
+  },
+  "info": {
+    "address": {
+      "title": "Address",
+      "line1": "123 Hair Care Street",
+      "line2": "Medical District",
+      "city": "Istanbul",
+      "country": "Turkey",
+      "postal": "34000"
+    },
+    "phone": {
+      "title": "Phone",
+      "main": "+90 123 456 7890",
+      "whatsapp": "+90 123 456 7891"
+    },
+    "email": {
+      "title": "Email",
+      "general": "info@myhaircare.com",
+      "support": "support@myhaircare.com"
+    },
+    "hours": {
+      "title": "Working Hours",
+      "weekdays": "Monday - Friday: 9:00 AM - 6:00 PM",
+      "weekend": "Saturday: 10:00 AM - 4:00 PM",
+      "timezone": "(UTC+3 Istanbul Time)"
+    }
+  },
+  "social": {
+    "title": "Follow Us",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "twitter": "Twitter",
+    "youtube": "YouTube"
+  },
+  "map": {
+    "title": "Our Location",
+    "directions": "Get Directions",
+    "viewLarger": "View Larger Map"
+  }
+}

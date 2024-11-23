@@ -1,0 +1,28 @@
+{
+  "meta": {
+    "title": "MyHairCare - Advanced Hair Restoration Solutions",
+    "description": "Experience world-class hair restoration with cutting-edge technology and expert care",
+    "keywords": "hair restoration, hair transplant, hair care, medical tourism"
+  },
+  "announcement": {
+    "special": "Special Offer",
+    "consultation": "Free Consultation Available",
+    "limited": "Limited Time Offer",
+    "book": "Book Now"
+  },
+  "topbar": {
+    "contact": {
+      "phone": "Call Us: +90 123 456 7890",
+      "email": "Email: info@myhaircare.com",
+      "whatsapp": "WhatsApp"
+    },
+    "location": {
+      "address": "Istanbul, Turkey",
+      "directions": "Get Directions"
+    },
+    "language": {
+      "select": "Select Language",
+      "current": "English"
+    }
+  }
+}

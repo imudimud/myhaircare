@@ -1,38 +1,56 @@
 {
   "nav": {
     "home": "Accueil",
-    "about": "À propos",
-    "whyEstenove": "Pourquoi Este Nove",
-    "ourTeam": "Notre équipe",
-    "trustAndSafety": "Confiance et sécurité",
-    "procedures": "Procédures",
-    "allProcedures": "Toutes les procédures",
-    "stemCellTherapy": "Thérapie par cellules souches",
-    "dhiTechnique": "Technique DHI",
-    "sapphireFue": "FUE Saphir",
-    "results": "Résultats",
-    "patientResources": "Ressources patients",
-    "educationCenter": "Centre d'éducation",
-    "medicalGuidelines": "Directives médicales",
-    "patientJourney": "Parcours du patient",
-    "careProtocols": "Protocoles de soins"
+    "menu": "Menu",
+    "close": "Fermer le menu",
+    "procedures": {
+      "title": "Procédures Capillaires",
+      "sapphire": "FUE Saphir",
+      "stem-cell": "Thérapie par Cellules Souches",
+      "dhi": "Transplantation DHI",
+      "description": "Procédures avancées de restauration capillaire"
+    },
+    "patient": {
+      "title": "Ressources Patients",
+      "before-after": "Galerie Avant & Après",
+      "testimonials": "Témoignages de Patients",
+      "description": "Résultats réels et expériences des patients"
+    },
+    "about": {
+      "title": "À Propos",
+      "main": "Notre Histoire",
+      "why": "Pourquoi Nous Choisir",
+      "trust": "Confiance & Sécurité",
+      "description": "Découvrez notre expertise et notre engagement"
+    },
+    "education": {
+      "title": "Éducation",
+      "description": "Centre de connaissances sur la restauration capillaire"
+    },
+    "contact": {
+      "title": "Contactez-Nous",
+      "whatsapp": "WhatsApp",
+      "description": "Prenez contact avec nos experts"
+    }
   },
   "buttons": {
-    "bookConsultation": "Réserver une consultation gratuite",
-    "language": "EN",
-    "learnMore": "En savoir plus",
-    "viewAll": "Voir tout",
-    "previous": "Précédent",
-    "next": "Suivant",
-    "scrollDown": "Défiler vers le bas",
-    "readMore": "Lire la suite",
-    "contactUs": "Nous contacter"
+    "bookConsultation": "Réserver une Consultation Gratuite",
+    "language": "FR",
+    "learnMore": "En Savoir Plus",
+    "viewGallery": "Voir la Galerie",
+    "readMore": "Lire Plus",
+    "getStarted": "Commencer",
+    "backToHome": "Retour à l'Accueil",
+    "goBack": "Retour"
   },
   "header": {
-    "openMenu": "Ouvrir le menu",
-    "closeMenu": "Fermer le menu"
+    "openMenu": "Ouvrir le Menu",
+    "closeMenu": "Fermer le Menu",
+    "consultation": "Réserver une Consultation Gratuite",
+    "navigation": "Navigation Principale"
   },
   "hero": {
+    "backgroundImage": "/images/hospital.jpg",
     "title": "Transformez votre apparence avec la restauration capillaire avancée",
     "subtitle": "Découvrez les dernières technologies de greffe de cheveux avec notre équipe d'experts",
     "cta": "Commencez votre parcours",
@@ -77,38 +95,153 @@
     "months": "mois"
   },
   "procedures": {
-    "title": "Nos procédures",
-    "subtitle": "Techniques de restauration capillaire avancées adaptées à vos besoins",
-    "readMore": "Lire la suite",
-    "sapphireFue": {
-      "title": "FUE Saphir",
-      "description": "Extraction folliculaire avancée utilisant des lames en saphir de précision pour une cicatrisation minimale et plus rapide",
-      "features": [
-        "Pas de cicatrice linéaire",
-        "Récupération rapide",
-        "Ligne frontale naturelle",
-        "Densité maximale",
-        "Traumatisme minimal",
-        "Guérison plus rapide"
-      ],
-      "details": {
-        "duration": "Durée",
-        "recovery": "Récupération",
-        "results": "Résultats",
-        "technique": "Technique"
+    "meta": {
+      "title": "Procédures de Greffe de Cheveux | MyHairCare",
+      "description": "Découvrez nos procédures avancées de greffe de cheveux, notamment FUE Saphir, DHI et traitements par cellules souches.",
+      "keywords": "procédures de greffe de cheveux, restauration capillaire, DHI, FUE, traitement par cellules souches"
+    },
+    "hero": {
+      "title": "Procédures Avancées de Greffe de Cheveux",
+      "subtitle": "Découvrez nos techniques de restauration capillaire de pointe adaptées à vos besoins"
+    },
+    "types": {
+      "title": "Nos Procédures",
+      "subtitle": "Choisissez parmi notre gamme de procédures avancées de greffe de cheveux",
+      "sapphireFue": {
+        "title": "FUE Saphir",
+        "description": "Extraction folliculaire avancée utilisant des lames en saphir de précision pour des cicatrices minimales"
+      },
+      "dhi": {
+        "title": "Technique DHI",
+        "description": "Implantation directe des cheveux pour un placement précis et des résultats naturels"
+      },
+      "stemCell": {
+        "title": "Traitement par Cellules Souches",
+        "description": "Thérapie innovante par cellules souches pour stimuler la croissance et la restauration des cheveux"
       }
     },
-    "dhi": {
-      "title": "Technique DHI",
-      "description": "Implantation directe des cheveux pour des résultats précis et naturels",
-      "features": [
-        "Pas de rasage nécessaire",
-        "Temps d'arrêt minimal",
-        "Design personnalisé",
-        "Densité maximale possible",
-        "Récupération rapide",
-        "Résultats naturels"
-      ]
+    "features": {
+      "title": "Pourquoi Nous Choisir",
+      "expertise": {
+        "title": "Équipe Expert",
+        "description": "Chirurgiens hautement qualifiés avec des années d'expérience spécialisée"
+      },
+      "technology": {
+        "title": "Technologie Avancée",
+        "description": "Équipement de pointe et techniques innovantes"
+      },
+      "results": {
+        "title": "Résultats Naturels",
+        "description": "Des résultats durables et naturels garantis"
+      },
+      "support": {
+        "title": "Support Complet",
+        "description": "Soins et support dédiés tout au long de votre parcours"
+      }
+    },
+    "faq": {
+      "title": "Questions Fréquemment Posées",
+      "items": {
+        "procedureTime": {
+          "question": "Combien de temps dure la procédure ?",
+          "answer": "La plupart des procédures durent 6-8 heures, selon l'étendue de la transplantation nécessaire"
+        },
+        "resultsTime": {
+          "question": "Quand verrai-je les résultats ?",
+          "answer": "La croissance initiale commence après 3-4 mois, avec des résultats complets visibles en 12-18 mois"
+        },
+        "painLevel": {
+          "question": "La procédure est-elle douloureuse ?",
+          "answer": "La procédure est réalisée sous anesthésie locale, assurant un inconfort minimal"
+        },
+        "recoveryTime": {
+          "question": "Quel est le temps de récupération ?",
+          "answer": "La plupart des patients reprennent le travail en 3-5 jours, avec une récupération complète en 2-3 semaines"
+        }
+      }
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "À Propos - Experts en Restauration Capillaire",
+      "description": "Découvrez notre équipe mondiale d'experts en restauration capillaire, nos techniques innovantes et notre engagement à transformer des vies.",
+      "keywords": ["experts restauration capillaire", "équipe greffe cheveux", "techniques innovantes", "soins capillaires avancés", "expertise médicale"]
+    },
+    "team": {
+      "title": "Notre équipe d'experts",
+      "subtitle": "Rencontrez les spécialistes derrière votre transformation",
+      "experience": "Années d'expérience",
+      "procedures": "Procédures",
+      "satisfaction": "Satisfaction des patients"
+    }
+  },
+  "consultation": {
+    "meta": {
+      "title": "Réservez Votre Consultation Gratuite",
+      "description": "Planifiez votre consultation gratuite avec nos experts en restauration capillaire. Choisissez entre consultation en personne, vidéo ou chat.",
+      "keywords": ["consultation greffe cheveux", "consultation gratuite", "consultation restauration capillaire", "consultation en ligne", "avis expert"]
+    }
+  },
+  "trust": {
+    "meta": {
+      "title": "Confiance et Reconnaissance - Clinique Capillaire Estenove",
+      "description": "Découvrez pourquoi la Clinique Capillaire Estenove est reconnue mondialement. Consultez nos certifications, accréditations et témoignages de patients."
+    },
+    "certifications": {
+      "title": "Certifications et Reconnaissance",
+      "subtitle": "Notre engagement envers l'excellence est reconnu par les principales organisations dans le domaine de la restauration capillaire et des soins de santé.",
+      "items": {
+        "ishrs": {
+          "title": "Certifié ISHRS",
+          "organization": "Société Internationale de Chirurgie de Restauration Capillaire",
+          "description": "Reconnu pour le respect des normes les plus élevées en chirurgie de restauration capillaire et formation continue."
+        },
+        "jci": {
+          "title": "Accrédité JCI",
+          "organization": "Joint Commission International",
+          "description": "Respect des normes mondiales de qualité et de sécurité des patients dans les services de santé."
+        },
+        "ema": {
+          "title": "Excellence en Restauration Capillaire",
+          "organization": "Association Médicale Européenne",
+          "description": "Récompensé pour ses réalisations exceptionnelles en techniques de greffe de cheveux et soins aux patients."
+        }
+      }
+    },
+    "mediaMentions": {
+      "title": "Couverture Médiatique",
+      "items": {
+        "medicalDaily": {
+          "source": "Medical Daily",
+          "title": "Approches Révolutionnaires en Transplantation Capillaire",
+          "excerpt": "Les techniques innovantes d'Estenove établissent de nouvelles normes dans le domaine de la restauration capillaire..."
+        },
+        "healthWellnessMagazine": {
+          "source": "Magazine Santé & Bien-être",
+          "title": "Leader dans les Soins aux Patients",
+          "excerpt": "L'engagement de la clinique envers la satisfaction des patients et les résultats exceptionnels leur a valu une reconnaissance..."
+        },
+        "medicalInnovationWeekly": {
+          "source": "Hebdomadaire Innovation Médicale",
+          "title": "Avancement de la Technologie de Restauration Capillaire",
+          "excerpt": "L'adoption par Estenove de technologies de pointe démontre leur dévouement à l'excellence..."
+        }
+      }
+    }
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Prenez contact avec notre équipe",
+    "whatsapp": {
+      "url": "https://wa.me/902125555555",
+      "text": "Contacter via WhatsApp"
+    },
+    "form": {
+      "name": "Votre Nom",
+      "email": "Votre Email",
+      "phone": "Numéro de Téléphone",
+      "message": "Votre Message",
+      "submit": "Envoyer le Message"
     }
   },
   "footer": {
@@ -172,42 +305,602 @@
     }
   },
   "gallery": {
-    "title": "Histoires de Réussite des Patients",
-    "subtitle": "Résultats réels de nos patients satisfaits",
-    "loading": "Chargement des images...",
+    "title": "Galerie Avant & Après",
+    "subtitle": "Explorez notre collection de transformations réussies et de résultats réels de patients",
     "before": "Avant",
     "after": "Après",
-    "beforeAlt": "Avant la procédure {{procedure}}",
-    "afterAlt": "Après la procédure {{procedure}}",
-    "months": "mois",
-    "years": "ans",
-    "grafts": "greffons",
-    "categories": {
-      "all": "Tous les Résultats",
-      "fue": "Résultats FUE",
-      "dhi": "Résultats DHI",
-      "combined": "Procédures Combinées"
-    },
+    "beforeAlt": "Avant le traitement {{procedure}}",
+    "afterAlt": "Après le traitement {{procedure}}",
+    "patientDetails": "Détails du Patient",
     "details": {
-      "age": "Âge du Patient",
-      "procedure": "Type de Procédure",
-      "grafts": "Total des Greffons",
+      "age": "Âge",
+      "procedure": "Procédure",
+      "grafts": "Greffes",
       "monthsAfter": "Mois Après",
-      "description": "Description du Résultat",
+      "description": "Description du Traitement",
       "additionalInfo": "Détails Supplémentaires"
     },
+    "years": "ans",
+    "grafts": "greffes",
+    "months": "mois",
+    "categories": {
+      "all": "Tous les Résultats",
+      "fue": "FUE",
+      "dhi": "DHI",
+      "combined": "Combiné"
+    },
+    "viewDetails": "Voir les Détails",
     "results": {
       "fue1": {
-        "description": "Amélioration significative de la ligne frontale et de la densité",
-        "details": "Le patient a reçu 4400 greffons en utilisant la technique FUE. La procédure s'est concentrée sur la reconstruction de la ligne frontale et l'augmentation de la densité globale."
+        "description": "Restauration complète de la ligne frontale avec densité naturelle",
+        "details": "Procédure FUE avec 4400 greffes ciblant les zones frontales et médianes du cuir chevelu. Le patient a constaté une amélioration significative de la densité et de l'apparence naturelle de la ligne des cheveux."
       },
       "dhi1": {
-        "description": "Restauration naturelle de la ligne frontale avec la technique DHI",
-        "details": "La technique DHI a été utilisée pour obtenir une densité maximale et une ligne frontale naturelle. La procédure comprenait 4000 greffons avec un contrôle personnalisé de l'angle."
+        "description": "Technique DHI avancée pour une implantation précise",
+        "details": "Procédure DHI avec 4000 greffes concentrée sur la zone de la couronne. La technique a permis un contrôle précis de l'angle et de la profondeur, résultant en une direction naturelle de la pousse des cheveux."
       },
       "combined1": {
         "description": "Restauration de la densité de la couronne et du cuir chevelu",
         "details": "Approche combinée utilisant les techniques FUE et DHI pour traiter à la fois la zone de la couronne et la ligne frontale. Le traitement incluait une thérapie PRP pour des résultats améliorés."
+      }
+    }
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Une erreur s'est produite",
+    "success": "Succès",
+    "readMore": "Lire la suite",
+    "showMore": "Voir plus",
+    "showLess": "Voir moins"
+  },
+  "whyEstenove": {
+    "meta": {
+      "title": "Pourquoi Choisir Estenove",
+      "description": "Découvrez pourquoi Estenove est un leader mondial de la transplantation capillaire, avec une collaboration Harvard, une technologie avancée et un taux de réussite de 97% dans plus de 50 pays.",
+      "keywords": ["greffe de cheveux", "collaboration Harvard", "technologie avancée", "portée mondiale"]
+    },
+    "hero": {
+      "title": "Pourquoi Choisir Este Nove pour Votre Parcours de Restauration Capillaire ?",
+      "subtitle": "Expertise de Classe Mondiale, Résultats Prouvés et Confiance Globale",
+      "image": {
+        "alt": "Clinique Este Nove"
+      },
+      "cta": {
+        "text": "Découvrez Notre Différence",
+        "ariaLabel": "Découvrez Notre Différence"
+      }
+    },
+    "stats": {
+      "title": "Nos Réalisations",
+      "items": {
+        "Years Experience": "Années d'Expérience",
+        "Success Rate": "Taux de Réussite",
+        "Patients Treated": "Patients Traités",
+        "Countries Served": "Pays Desservis"
+      }
+    },
+    "expertise": {
+      "title": "Excellence Mondiale en Restauration Capillaire",
+      "subtitle": "Soutenu par des institutions et certifications de renommée mondiale",
+      "items": {
+        "Harvard Affiliation": {
+          "title": "Affiliation Harvard",
+          "description": "Collaboration avec des experts médicaux affiliés à Harvard",
+          "imageAlt": "Certification d'affiliation Harvard"
+        },
+        "JCI Accreditation": {
+          "title": "Accréditation JCI",
+          "description": "Respect des plus hauts standards internationaux de soins de santé",
+          "imageAlt": "Certification d'accréditation JCI"
+        },
+        "ISO 9001 Certified": {
+          "title": "Certifié ISO 9001",
+          "description": "Certification du système de gestion de la qualité",
+          "imageAlt": "Certification ISO 9001"
+        },
+        "ISHRS Member": {
+          "title": "Membre ISHRS",
+          "description": "Société Internationale de Chirurgie de Restauration Capillaire",
+          "imageAlt": "Certification de membre ISHRS"
+        }
+      }
+    },
+    "features": {
+      "title": "Ce Qui Nous Distingue",
+      "subtitle": "Notre approche unique de la restauration capillaire",
+      "items": {
+        "Harvard Collaboration": {
+          "title": "Collaboration Harvard",
+          "description": "Partenariat direct avec la Harvard Medical School pour des techniques de pointe et des procédures basées sur la recherche."
+        },
+        "Advanced Technology": {
+          "title": "Technologie Avancée",
+          "description": "Techniques FUE et DHI de pointe combinées à la recherche sur les cellules souches pour des résultats optimaux."
+        },
+        "Certified Excellence": {
+          "title": "Excellence Certifiée",
+          "description": "Clinique accréditée internationalement avec de multiples certifications et normes de qualité."
+        },
+        "Ethical Practice": {
+          "title": "Pratique Éthique",
+          "description": "Engagement envers la transparence, les consultations honnêtes et une approche centrée sur le patient."
+        },
+        "Lifetime Support": {
+          "title": "Support à Vie",
+          "description": "Programme de suivi complet avec garantie à vie et support continu pour des résultats optimaux."
+        },
+        "Expert Team": {
+          "title": "Équipe d'Experts",
+          "description": "Chirurgiens et personnel médical hautement qualifiés avec une vaste expérience en restauration capillaire."
+        }
+      }
+    },
+    "journeySteps": {
+      "title": "Votre Parcours de Restauration Capillaire",
+      "subtitle": "Un guide étape par étape pour atteindre les résultats souhaités",
+      "items": {
+        "01": {
+          "title": "Consultation Gratuite",
+          "description": "Commencez par une analyse détaillée de votre perte de cheveux et un plan de traitement personnalisé.",
+          "imageAlt": "Illustration du processus de consultation"
+        },
+        "02": {
+          "title": "Planification du Traitement",
+          "description": "Personnalisez votre procédure en fonction de vos besoins uniques et des résultats souhaités.",
+          "imageAlt": "Illustration de la planification du traitement"
+        },
+        "03": {
+          "title": "Soins Expert",
+          "description": "Bénéficiez d'un traitement de classe mondiale avec notre équipe médicale qualifiée.",
+          "imageAlt": "Illustration des soins experts"
+        },
+        "04": {
+          "title": "Support à Vie",
+          "description": "Profitez d'un suivi et d'un support continus tout au long de votre parcours de restauration capillaire.",
+          "imageAlt": "Illustration du support à vie"
+        }
+      }
+    },
+    "advancedTechniques": {
+      "title": "Techniques Avancées de Restauration Capillaire",
+      "subtitle": "Procédures de pointe pour des résultats optimaux",
+      "items": {
+        "Sapphire FUE": {
+          "title": "FUE Saphir",
+          "description": "Précision avancée avec des lames en saphir pour des cicatrices minimales",
+          "imageAlt": "Illustration de la technique FUE Saphir"
+        },
+        "DHI Technique": {
+          "title": "Technique DHI",
+          "description": "Implantation directe des cheveux pour un placement précis et des résultats naturels",
+          "imageAlt": "Illustration de la technique DHI"
+        },
+        "Stem Cell Therapy": {
+          "title": "Thérapie par Cellules Souches",
+          "description": "Traitement régénératif de pointe pour des résultats améliorés",
+          "imageAlt": "Illustration de la thérapie par cellules souches"
+        }
+      }
+    },
+    "press": {
+      "title": "Présent dans les Médias Mondiaux",
+      "subtitle": "Reconnu par les principales publications internationales",
+      "items": {
+        "BBC": {
+          "ariaLabel": "Présenté sur BBC",
+          "imageAlt": "Logo BBC"
+        },
+        "Forbes": {
+          "ariaLabel": "Présenté dans Forbes",
+          "imageAlt": "Logo Forbes"
+        },
+        "Bloomberg": {
+          "ariaLabel": "Présenté sur Bloomberg",
+          "imageAlt": "Logo Bloomberg"
+        }
+      }
+    },
+    "testimonials": {
+      "title": "Témoignages de Patients",
+      "subtitle": "Expériences réelles de nos patients satisfaits"
+    },
+    "cta": {
+      "title": "Commencez Votre Parcours avec Este Nove Aujourd'hui",
+      "subtitle": "Faites le premier pas vers la restauration de votre confiance",
+      "buttons": {
+        "consultation": {
+          "text": "Réserver une Consultation Gratuite",
+          "ariaLabel": "Réserver une consultation gratuite"
+        },
+        "contact": {
+          "text": "Nous Contacter",
+          "ariaLabel": "Nous contacter"
+        }
+      }
+    }
+  },
+  "sapphireFue": {
+    "meta": {
+      "title": "Greffe de Cheveux FUE Saphir - Restauration Capillaire Avancée",
+      "description": "Découvrez la dernière technologie de greffe de cheveux FUE avec des lames en saphir pour des cicatrices minimales et des résultats naturels.",
+      "keywords": ["FUE saphir", "greffe de cheveux", "cicatrices minimales", "résultats naturels"]
+    },
+    "hero": {
+      "title": "Greffe de Cheveux FUE Saphir",
+      "subtitle": "Précision avancée avec des lames en saphir pour des résultats naturels",
+      "cta": "Réserver une Consultation"
+    },
+    "benefits": {
+      "title": "Avantages de la FUE Saphir",
+      "subtitle": "Technologie Avancée pour des Résultats Supérieurs",
+      "items": {
+        "naturalResults": {
+          "title": "Résultats Naturels",
+          "description": "Obtenez une ligne de cheveux naturelle et harmonieuse"
+        },
+        "minimalScarring": {
+          "title": "Cicatrices Minimales",
+          "description": "Les lames en saphir réduisent les dommages tissulaires et les cicatrices visibles"
+        },
+        "fasterRecovery": {
+          "title": "Récupération Rapide",
+          "description": "Reprise plus rapide des activités quotidiennes avec un temps de guérison réduit"
+        },
+        "highDensity": {
+          "title": "Haute Densité",
+          "description": "Obtenez une densité capillaire optimale grâce à une implantation précise"
+        }
+      }
+    },
+    "process": {
+      "title": "Processus de Traitement",
+      "steps": {
+        "extraction": {
+          "title": "Extraction des Follicules",
+          "description": "Extraction précise utilisant la technologie saphir"
+        },
+        "preparation": {
+          "title": "Préparation",
+          "description": "Planification approfondie et préparation de la zone donneuse"
+        },
+        "implantation": {
+          "title": "Implantation",
+          "description": "Placement stratégique pour un motif de croissance naturel"
+        },
+        "aftercare": {
+          "title": "Soins Post-Opératoires",
+          "description": "Instructions complètes pour les soins post-procédure"
+        }
+      }
+    },
+    "faq": {
+      "title": "Questions Fréquentes",
+      "items": {
+        "procedure": {
+          "question": "Qu'est-ce qui rend la FUE Saphir différente ?",
+          "answer": "La FUE Saphir utilise des lames en saphir avancées pour des incisions plus précises et une guérison plus rapide par rapport aux méthodes traditionnelles."
+        },
+        "recovery": {
+          "question": "Quelle est la durée de la période de récupération ?",
+          "answer": "La plupart des patients reprennent leurs activités normales dans les 7 à 10 jours, la guérison complète s'effectuant sur plusieurs semaines."
+        },
+        "results": {
+          "question": "Quand verrai-je les résultats ?",
+          "answer": "La croissance initiale commence à 3-4 mois, avec des résultats complets visibles à 12-18 mois."
+        },
+        "difference": {
+          "question": "Quels sont les avantages par rapport à la FUE traditionnelle ?",
+          "answer": "La FUE Saphir offre moins de traumatisme, une guérison plus rapide et une implantation plus précise par rapport aux méthodes traditionnelles."
+        }
+      }
+    }
+  },
+  "stemCellTherapy": {
+    "meta": {
+      "title": "Thérapie par Cellules Souches pour la Repousse des Cheveux",
+      "description": "Découvrez notre traitement innovant de thérapie par cellules souches pour la repousse des cheveux, stimulant la régénération naturelle des follicules.",
+      "keywords": ["cellules souches", "repousse cheveux", "traitement cheveux", "régénération capillaire", "thérapie régénérative"]
+    },
+    "hero": {
+      "title": "Thérapie par Cellules Souches",
+      "subtitle": "Stimulez la régénération naturelle de vos cheveux",
+      "cta": "Découvrir le Traitement"
+    },
+    "benefits": {
+      "title": "Avantages de la Thérapie par Cellules Souches",
+      "items": {
+        "naturalGrowth": {
+          "title": "Croissance Naturelle",
+          "description": "Stimule la régénération naturelle des follicules pileux"
+        },
+        "noSurgery": {
+          "title": "Non Chirurgical",
+          "description": "Traitement minimalement invasif sans chirurgie majeure"
+        },
+        "quickRecovery": {
+          "title": "Récupération Rapide",
+          "description": "Reprise immédiate des activités quotidiennes"
+        },
+        "longLasting": {
+          "title": "Résultats Durables",
+          "description": "Effets à long terme sur la santé des cheveux"
+        }
+      }
+    },
+    "procedure": {
+      "title": "Le Processus",
+      "subtitle": "Étapes de la thérapie par cellules souches",
+      "steps": {
+        "extraction": {
+          "title": "Extraction des Cellules",
+          "description": "Prélèvement des cellules souches de votre propre tissu",
+          "duration": "30-45 minutes"
+        },
+        "processing": {
+          "title": "Traitement",
+          "description": "Isolation et concentration des cellules souches",
+          "duration": "45-60 minutes"
+        },
+        "injection": {
+          "title": "Injection",
+          "description": "Application précise dans les zones de perte de cheveux",
+          "duration": "30-45 minutes"
+        },
+        "aftercare": {
+          "title": "Suivi",
+          "description": "Programme de soins post-traitement personnalisé",
+          "duration": "Continu"
+        }
+      }
+    },
+    "faq": {
+      "title": "Questions Fréquentes",
+      "subtitle": "Informations sur la thérapie par cellules souches",
+      "items": {
+        "effectiveness": {
+          "question": "Quelle est l'efficacité du traitement ?",
+          "answer": "La thérapie montre des résultats prometteurs pour la majorité des patients, avec une amélioration visible de la densité capillaire."
+        },
+        "duration": {
+          "question": "Combien de temps durent les résultats ?",
+          "answer": "Les résultats peuvent durer plusieurs années, avec des séances d'entretien recommandées."
+        },
+        "sessions": {
+          "question": "Combien de séances sont nécessaires ?",
+          "answer": "Le nombre de séances varie selon chaque cas, généralement 2-3 séances sont recommandées."
+        },
+        "sideEffects": {
+          "question": "Y a-t-il des effets secondaires ?",
+          "answer": "Les effets secondaires sont minimes, principalement une légère sensibilité temporaire."
+        }
+      }
+    },
+    "cta": {
+      "title": "Découvrez la Puissance des Cellules Souches",
+      "subtitle": "Prenez rendez-vous pour une consultation personnalisée",
+      "button": "Réserver une Consultation"
+    }
+  },
+  "dhi": {
+    "meta": {
+      "title": "Greffe de Cheveux DHI - Implantation Directe de Cheveux",
+      "description": "Découvrez la technique DHI la plus avancée pour des résultats naturels avec un temps de récupération minimal.",
+      "keywords": ["greffe de cheveux DHI", "implantation directe de cheveux", "restauration capillaire", "traitement de la perte de cheveux"]
+    },
+    "hero": {
+      "title": "Greffe de Cheveux DHI",
+      "subtitle": "Découvrez la technique d'implantation directe la plus avancée"
+    },
+    "benefits": {
+      "precision": {
+        "title": "Précision Maximale",
+        "description": "L'implantation directe permet un contrôle précis de l'angle, de la direction et de la profondeur"
+      },
+      "density": {
+        "title": "Densité Supérieure",
+        "description": "Obtenez des résultats plus denses et naturels avec un placement optimal des greffons"
+      },
+      "recovery": {
+        "title": "Récupération Rapide",
+        "description": "Temps d'arrêt minimal avec un processus de guérison plus rapide"
+      },
+      "scarless": {
+        "title": "Sans Cicatrice Linéaire",
+        "description": "Ne laisse aucune cicatrice visible grâce à notre technique d'extraction avancée"
+      }
+    },
+    "steps": {
+      "title": "Processus de Traitement",
+      "planning": {
+        "title": "Planification du Traitement",
+        "description": "Analyse détaillée et planification personnalisée pour des résultats optimaux"
+      },
+      "extraction": {
+        "title": "Extraction des Follicules",
+        "description": "Extraction douce des follicules pileux individuels à l'aide d'outils avancés"
+      },
+      "implantation": {
+        "title": "Implantation Directe",
+        "description": "Placement précis des greffons à l'aide d'outils DHI spécialisés"
+      },
+      "recovery": {
+        "title": "Récupération et Croissance",
+        "description": "Processus de guérison rapide avec résultats visibles en 3-4 mois"
+      }
+    },
+    "faq": {
+      "title": "Questions Fréquentes",
+      "difference": {
+        "question": "En quoi la DHI est-elle différente des autres méthodes ?",
+        "answer": "La DHI permet une implantation directe sans créer de sites receveurs au préalable, ce qui permet une meilleure précision et une récupération plus rapide"
+      },
+      "healing": {
+        "question": "Combien de temps dure le processus de guérison ?",
+        "answer": "La plupart des patients reprennent leurs activités normales en 3-5 jours, avec une guérison complète en 10-14 jours"
+      },
+      "results": {
+        "question": "Quand verrai-je les résultats ?",
+        "answer": "La croissance initiale commence après 3-4 mois, avec des résultats complets visibles en 12-18 mois"
+      }
+    }
+  },
+  "education": {
+    "meta": {
+      "title": "Éducation et Ressources sur la Greffe de Cheveux",
+      "description": "Accédez à des ressources éducatives complètes sur la greffe de cheveux, incluant des articles de recherche et des conseils d'experts.",
+      "keywords": ["éducation greffe cheveux", "ressources capillaires", "techniques transplantation", "guides soins", "conseils experts"]
+    }
+  },
+  "gallery": {
+    "meta": {
+      "title": "Galerie Avant & Après - Greffe de Cheveux",
+      "description": "Découvrez notre galerie de résultats réussis de greffe de cheveux. Voyez les transformations réelles de nos patients.",
+      "keywords": ["galerie avant après", "résultats greffe", "témoignages succès", "transformations", "photos résultats"]
+    }
+  },
+  "medical": {
+    "meta": {
+      "title": "Normes Médicales et Protocoles de Sécurité",
+      "description": "Découvrez nos normes médicales rigoureuses et nos protocoles qui garantissent la plus haute qualité de soins.",
+      "keywords": ["normes médicales", "protocoles sécurité", "qualité soins", "installations", "sécurité patients"]
+    }
+  },
+  "patient": {
+    "meta": {
+      "title": "Ressources pour les Patients - Votre Parcours de Restauration Capillaire",
+      "description": "Ressources complètes pour les patients subissant des procédures de restauration capillaire. Guides de préparation, informations de récupération et témoignages de patients.",
+      "keywords": ["ressources patients", "préparation greffe cheveux", "guide récupération", "témoignages patients"]
+    },
+    "hero": {
+      "title": "Ressources Patients",
+      "subtitle": "Tout ce que vous devez savoir sur votre parcours de restauration capillaire"
+    },
+    "beforeAfter": {
+      "meta": {
+        "title": "Galerie Avant & Après - Résultats de Greffe de Cheveux",
+        "description": "Découvrez notre collection de photos avant et après montrant les transformations réussies de greffe de cheveux.",
+        "keywords": ["photos avant après", "résultats greffe cheveux", "galerie transformations"]
+      },
+      "title": "Galerie Avant & Après",
+      "subtitle": "Résultats réels de nos patients satisfaits"
+    },
+    "testimonials": {
+      "meta": {
+        "title": "Témoignages de Patients - Histoires de Réussite de Greffe de Cheveux",
+        "description": "Lisez les témoignages réels de nos patients concernant leur expérience de restauration capillaire et leurs résultats.",
+        "keywords": ["témoignages patients", "avis greffe cheveux", "histoires réussite"]
+      },
+      "title": "Témoignages de Patients",
+      "subtitle": "Écoutez nos patients satisfaits"
+    }
+  },
+  "home": {
+    "title": "Solutions Avancées de Greffe de Cheveux",
+    "description": "Découvrez les dernières technologies en matière de restauration capillaire avec notre équipe d'experts.",
+    "subtitle": "Transformez Votre Look avec une Restauration Capillaire Avancée",
+    "seo": {
+      "title": "MyHairCare - Services Professionnels de Soins Capillaires",
+      "description": "Découvrez nos services experts de soins capillaires avec nos coiffeurs professionnels. Spécialisés dans les traitements innovants et les soins personnalisés pour tous types de cheveux."
+    },
+    "hero": {
+      "title": "Transformez Vos Cheveux, Transformez Votre Vie",
+      "subtitle": "Découvrez l'alliance parfaite entre expertise et soin avec nos services professionnels",
+      "cta": "Prendre Rendez-vous"
+    },
+    "features": {
+      "title": "Pourquoi Nous Choisir",
+      "expert": {
+        "title": "Coiffeurs Experts",
+        "description": "Notre équipe de professionnels certifiés apporte des années d'expérience et une formation continue pour vous offrir le meilleur service."
+      },
+      "care": {
+        "title": "Soins Personnalisés",
+        "description": "Nous comprenons que chaque client est unique. Nos traitements sont adaptés à vos besoins et objectifs capillaires spécifiques."
+      },
+      "quality": {
+        "title": "Produits Premium",
+        "description": "Nous utilisons uniquement des produits professionnels de la plus haute qualité pour garantir les meilleurs résultats pour vos cheveux."
+      }
+    },
+    "testimonials": {
+      "title": "Ce Que Disent Nos Clients",
+      "1": {
+        "name": "Sophie Martin",
+        "content": "La meilleure expérience de soins capillaires que j'ai jamais eue. L'attention aux détails et le service personnalisé sont exceptionnels !"
+      },
+      "2": {
+        "name": "Pierre Dubois",
+        "content": "Résultats incroyables et service professionnel. Mes cheveux n'ont jamais été aussi beaux !"
+      }
+    },
+    "awards": {
+      "title": "Nos Reconnaissances"
+    }
+  },
+  "procedures": {
+    "meta": {
+      "title": "Procédures de Greffe de Cheveux | MyHairCare",
+      "description": "Découvrez nos procédures avancées de greffe de cheveux, notamment FUE Saphir, DHI et traitements par cellules souches.",
+      "keywords": "procédures de greffe de cheveux, restauration capillaire, DHI, FUE, traitement par cellules souches"
+    },
+    "hero": {
+      "title": "Procédures Avancées de Greffe de Cheveux",
+      "subtitle": "Découvrez nos techniques de restauration capillaire de pointe adaptées à vos besoins"
+    },
+    "types": {
+      "title": "Nos Procédures",
+      "subtitle": "Choisissez parmi notre gamme de procédures avancées de greffe de cheveux",
+      "sapphireFue": {
+        "title": "FUE Saphir",
+        "description": "Extraction folliculaire avancée utilisant des lames en saphir de précision pour des cicatrices minimales"
+      },
+      "dhi": {
+        "title": "Technique DHI",
+        "description": "Implantation directe des cheveux pour un placement précis et des résultats naturels"
+      },
+      "stemCell": {
+        "title": "Traitement par Cellules Souches",
+        "description": "Thérapie innovante par cellules souches pour stimuler la croissance et la restauration des cheveux"
+      }
+    },
+    "features": {
+      "title": "Pourquoi Nous Choisir",
+      "expertise": {
+        "title": "Équipe Expert",
+        "description": "Chirurgiens hautement qualifiés avec des années d'expérience spécialisée"
+      },
+      "technology": {
+        "title": "Technologie Avancée",
+        "description": "Équipement de pointe et techniques innovantes"
+      },
+      "results": {
+        "title": "Résultats Naturels",
+        "description": "Des résultats durables et naturels garantis"
+      },
+      "support": {
+        "title": "Support Complet",
+        "description": "Soins et support dédiés tout au long de votre parcours"
+      }
+    },
+    "faq": {
+      "title": "Questions Fréquemment Posées",
+      "items": {
+        "procedureTime": {
+          "question": "Combien de temps dure la procédure ?",
+          "answer": "La plupart des procédures durent 6-8 heures, selon l'étendue de la transplantation nécessaire"
+        },
+        "resultsTime": {
+          "question": "Quand verrai-je les résultats ?",
+          "answer": "La croissance initiale commence après 3-4 mois, avec des résultats complets visibles en 12-18 mois"
+        },
+        "painLevel": {
+          "question": "La procédure est-elle douloureuse ?",
+          "answer": "La procédure est réalisée sous anesthésie locale, assurant un inconfort minimal"
+        },
+        "recoveryTime": {
+          "question": "Quel est le temps de récupération ?",
+          "answer": "La plupart des patients reprennent le travail en 3-5 jours, avec une récupération complète en 2-3 semaines"
+        }
       }
     }
   }

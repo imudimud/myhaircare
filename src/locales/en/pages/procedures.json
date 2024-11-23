@@ -1,0 +1,45 @@
+{
+  "dhi": {
+    "meta": {
+      "title": "DHI Hair Transplant - Direct Hair Implantation",
+      "description": "Experience the most advanced DHI hair transplant technique for natural-looking results with minimal recovery time.",
+      "keywords": ["DHI hair transplant", "direct hair implantation", "hair restoration", "hair loss treatment"]
+    },
+    "hero": {
+      "title": "DHI Hair Transplant",
+      "subtitle": "Experience the most advanced direct hair implantation technique"
+    },
+    "benefits": {
+      "precision": {
+        "title": "Maximum Precision",
+        "description": "Direct implantation allows for precise control over angle, direction, and depth"
+      },
+      "density": {
+        "title": "Higher Density",
+        "description": "Achieve denser, more natural-looking results with optimal graft placement"
+      },
+      "recovery": {
+        "title": "Quick Recovery",
+        "description": "Minimal downtime with faster healing and recovery process"
+      },
+      "scarless": {
+        "title": "No Linear Scarring",
+        "description": "Leave no visible scars with our advanced extraction technique"
+      }
+    }
+  },
+  "sapphireFue": {
+    "meta": {
+      "title": "Sapphire FUE Hair Transplant - Advanced Hair Restoration",
+      "description": "Experience the latest in FUE hair transplant technology with sapphire blades for minimal scarring and natural-looking results.",
+      "keywords": ["sapphire FUE", "hair transplant", "minimal scarring", "natural results"]
+    }
+  },
+  "stemCell": {
+    "meta": {
+      "title": "Stem Cell Hair Treatment - Advanced Hair Restoration",
+      "description": "Experience innovative stem cell therapy for natural hair regeneration with minimal recovery time.",
+      "keywords": "stem cell hair treatment, hair regeneration, natural hair growth, hair restoration"
+    }
+  }
+}

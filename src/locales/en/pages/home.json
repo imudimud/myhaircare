@@ -1,0 +1,26 @@
+{
+  "hero": {
+    "backgroundImage": "/images/hospital.jpg",
+    "title": "Transform Your Look with Advanced Hair Restoration",
+    "subtitle": "Experience the latest in hair transplant technology with our expert team",
+    "cta": "Start Your Journey",
+    "features": {
+      "expertise": {
+        "title": "Harvard-affiliated Expertise",
+        "description": "Benefit from our partnership with world-renowned medical institutions"
+      },
+      "technology": {
+        "title": "Latest FUE Technology",
+        "description": "Advanced techniques for natural-looking, permanent results"
+      },
+      "ethics": {
+        "title": "Ethical Practices",
+        "description": "Transparent, patient-focused approach to hair restoration"
+      },
+      "results": {
+        "title": "Proven Results",
+        "description": "97% success rate with over 15,000 satisfied patients"
+      }
+    }
+  }
+}

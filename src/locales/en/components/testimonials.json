@@ -1,0 +1,44 @@
+{
+  "section": {
+    "title": "Patient Testimonials",
+    "subtitle": "Real Stories from Real Patients",
+    "description": "Hear what our patients have to say about their hair restoration journey"
+  },
+  "filters": {
+    "all": "All Testimonials",
+    "video": "Video Testimonials",
+    "written": "Written Reviews",
+    "recent": "Most Recent",
+    "popular": "Most Popular"
+  },
+  "card": {
+    "verified": "Verified Patient",
+    "readMore": "Read Full Story",
+    "watchVideo": "Watch Video",
+    "shareStory": "Share Your Story",
+    "postedOn": "Posted on {{date}}",
+    "procedure": "Procedure: {{name}}"
+  },
+  "rating": {
+    "overall": "Overall Rating",
+    "service": "Service Quality",
+    "result": "Result Satisfaction",
+    "care": "Patient Care",
+    "outOf": "{{rating}} out of 5"
+  },
+  "cta": {
+    "share": "Share Your Experience",
+    "write": "Write a Review",
+    "record": "Record Video Review"
+  },
+  "form": {
+    "title": "Share Your Story",
+    "name": "Your Name",
+    "procedure": "Procedure Type",
+    "rating": "Your Rating",
+    "review": "Your Review",
+    "media": "Add Photos/Videos",
+    "consent": "I consent to sharing my story",
+    "submit": "Submit Review"
+  }
+}

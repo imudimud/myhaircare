@@ -1,353 +1,374 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import {
-  Droplet,
-  CheckCircle2,
-  Clock,
-  Users,
-  HeartPulse,
-  Star,
-  Shield,
-  HelpCircle,
-  ChevronRight,
-  MessageSquare,
-  Microscope,
-  Leaf,
-  Activity,
-  Zap
-} from 'lucide-react';
+import { Droplet, CheckCircle2, Clock, Microscope, Leaf, Activity, Star } from 'lucide-react';
+import { useTranslation } from '../../hooks/useTranslation';
+import { SEOHelmet } from '../../components/SEOHelmet';
+import Layout from '../../components/layout/Layout';
+import { generateMedicalProcedureSchema, generateFAQSchema } from '../../utils/schemaMarkup';
 
 const benefits = [
   {
-    title: 'Natural Growth Stimulation',
-    description: 'Activates and strengthens existing hair follicles naturally',
+    key: 'naturalGrowth',
     icon: Leaf
   },
   {
-    title: 'Improved Hair Quality',
-    description: 'Enhances thickness and health of existing hair',
-    icon: Star
+    key: 'noSurgery',
+    icon: CheckCircle2
   },
   {
-    title: 'Minimal Recovery Time',
-    description: 'No downtime, return to daily activities immediately',
+    key: 'quickRecovery',
     icon: Clock
   },
   {
-    title: 'Long-lasting Results',
-    description: 'Sustainable improvement in hair growth and density',
+    key: 'longLasting',
     icon: Activity
   }
 ];
 
 const steps = [
   {
-    title: 'Stem Cell Extraction',
-    description: 'Gentle extraction of stem cells from your own body',
-    duration: '30-45 minutes',
-    icon: Microscope
+    key: 'extraction',
   },
   {
-    title: 'Solution Preparation',
-    description: 'Processing and concentration of stem cells for maximum efficacy',
-    duration: '45-60 minutes',
-    icon: Droplet
+    key: 'processing',
   },
   {
-    title: 'Treatment Application',
-    description: 'Precise application to targeted areas of the scalp',
-    duration: '30-45 minutes',
-    icon: Zap
-  }
-];
-
-const comparisons = [
-  {
-    feature: 'Treatment Type',
-    stemCell: 'Non-surgical, regenerative',
-    fue: 'Surgical transplant',
-    dhi: 'Surgical implantation'
+    key: 'injection',
   },
   {
-    feature: 'Recovery Time',
-    stemCell: 'Immediate',
-    fue: '7-10 days',
-    dhi: '5-7 days'
-  },
-  {
-    feature: 'Best For',
-    stemCell: 'Early hair loss, thinning',
-    fue: 'Advanced hair loss',
-    dhi: 'Specific area treatment'
-  },
-  {
-    feature: 'Results Timeline',
-    stemCell: '2-3 months',
-    fue: '6-12 months',
-    dhi: '6-12 months'
+    key: 'aftercare',
   }
 ];
 
 const faqs = [
   {
-    question: 'Is stem cell treatment safe?',
-    answer: 'Yes, stem cell therapy is safe as it uses your body\'s own cells. The procedure is minimally invasive and performed under strict medical protocols.'
+    key: 'effectiveness',
   },
   {
-    question: 'How many sessions are needed?',
-    answer: 'Most patients see significant improvement after 2-3 sessions, spaced 4-6 weeks apart. The exact number depends on your individual condition and goals.'
+    key: 'duration',
   },
   {
-    question: 'When will I see results?',
-    answer: 'Initial improvements can be seen within 2-3 months, with continued enhancement over 6-12 months as new hair growth cycles begin.'
-  },
-  {
-    question: 'Who is an ideal candidate?',
-    answer: 'Ideal candidates include those with early-stage hair loss, thinning hair, or weakened follicles. The treatment is effective for both men and women.'
+    key: 'sessions',
   }
 ];
 
-export default function StemCell() {
-  return (
-    <div className="min-h-screen pt-20 pb-12 bg-gray-50">
-      <Helmet>
-        <title>Stem Cell Therapy for Hair Growth - Estenove Hair Clinic</title>
-        <meta
-          name="description"
-          content="Experience revolutionary stem cell therapy for natural hair restoration at Estenove. Advanced regenerative treatment for thicker, healthier hair."
-        />
-      </Helmet>
+const StemCellPage: React.FC = () => {
+  const { t } = useTranslation('procedures');
 
+  // Generate medical procedure schema
+  const procedureSchema = generateMedicalProcedureSchema({
+    name: t('stemCell.title'),
+    description: t('stemCell.description'),
+    benefits: t('stemCell.benefits', { returnObjects: true }),
+    risks: t('stemCell.risks', { returnObjects: true }),
+    preparation: t('stemCell.preparation', { returnObjects: true }),
+    recovery: t('stemCell.recovery', { returnObjects: true }),
+    image: '/images/procedures/stem-cell.jpg',
+    performedBy: {
+      name: 'Dr. Sarah Wilson',
+      specialty: 'Regenerative Medicine Specialist',
+      certifications: [
+        'American Board of Hair Restoration Surgery',
+        'International Society of Regenerative Medicine',
+      ],
+      image: '/images/doctors/dr-wilson.jpg',
+      description: 'Pioneer in stem cell therapy for hair restoration',
+    },
+    cost: {
+      currency: 'USD',
+      value: 6500,
+    },
+  });
+
+  // Generate FAQ schema
+  const faqSchema = generateFAQSchema(
+    t('stemCell.faq.items', { returnObjects: true }).map(faq => ({
+      question: faq.question,
+      answer: faq.answer,
+    }))
+  );
+
+  // Generate breadcrumbs
+  const breadcrumbs = [
+    { name: t('common:navigation.home'), url: '/' },
+    { name: t('procedures:navigation.procedures'), url: '/procedures' },
+    { name: t('procedures:stemCell.title'), url: '/procedures/stem-cell-therapy' },
+  ];
+
+  return (
+    <Layout heroBackground="/images/procedures/stem-cell-hero.jpg">
+      <SEOHelmet
+        titleKey="procedures:stemCell.meta.title"
+        descriptionKey="procedures:stemCell.meta.description"
+        keywordsKey="procedures:stemCell.meta.keywords"
+        image="/images/procedures/stem-cell.jpg"
+        breadcrumbs={breadcrumbs}
+        structuredData={[procedureSchema, faqSchema]}
+      />
+      
       {/* Hero Section */}
-      <div className="relative h-[80vh] min-h-[600px] w-full bg-gradient-to-br from-blue-900 to-blue-950 text-white">
-        <div className="container mx-auto h-full px-4 flex items-center justify-center">
-          <div className="w-full max-w-3xl mx-auto text-center">
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
-            >
-              Stem Cell Therapy: Revitalize Your Hair Naturally
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="text-base sm:text-lg md:text-xl text-blue-100 mb-8 max-w-3xl mx-auto"
-            >
-              Harnessing the Power of Regenerative Medicine for Hair Restoration
-            </motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center px-4"
-            >
-              <a
-                href="/consultation"
-                className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 border border-transparent rounded-full text-base sm:text-lg font-medium text-blue-600 bg-white hover:bg-blue-50 w-auto max-w-[280px] mx-auto"
+      <section className="pt-32 pb-16 text-white">
+        <motion.h1 
+          className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          {t('stemCell.title')}
+        </motion.h1>
+        <motion.p 
+          className="text-lg md:text-xl max-w-2xl"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          {t('stemCell.description')}
+        </motion.p>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-16 bg-white rounded-t-3xl -mt-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {benefits.map((benefit, index) => {
+            const Icon = benefit.icon;
+            return (
+              <motion.div
+                key={benefit.key}
+                className="flex flex-col items-center text-center p-6"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                Book Free Consultation
-              </a>
+                <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center mb-4">
+                  <Icon className="w-8 h-8 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">
+                  {t(`stemCell.benefits.${benefit.key}.title`)}
+                </h3>
+                <p className="text-gray-600">
+                  {t(`stemCell.benefits.${benefit.key}.description`)}
+                </p>
+              </motion.div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="py-16 bg-white">
+        <h2 className="text-3xl font-bold text-center mb-12">
+          {t('stemCell.process.title')}
+        </h2>
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          {steps.map((step, index) => (
+            <motion.div
+              key={step.key}
+              className="relative"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <div className="flex items-center mb-4">
+                <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">
+                  {index + 1}
+                </div>
+                <h3 className="text-lg font-semibold ml-3">
+                  {t(`stemCell.process.steps.${step.key}.title`)}
+                </h3>
+              </div>
+              <p className="text-gray-600">
+                {t(`stemCell.process.steps.${step.key}.description`)}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* Results Section */}
+      <section className="py-16 bg-white">
+        <h2 className="text-3xl font-bold text-center mb-12">
+          {t('stemCell.results.title')}
+        </h2>
+        <p className="text-center text-gray-600 max-w-3xl mx-auto mb-12">
+          {t('stemCell.results.description')}
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {[1, 2, 3].map((index) => (
+            <motion.div
+              key={index}
+              className="bg-white rounded-xl shadow-sm overflow-hidden"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <div className="aspect-[4/3] relative">
+                <img
+                  src={`/images/procedures/stem-cell-result-${index}.jpg`}
+                  alt={`Stem cell treatment result ${index}`}
+                  className="object-cover w-full h-full"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="font-semibold mb-2">
+                  {t(`stemCell.results.cases.${index}.title`)}
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  {t(`stemCell.results.cases.${index}.description`)}
+                </p>
+                <div className="mt-4 flex justify-between text-sm text-gray-500">
+                  <span>{t(`stemCell.results.cases.${index}.time`)}</span>
+                  <span>{t(`stemCell.results.cases.${index}.sessions`)} sessions</span>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* Science Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            {t('stemCell.science.title')}
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              className="flex flex-col justify-center"
+            >
+              <h3 className="text-xl font-semibold mb-4">
+                {t('stemCell.science.howItWorks.title')}
+              </h3>
+              <p className="text-gray-600 mb-6">
+                {t('stemCell.science.howItWorks.description')}
+              </p>
+              <ul className="space-y-4">
+                {[1, 2, 3].map((index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center">
+                      <Microscope className="w-4 h-4 text-blue-600" />
+                    </div>
+                    <span className="text-gray-600">
+                      {t(`stemCell.science.howItWorks.points.${index}`)}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              className="flex flex-col justify-center"
+            >
+              <h3 className="text-xl font-semibold mb-4">
+                {t('stemCell.science.research.title')}
+              </h3>
+              <p className="text-gray-600 mb-6">
+                {t('stemCell.science.research.description')}
+              </p>
+              <div className="bg-white p-6 rounded-xl shadow-sm">
+                <div className="flex items-center gap-4 mb-4">
+                  <Star className="w-8 h-8 text-blue-600" />
+                  <h4 className="font-semibold">
+                    {t('stemCell.science.research.stats.title')}
+                  </h4>
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  {[1, 2].map((index) => (
+                    <div key={index} className="text-center">
+                      <div className="text-2xl font-bold text-blue-600 mb-1">
+                        {t(`stemCell.science.research.stats.${index}.value`)}
+                      </div>
+                      <div className="text-sm text-gray-600">
+                        {t(`stemCell.science.research.stats.${index}.label`)}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </motion.div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* What Is Stem Cell Therapy Section */}
-        <div className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Revolutionizing Hair Regrowth with Cutting-Edge Science
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Stem cell therapy represents the future of hair restoration, using your body's natural
-              regenerative capabilities to stimulate new growth and strengthen existing follicles.
-              This innovative treatment harnesses the power of stem cells to revitalize your scalp
-              and promote sustainable hair growth.
-            </p>
-          </div>
-        </div>
-
-        {/* How It Works Section */}
-        <div className="bg-white rounded-2xl p-8 mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">How It Works</h2>
-            <p className="text-xl text-gray-600">Understanding the science behind stem cell therapy</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {steps.map((step, index) => (
-              <motion.div
-                key={step.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-gray-50 rounded-xl p-6"
-              >
-                <div className="flex items-center mb-4">
-                  <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                    <step.icon className="h-6 w-6 text-blue-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900">{step.title}</h3>
-                </div>
-                <p className="text-gray-600 mb-4">{step.description}</p>
-                <div className="flex items-center text-gray-500">
-                  <Clock className="h-5 w-5 mr-2" />
-                  <span>{step.duration}</span>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        {/* Benefits Section */}
-        <div className="bg-gray-100 rounded-2xl p-8 mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Benefits of Stem Cell Treatment</h2>
-            <p className="text-xl text-gray-600">Experience the advantages of regenerative therapy</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={benefit.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 + index * 0.1 }}
-                className="bg-white rounded-xl p-6 text-center"
-              >
-                <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-6">
-                  <benefit.icon className="h-8 w-8 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  {benefit.title}
+      {/* Cost Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            {t('stemCell.cost.title')}
+          </h2>
+          <div className="bg-gray-50 rounded-2xl p-8">
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-xl font-semibold mb-4">
+                  {t('stemCell.cost.pricing.title')}
                 </h3>
-                <p className="text-gray-600">{benefit.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        {/* Comparison Section */}
-        <div className="bg-white rounded-2xl p-4 sm:p-8 mb-16">
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Treatment Comparison</h2>
-            <p className="text-lg sm:text-xl text-gray-600">How stem cell therapy compares to other treatments</p>
-          </div>
-          <div className="overflow-x-auto -mx-4 sm:mx-0">
-            <div className="min-w-full inline-block align-middle">
-              <div className="overflow-hidden">
-                <table className="min-w-full divide-y divide-gray-200">
-                  <thead>
-                    <tr className="border-b-2 border-gray-200">
-                      <th className="px-3 sm:px-6 py-3 text-left text-sm sm:text-base text-gray-600 font-semibold">Feature</th>
-                      <th className="px-3 sm:px-6 py-3 text-left text-sm sm:text-base text-blue-600 font-semibold">Stem Cell Therapy</th>
-                      <th className="px-3 sm:px-6 py-3 text-left text-sm sm:text-base text-gray-600 font-semibold">FUE</th>
-                      <th className="px-3 sm:px-6 py-3 text-left text-sm sm:text-base text-gray-600 font-semibold">DHI</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-gray-200">
-                    {comparisons.map((row, index) => (
-                      <tr key={index}>
-                        <td className="px-3 sm:px-6 py-4 text-sm sm:text-base font-medium text-gray-900">{row.feature}</td>
-                        <td className="px-3 sm:px-6 py-4 text-sm sm:text-base text-blue-600">{row.stemCell}</td>
-                        <td className="px-3 sm:px-6 py-4 text-sm sm:text-base text-gray-600">{row.fue}</td>
-                        <td className="px-3 sm:px-6 py-4 text-sm sm:text-base text-gray-600">{row.dhi}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Scientific Backing */}
-        <div className="bg-blue-50 rounded-2xl p-4 sm:p-8 mb-16">
-          <div className="max-w-3xl mx-auto text-center">
-            <HeartPulse className="h-10 w-10 sm:h-12 sm:w-12 text-blue-600 mx-auto mb-6" />
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Scientific Backing</h2>
-            <p className="text-base sm:text-xl text-gray-600 mb-8">
-              Our stem cell therapy is supported by extensive clinical research and proven results.
-              Multiple studies have shown significant improvement in hair density and growth after
-              treatment, with success rates exceeding 80% in suitable candidates.
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 text-left">
-              <div className="bg-white rounded-xl p-6">
-                <div className="text-3xl font-bold text-blue-600 mb-2">85%</div>
-                <p className="text-gray-600">Patient satisfaction rate</p>
-              </div>
-              <div className="bg-white rounded-xl p-6">
-                <div className="text-3xl font-bold text-blue-600 mb-2">90%</div>
-                <p className="text-gray-600">Improved hair density</p>
-              </div>
-              <div className="bg-white rounded-xl p-6">
-                <div className="text-3xl font-bold text-blue-600 mb-2">95%</div>
-                <p className="text-gray-600">Treatment safety rating</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* FAQ Section */}
-        <div className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-            <p className="text-xl text-gray-600">Find answers to common questions about stem cell therapy</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {faqs.map((faq, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-xl p-6"
-              >
-                <div className="flex items-start mb-4">
-                  <HelpCircle className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0" />
-                  <h3 className="text-lg font-semibold text-gray-900">{faq.question}</h3>
+                <p className="text-gray-600 mb-6">
+                  {t('stemCell.cost.pricing.description')}
+                </p>
+                <div className="bg-white p-6 rounded-xl shadow-sm">
+                  <div className="text-3xl font-bold text-blue-600 mb-2">
+                    {t('stemCell.cost.pricing.value')}
+                  </div>
+                  <div className="text-sm text-gray-600">
+                    {t('stemCell.cost.pricing.note')}
+                  </div>
                 </div>
-                <p className="text-gray-600 ml-9">{faq.answer}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        {/* Final CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="py-20 bg-gradient-to-br from-blue-900 to-blue-950 text-white"
-        >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold mb-6">
-              Take the First Step Toward Healthier, Fuller Hair
-            </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Experience the power of regenerative medicine with our advanced stem cell therapy.
-              Schedule a consultation with our experts to discover if this treatment is right for you.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-              <a
-                href="/consultation"
-                className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 border border-transparent rounded-full text-base sm:text-lg font-medium text-blue-600 bg-white hover:bg-blue-50 w-auto max-w-[280px] mx-auto"
-              >
-                Schedule Free Consultation
-              </a>
-              <a
-                href="/contact"
-                className="inline-flex items-center px-8 py-4 border-2 border-white rounded-full text-lg font-medium text-white hover:bg-white/10"
-              >
-                <MessageSquare className="h-5 w-5 mr-2" />
-                Chat with Our Experts
-              </a>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-4">
+                  {t('stemCell.cost.insurance.title')}
+                </h3>
+                <p className="text-gray-600 mb-6">
+                  {t('stemCell.cost.insurance.description')}
+                </p>
+                <ul className="space-y-4">
+                  {[1, 2, 3].map((index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center">
+                        <CheckCircle2 className="w-4 h-4 text-blue-600" />
+                      </div>
+                      <span className="text-gray-600">
+                        {t(`stemCell.cost.insurance.points.${index}`)}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
-        </motion.div>
-      </div>
-    </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16 bg-gray-50 rounded-t-3xl">
+        <h2 className="text-3xl font-bold text-center mb-12">
+          {t('stemCell.faq.title')}
+        </h2>
+        <div className="max-w-3xl mx-auto divide-y bg-white rounded-xl shadow-sm">
+          {faqs.map((faq, index) => (
+            <motion.div 
+              key={faq.key} 
+              className="p-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <h3 className="text-lg font-medium text-gray-900">
+                {t(`stemCell.faq.items.${faq.key}.question`)}
+              </h3>
+              <p className="mt-2 text-gray-600">
+                {t(`stemCell.faq.items.${faq.key}.answer`)}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+    </Layout>
   );
-}
+};
+
+export default StemCellPage;

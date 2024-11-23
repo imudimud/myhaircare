@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "title": "Patient Testimonials - Real Stories, Real Results",
+    "description": "Read authentic testimonials from our satisfied patients about their hair restoration journey.",
+    "keywords": ["patient testimonials", "success stories", "hair restoration reviews", "patient experiences"]
+  },
+  "title": "Patient Testimonials",
+  "subtitle": "Real Stories from Real Patients",
+  "description": "Discover the experiences of our patients who have undergone various hair restoration procedures.",
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "John D.",
+      "age": 35,
+      "procedure": "Sapphire FUE",
+      "rating": 5,
+      "date": "2023-06-15",
+      "title": "Life-changing Results",
+      "content": "The Sapphire FUE procedure exceeded my expectations. The team was professional and supportive throughout.",
+      "beforeImage": "/images/testimonials/john-before.jpg",
+      "afterImage": "/images/testimonials/john-after.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Sarah M.",
+      "age": 42,
+      "procedure": "Stem Cell Treatment",
+      "rating": 5,
+      "date": "2023-07-20",
+      "title": "Amazing Natural Results",
+      "content": "The stem cell treatment was perfect for my needs. Minimal downtime and great results.",
+      "beforeImage": "/images/testimonials/sarah-before.jpg",
+      "afterImage": "/images/testimonials/sarah-after.jpg"
+    }
+  ],
+  "filters": {
+    "all": "All Testimonials",
+    "sapphireFue": "Sapphire FUE",
+    "dhi": "DHI Treatment",
+    "stemCell": "Stem Cell Therapy"
+  },
+  "sorting": {
+    "latest": "Most Recent",
+    "oldest": "Oldest First",
+    "highestRated": "Highest Rated"
+  }
+}

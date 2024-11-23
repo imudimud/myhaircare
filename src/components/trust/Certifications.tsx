@@ -1,41 +1,32 @@
 import React from 'react';
 import { Award, Shield, Star, Trophy, Newspaper } from 'lucide-react';
+import { useTranslation } from '../../hooks/useTranslation';
 
 interface Certification {
-  title: string;
-  organization: string;
-  description: string;
+  key: string;
   icon: React.ReactNode;
   year: string;
 }
 
 interface MediaMention {
-  source: string;
-  title: string;
-  excerpt: string;
+  key: string;
   date: string;
   link: string;
 }
 
 const certifications: Certification[] = [
   {
-    title: "ISHRS Certified",
-    organization: "International Society of Hair Restoration Surgery",
-    description: "Recognized for meeting the highest standards in hair restoration surgery and continuing education.",
+    key: "ishrs",
     icon: <Award className="w-8 h-8 text-blue-600" />,
     year: "2023"
   },
   {
-    title: "JCI Accredited",
-    organization: "Joint Commission International",
-    description: "Meeting global standards for quality and patient safety in healthcare services.",
+    key: "jci",
     icon: <Shield className="w-8 h-8 text-blue-600" />,
     year: "2023"
   },
   {
-    title: "Excellence in Hair Restoration",
-    organization: "European Medical Association",
-    description: "Awarded for outstanding achievements in hair transplantation techniques and patient care.",
+    key: "ema",
     icon: <Trophy className="w-8 h-8 text-blue-600" />,
     year: "2023"
   }
@@ -43,89 +34,72 @@ const certifications: Certification[] = [
 
 const mediaMentions: MediaMention[] = [
   {
-    source: "Medical Daily",
-    title: "Revolutionary Approaches in Hair Transplantation",
-    excerpt: "Estenove's innovative techniques are setting new standards in the field of hair restoration...",
+    key: "medicalDaily",
     date: "2024-01-10",
     link: "#"
   },
   {
-    source: "Health & Wellness Magazine",
-    title: "Leading the Way in Patient Care",
-    excerpt: "The clinic's commitment to patient satisfaction and exceptional results has earned them recognition...",
+    key: "healthWellnessMagazine",
     date: "2023-12-15",
     link: "#"
   },
   {
-    source: "Medical Innovation Weekly",
-    title: "Advancing Hair Restoration Technology",
-    excerpt: "Estenove's adoption of cutting-edge technology demonstrates their dedication to excellence...",
+    key: "medicalInnovationWeekly",
     date: "2023-11-20",
     link: "#"
   }
 ];
 
 export default function Certifications() {
+  const { t } = useTranslation();
+
   return (
-    <section className="bg-white">
-      <div className="bg-gradient-to-b from-navy-900 to-navy-800 text-white py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4 text-white">Certifications & Recognition</h2>
-            <p className="text-blue-100">
-              Our commitment to excellence is recognized by leading organizations in the field
-              of hair restoration and healthcare.
-            </p>
-          </div>
+    <section className="py-16 bg-white">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold mb-4">{t('trust.certifications.title')}</h2>
+          <p className="text-gray-600">{t('trust.certifications.subtitle')}</p>
         </div>
-      </div>
-
-      <div className="container mx-auto px-4 pb-20">
-        {/* Certifications */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold mb-8">Professional Certifications</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {certifications.map((cert, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition-shadow">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-blue-50 rounded-xl">
-                    {cert.icon}
-                  </div>
-                  <div>
-                    <h4 className="font-bold mb-1">{cert.title}</h4>
-                    <p className="text-sm text-blue-600 mb-2">{cert.organization}</p>
-                    <p className="text-gray-600 text-sm mb-2">{cert.description}</p>
-                    <span className="text-sm text-gray-500">Certified {cert.year}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+        
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          {certifications.map((cert) => (
+            <div key={cert.key} className="p-6 bg-white rounded-lg shadow-lg">
+              {cert.icon}
+              <h3 className="text-xl font-semibold mt-4">
+                {t(`trust.certifications.items.${cert.key}.title`)}
+              </h3>
+              <p className="text-gray-600 mt-2">
+                {t(`trust.certifications.items.${cert.key}.organization`)}
+              </p>
+              <p className="mt-2">
+                {t(`trust.certifications.items.${cert.key}.description`)}
+              </p>
+              <p className="text-sm text-gray-500 mt-2">{cert.year}</p>
+            </div>
+          ))}
         </div>
 
-        {/* Media Mentions */}
-        <div>
-          <h3 className="text-2xl font-bold mb-8">Media Coverage</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {mediaMentions.map((mention, index) => (
-              <a 
-                key={index}
+        <div className="mt-16">
+          <h3 className="text-2xl font-bold text-center mb-8">
+            {t('trust.mediaMentions.title')}
+          </h3>
+          <div className="grid md:grid-cols-2 gap-8">
+            {mediaMentions.map((mention) => (
+              <a
+                key={mention.key}
                 href={mention.link}
-                className="block bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition-shadow"
+                className="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow"
               >
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-blue-50 rounded-xl">
-                    <Newspaper className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <div>
-                    <span className="text-sm text-blue-600 mb-1 block">{mention.source}</span>
-                    <h4 className="font-bold mb-2">{mention.title}</h4>
-                    <p className="text-gray-600 text-sm mb-3">{mention.excerpt}</p>
-                    <span className="text-sm text-gray-500">
-                      {new Date(mention.date).toLocaleDateString()}
-                    </span>
-                  </div>
-                </div>
+                <h4 className="text-xl font-semibold">
+                  {t(`trust.mediaMentions.items.${mention.key}.source`)}
+                </h4>
+                <p className="text-lg font-medium mt-2">
+                  {t(`trust.mediaMentions.items.${mention.key}.title`)}
+                </p>
+                <p className="text-gray-600 mt-2">
+                  {t(`trust.mediaMentions.items.${mention.key}.excerpt`)}
+                </p>
+                <p className="text-sm text-gray-500 mt-2">{mention.date}</p>
               </a>
             ))}
           </div>

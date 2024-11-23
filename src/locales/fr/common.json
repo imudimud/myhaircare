@@ -1,0 +1,51 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": {
+      "title": "À Propos",
+      "main": "À Propos de Nous",
+      "why": "Pourquoi Este Nove",
+      "trust": "Confiance & Certifications"
+    },
+    "procedures": {
+      "title": "Procédures",
+      "sapphire": "FUE Saphir",
+      "stem-cell": "Thérapie par Cellules Souches",
+      "dhi": "Technique DHI"
+    },
+    "patient": {
+      "title": "Patients",
+      "before-after": "Avant/Après",
+      "testimonials": "Témoignages"
+    },
+    "education": "Éducation",
+    "medical": "Médical",
+    "consultation": "Consultation",
+    "gallery": "Galerie",
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Contactez notre équipe"
+    }
+  },
+  "buttons": {
+    "bookConsultation": "Réserver une Consultation Gratuite",
+    "language": "FR",
+    "learnMore": "En Savoir Plus",
+    "readMore": "Lire Plus",
+    "viewAll": "Voir Tout",
+    "getStarted": "Commencer",
+    "submit": "Envoyer",
+    "close": "Fermer",
+    "whatsapp": "Contacter via WhatsApp",
+    "scrollDown": "Défiler vers le Bas",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "backToTop": "Retour en Haut",
+    "contactUs": "Nous Contacter"
+  },
+  "seo": {
+    "defaultTitle": "Clinique Capillaire Este Nove - Restauration Capillaire Avancée",
+    "defaultDescription": "Découvrez la restauration capillaire de classe mondiale à la Clinique Este Nove. Techniques avancées, chirurgiens expérimentés et résultats naturels.",
+    "defaultKeywords": ["greffe de cheveux", "restauration capillaire", "clinique capillaire", "Istanbul", "FUE", "DHI"]
+  }
+}

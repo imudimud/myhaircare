@@ -1,0 +1,51 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": {
+      "title": "About",
+      "main": "About Us",
+      "why": "Why Este Nove",
+      "trust": "Trust & Certifications"
+    },
+    "procedures": {
+      "title": "Procedures",
+      "sapphire": "Sapphire FUE",
+      "stem-cell": "Stem Cell Therapy",
+      "dhi": "DHI Technique"
+    },
+    "patient": {
+      "title": "Patients",
+      "before-after": "Before/After",
+      "testimonials": "Testimonials"
+    },
+    "education": "Education",
+    "medical": "Medical",
+    "consultation": "Consultation",
+    "gallery": "Gallery",
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Get in touch with our team"
+    }
+  },
+  "buttons": {
+    "bookConsultation": "Book Free Consultation",
+    "language": "EN",
+    "learnMore": "Learn More",
+    "readMore": "Read More",
+    "viewAll": "View All",
+    "getStarted": "Get Started",
+    "submit": "Submit",
+    "close": "Close",
+    "whatsapp": "Contact via WhatsApp",
+    "scrollDown": "Scroll Down",
+    "previous": "Previous",
+    "next": "Next",
+    "backToTop": "Back to Top",
+    "contactUs": "Contact Us"
+  },
+  "seo": {
+    "defaultTitle": "Este Nove Hair Clinic - Advanced Hair Restoration",
+    "defaultDescription": "Experience world-class hair restoration at Este Nove Hair Clinic. Advanced techniques, experienced surgeons, and natural results.",
+    "defaultKeywords": ["hair transplant", "hair restoration", "hair clinic", "Istanbul", "FUE", "DHI"]
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "section": {
+    "title": "Treatment Results",
+    "subtitle": "Success Stories and Outcomes",
+    "description": "Explore our proven track record of successful hair restoration procedures"
+  },
+  "statistics": {
+    "title": "Our Success Metrics",
+    "patients": {
+      "title": "Satisfied Patients",
+      "count": "15,000+",
+      "description": "Happy patients worldwide"
+    },
+    "success": {
+      "title": "Success Rate",
+      "rate": "97%",
+      "description": "Successful procedures"
+    },
+    "experience": {
+      "title": "Years of Experience",
+      "years": "20+",
+      "description": "In hair restoration"
+    },
+    "grafts": {
+      "title": "Grafts Transplanted",
+      "count": "10M+",
+      "description": "Successfully transplanted"
+    }
+  },
+  "timeline": {
+    "title": "Recovery Timeline",
+    "stages": {
+      "day1": {
+        "title": "Day 1",
+        "description": "Initial recovery phase begins"
+      },
+      "week1": {
+        "title": "Week 1",
+        "description": "Scabs begin to heal"
+      },
+      "month1": {
+        "title": "Month 1",
+        "description": "Transplanted hair sheds"
+      },
+      "month3": {
+        "title": "Month 3",
+        "description": "New hair starts growing"
+      },
+      "month6": {
+        "title": "Month 6",
+        "description": "Significant growth visible"
+      },
+      "month12": {
+        "title": "Month 12",
+        "description": "Final results emerge"
+      }
+    }
+  },
+  "gallery": {
+    "title": "Results Gallery",
+    "filters": {
+      "procedure": "Filter by Procedure",
+      "timeline": "Filter by Timeline",
+      "gender": "Filter by Gender"
+    },
+    "categories": {
+      "sapphireFue": "Sapphire FUE Results",
+      "dhi": "DHI Results",
+      "stemCell": "Stem Cell Results"
+    }
+  },
+  "testimonials": {
+    "title": "Patient Testimonials",
+    "featured": "Featured Stories",
+    "readMore": "Read More Stories"
+  },
+  "cta": {
+    "consultation": "Book Your Free Consultation",
+    "gallery": "View Full Gallery",
+    "contact": "Contact Us for More Information"
+  }
+}

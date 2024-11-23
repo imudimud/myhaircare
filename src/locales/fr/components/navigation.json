@@ -1,0 +1,52 @@
+{
+  "main": {
+    "home": "Accueil",
+    "procedures": "Procédures Capillaires",
+    "patient": "Ressources Patients",
+    "about": "À Propos",
+    "education": "Éducation",
+    "medical": "Médical",
+    "contact": "Contact"
+  },
+  "procedures": {
+    "title": "Procédures Capillaires",
+    "sapphire": "FUE Saphir",
+    "stemCell": "Thérapie par Cellules Souches",
+    "dhi": "Greffe DHI",
+    "description": "Procédures avancées de restauration capillaire"
+  },
+  "patient": {
+    "title": "Ressources Patients",
+    "beforeAfter": "Galerie Avant & Après",
+    "testimonials": "Témoignages de Patients",
+    "description": "Résultats réels et expériences de patients"
+  },
+  "about": {
+    "title": "À Propos",
+    "main": "Notre Histoire",
+    "why": "Pourquoi Nous Choisir",
+    "trust": "Confiance & Sécurité",
+    "description": "Découvrez notre expertise et notre engagement"
+  },
+  "medical": {
+    "title": "Médical",
+    "guidelines": "Directives Médicales",
+    "safety": "Sécurité & Protocoles",
+    "research": "Recherche & Innovation",
+    "description": "Informations médicales et protocoles de sécurité"
+  },
+  "education": {
+    "title": "Éducation",
+    "description": "Ressources éducatives sur la restauration capillaire"
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Contactez notre équipe d'experts"
+  },
+  "buttons": {
+    "bookConsultation": "Réserver une Consultation Gratuite",
+    "language": "FR",
+    "menu": "Menu",
+    "close": "Fermer"
+  }
+}

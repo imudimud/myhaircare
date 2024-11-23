@@ -1,0 +1,45 @@
+{
+  "dhi": {
+    "meta": {
+      "title": "Greffe de Cheveux DHI - Implantation Directe de Cheveux",
+      "description": "Découvrez la technique de greffe de cheveux DHI la plus avancée pour des résultats naturels avec un temps de récupération minimal.",
+      "keywords": ["greffe de cheveux DHI", "implantation directe de cheveux", "restauration capillaire", "traitement de la perte de cheveux"]
+    },
+    "hero": {
+      "title": "Greffe de Cheveux DHI",
+      "subtitle": "Découvrez la technique d'implantation directe de cheveux la plus avancée"
+    },
+    "benefits": {
+      "precision": {
+        "title": "Précision Maximale",
+        "description": "L'implantation directe permet un contrôle précis de l'angle, de la direction et de la profondeur"
+      },
+      "density": {
+        "title": "Densité Supérieure",
+        "description": "Obtenez des résultats plus denses et naturels avec un placement optimal des greffons"
+      },
+      "recovery": {
+        "title": "Récupération Rapide",
+        "description": "Temps d'arrêt minimal avec un processus de guérison et de récupération plus rapide"
+      },
+      "scarless": {
+        "title": "Sans Cicatrice Linéaire",
+        "description": "Ne laisse aucune cicatrice visible grâce à notre technique d'extraction avancée"
+      }
+    }
+  },
+  "sapphireFue": {
+    "meta": {
+      "title": "Greffe de Cheveux FUE Saphir - Restauration Capillaire Avancée",
+      "description": "Découvrez la dernière technologie de greffe de cheveux FUE avec des lames en saphir pour des cicatrices minimales et des résultats naturels.",
+      "keywords": ["FUE saphir", "greffe de cheveux", "cicatrices minimales", "résultats naturels"]
+    }
+  },
+  "stemCell": {
+    "meta": {
+      "title": "Traitement Capillaire par Cellules Souches - Restauration Capillaire Avancée",
+      "description": "Découvrez la thérapie innovante par cellules souches pour une régénération naturelle des cheveux avec un temps de récupération minimal.",
+      "keywords": "traitement capillaire par cellules souches, régénération capillaire, croissance naturelle des cheveux, restauration capillaire"
+    }
+  }
+}

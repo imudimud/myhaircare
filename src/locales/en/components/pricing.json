@@ -1,0 +1,66 @@
+{
+  "section": {
+    "title": "Treatment Pricing",
+    "subtitle": "Transparent Pricing for Quality Care",
+    "description": "Explore our competitive pricing options for hair restoration procedures"
+  },
+  "packages": {
+    "basic": {
+      "name": "Basic Package",
+      "price": "€2,500",
+      "description": "Essential hair transplant package",
+      "features": [
+        "Up to 2000 grafts",
+        "Local anesthesia",
+        "Basic aftercare kit",
+        "1 year follow-up"
+      ]
+    },
+    "premium": {
+      "name": "Premium Package",
+      "price": "€3,500",
+      "description": "Enhanced hair transplant experience",
+      "features": [
+        "Up to 3000 grafts",
+        "PRP treatment included",
+        "Premium aftercare kit",
+        "2 years follow-up",
+        "Hotel accommodation"
+      ]
+    },
+    "vip": {
+      "name": "VIP Package",
+      "price": "€5,000",
+      "description": "Ultimate hair restoration experience",
+      "features": [
+        "Unlimited grafts",
+        "PRP treatment included",
+        "Stem cell therapy",
+        "Lifetime follow-up",
+        "5-star hotel accommodation",
+        "Private transfer service"
+      ]
+    }
+  },
+  "features": {
+    "included": "What's Included",
+    "excluded": "What's Not Included",
+    "additional": "Additional Services"
+  },
+  "payment": {
+    "methods": "Payment Methods",
+    "installment": "Installment Options",
+    "currency": "Prices in Euro",
+    "guarantee": "Money-back Guarantee"
+  },
+  "cta": {
+    "contact": "Contact for Details",
+    "customize": "Customize Package",
+    "book": "Book Now"
+  },
+  "notes": {
+    "consultation": "Free consultation included",
+    "customization": "Packages can be customized",
+    "validity": "Prices valid until {{date}}"
+  }
+}

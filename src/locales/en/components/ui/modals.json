@@ -1,0 +1,52 @@
+{
+  "common": {
+    "close": "Close",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save Changes",
+    "loading": "Loading..."
+  },
+  "consultation": {
+    "title": "Book Your Free Consultation",
+    "subtitle": "Speak with our hair restoration experts",
+    "success": "Consultation Booked Successfully",
+    "error": "Error Booking Consultation"
+  },
+  "gallery": {
+    "title": "Before & After Gallery",
+    "next": "Next Image",
+    "previous": "Previous Image",
+    "count": "Image {{current}} of {{total}}"
+  },
+  "video": {
+    "play": "Play Video",
+    "pause": "Pause Video",
+    "mute": "Mute",
+    "unmute": "Unmute",
+    "fullscreen": "Fullscreen"
+  },
+  "alerts": {
+    "success": {
+      "title": "Success",
+      "message": "Operation completed successfully"
+    },
+    "error": {
+      "title": "Error",
+      "message": "Something went wrong"
+    },
+    "warning": {
+      "title": "Warning",
+      "message": "Please review the information"
+    },
+    "info": {
+      "title": "Information",
+      "message": "Please note"
+    }
+  },
+  "confirmation": {
+    "title": "Are you sure?",
+    "message": "This action cannot be undone",
+    "confirm": "Yes, proceed",
+    "cancel": "No, cancel"
+  }
+}

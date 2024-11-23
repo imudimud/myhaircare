@@ -1,38 +1,65 @@
 {
   "nav": {
     "home": "Home",
-    "about": "About",
-    "whyEstenove": "Why Este Nove",
-    "ourTeam": "Our Team",
-    "trustAndSafety": "Trust & Safety",
-    "procedures": "Procedures",
-    "allProcedures": "All Procedures",
-    "stemCellTherapy": "Stem Cell Therapy",
-    "dhiTechnique": "DHI Technique",
-    "sapphireFue": "Sapphire FUE",
-    "results": "Results",
-    "patientResources": "Patient Resources",
-    "educationCenter": "Education Center",
-    "medicalGuidelines": "Medical Guidelines",
-    "patientJourney": "Patient Journey",
-    "careProtocols": "Care Protocols"
+    "menu": "Menu",
+    "close": "Close menu",
+    "procedures": {
+      "title": "Hair Procedures",
+      "sapphire": "Sapphire FUE",
+      "stem-cell": "Stem Cell Therapy",
+      "dhi": "DHI Transplant",
+      "description": "Advanced hair restoration procedures"
+    },
+    "patient": {
+      "title": "Patient Resources",
+      "before-after": "Before & After Gallery",
+      "testimonials": "Patient Testimonials",
+      "description": "Real results and patient experiences"
+    },
+    "about": {
+      "title": "About Us",
+      "main": "Our Story",
+      "why": "Why Choose Us",
+      "trust": "Trust & Safety",
+      "description": "Learn about our expertise and commitment"
+    },
+    "education": {
+      "title": "Education",
+      "description": "Hair restoration knowledge center"
+    },
+    "contact": {
+      "title": "Contact Us",
+      "whatsapp": "WhatsApp Us",
+      "description": "Get in touch with our experts"
+    }
   },
   "buttons": {
     "bookConsultation": "Book Free Consultation",
-    "language": "FR",
+    "language": "EN",
     "learnMore": "Learn More",
+    "readMore": "Read More",
     "viewAll": "View All",
+    "getStarted": "Get Started",
+    "submit": "Submit",
+    "close": "Close",
+    "whatsapp": "Contact via WhatsApp",
+    "scrollDown": "Scroll Down",
     "previous": "Previous",
     "next": "Next",
-    "scrollDown": "Scroll Down",
-    "readMore": "Read More",
-    "contactUs": "Contact Us"
+    "backToTop": "Back to Top",
+    "contactUs": "Contact Us",
+    "viewGallery": "View Gallery",
+    "backToHome": "Back to Home",
+    "goBack": "Go Back"
   },
   "header": {
     "openMenu": "Open Menu",
-    "closeMenu": "Close Menu"
+    "closeMenu": "Close Menu",
+    "consultation": "Book Free Consultation",
+    "navigation": "Main Navigation"
   },
   "hero": {
+    "backgroundImage": "/images/hospital.jpg",
     "title": "Transform Your Look with Advanced Hair Restoration",
     "subtitle": "Experience the latest in hair transplant technology with our expert team",
     "cta": "Start Your Journey",
@@ -77,38 +104,305 @@
     "months": "months"
   },
   "procedures": {
-    "title": "Our Procedures",
-    "subtitle": "Advanced hair restoration techniques tailored to your needs",
-    "readMore": "Read More",
-    "sapphireFue": {
-      "title": "Sapphire FUE",
-      "description": "Advanced follicular extraction using precision sapphire blades for minimal scarring and faster healing",
-      "features": [
-        "No linear scarring",
-        "Quick recovery",
-        "Natural hairline",
-        "Maximum density",
-        "Minimal trauma",
-        "Faster healing"
-      ],
-      "details": {
-        "duration": "Duration",
-        "recovery": "Recovery",
-        "results": "Results",
-        "technique": "Technique"
+    "meta": {
+      "title": "Hair Transplant Procedures | MyHairCare",
+      "description": "Explore our advanced hair transplant procedures including Sapphire FUE, DHI, and Stem Cell treatments.",
+      "keywords": "hair transplant procedures, hair restoration, DHI, FUE, stem cell treatment"
+    },
+    "hero": {
+      "title": "Advanced Hair Transplant Procedures",
+      "subtitle": "Discover our state-of-the-art hair restoration techniques tailored to your needs"
+    },
+    "types": {
+      "title": "Our Procedures",
+      "subtitle": "Choose from our range of advanced hair transplant procedures",
+      "sapphireFue": {
+        "title": "Sapphire FUE",
+        "description": "Advanced follicular unit extraction using precision sapphire blades for minimal scarring"
+      },
+      "dhi": {
+        "title": "DHI Technique",
+        "description": "Direct hair implantation for precise placement and natural-looking results"
+      },
+      "stemCell": {
+        "title": "Stem Cell Treatment",
+        "description": "Innovative stem cell therapy to enhance hair growth and restoration"
       }
     },
-    "dhi": {
-      "title": "DHI Technique",
-      "description": "Direct Hair Implantation for precise, natural-looking results",
-      "features": [
-        "No shaving required",
-        "Minimal downtime",
-        "Custom hairline design",
-        "Dense packing possible",
-        "Quick recovery",
-        "Natural results"
-      ]
+    "features": {
+      "title": "Why Choose Us",
+      "expertise": {
+        "title": "Expert Team",
+        "description": "Highly skilled surgeons with years of specialized experience"
+      },
+      "technology": {
+        "title": "Advanced Technology",
+        "description": "State-of-the-art equipment and innovative techniques"
+      },
+      "results": {
+        "title": "Natural Results",
+        "description": "Consistently achieving natural-looking, lasting outcomes"
+      },
+      "support": {
+        "title": "Comprehensive Support",
+        "description": "Dedicated care and support throughout your journey"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": {
+        "procedureTime": {
+          "question": "How long does the procedure take?",
+          "answer": "Most procedures take 6-8 hours, depending on the extent of transplantation needed"
+        },
+        "resultsTime": {
+          "question": "When will I see results?",
+          "answer": "Initial growth begins in 3-4 months, with full results visible in 12-18 months"
+        },
+        "painLevel": {
+          "question": "Is the procedure painful?",
+          "answer": "The procedure is performed under local anesthesia, ensuring minimal discomfort"
+        },
+        "recoveryTime": {
+          "question": "What is the recovery time?",
+          "answer": "Most patients return to work within 3-5 days, with full recovery in 2-3 weeks"
+        }
+      }
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "About Us - Leading Hair Restoration Experts",
+      "description": "Learn about our world-class team of hair restoration experts, our innovative techniques, and our commitment to transforming lives through advanced hair care solutions.",
+      "keywords": ["hair restoration experts", "hair transplant team", "innovative techniques", "advanced hair care", "medical expertise"]
+    },
+    "hero": {
+      "title": "About Este Nove",
+      "subtitle": "Setting the standard in hair restoration excellence"
+    },
+    "achievements": {
+      "title": "Our Achievements",
+      "subtitle": "A track record of excellence in hair restoration",
+      "items": {
+        "experience": {
+          "value": "15+",
+          "label": "Years of Experience"
+        },
+        "patients": {
+          "value": "15,000+",
+          "label": "Satisfied Patients"
+        },
+        "countries": {
+          "value": "50+",
+          "label": "Countries Served"
+        },
+        "satisfaction": {
+          "value": "97%",
+          "label": "Success Rate"
+        }
+      }
+    },
+    "story": {
+      "title": "Our Story",
+      "content": "Founded in 2008, Este Nove has grown from a small clinic to a global leader in hair restoration. Our journey is marked by continuous innovation, unwavering commitment to patient care, and a passion for delivering life-changing results. Today, we proudly serve patients from over 50 countries, combining Harvard-affiliated expertise with cutting-edge technology."
+    },
+    "values": {
+      "title": "Our Core Values",
+      "items": {
+        "expertise": {
+          "title": "Medical Excellence",
+          "description": "Harvard-affiliated expertise ensuring the highest standards of care"
+        },
+        "trust": {
+          "title": "Patient Trust",
+          "description": "Building lasting relationships through transparency and integrity"
+        },
+        "care": {
+          "title": "Personalized Care",
+          "description": "Tailored solutions for each patient's unique needs"
+        },
+        "innovation": {
+          "title": "Innovation",
+          "description": "Pioneering advanced techniques in hair restoration"
+        }
+      }
+    },
+    "team": {
+      "title": "Meet Our Expert Team",
+      "subtitle": "World-class specialists dedicated to your transformation",
+      "members": {
+        "member1": {
+          "name": "Dr. Sarah Johnson",
+          "role": "Medical Director",
+          "description": "Harvard-trained specialist with over 15 years of experience in hair restoration"
+        },
+        "member2": {
+          "name": "Dr. Michael Chen",
+          "role": "Lead Surgeon",
+          "description": "Pioneering expert in FUE and DHI techniques with international recognition"
+        },
+        "member3": {
+          "name": "Dr. Emma Martinez",
+          "role": "Research Director",
+          "description": "Leading our stem cell therapy research and innovation initiatives"
+        }
+      }
+    }
+  },
+  "consultation": {
+    "meta": {
+      "title": "Book Your Free Hair Transplant Consultation",
+      "description": "Schedule your free consultation with our hair restoration experts. Choose from in-person, video, or chat consultations to discuss your hair transplant journey.",
+      "keywords": ["hair transplant consultation", "free consultation", "hair restoration consultation", "online consultation", "expert consultation"]
+    }
+  },
+  "education": {
+    "meta": {
+      "title": "Hair Transplant Education & Resources",
+      "description": "Access comprehensive educational resources about hair transplantation, including research papers, technique videos, and expert guidance.",
+      "keywords": ["hair transplant education", "hair restoration resources", "transplant techniques", "hair care guides", "expert guidance"]
+    },
+    "hero": {
+      "title": "Educational Resources",
+      "subtitle": "Explore our comprehensive collection of educational materials designed to help you understand hair transplantation better."
+    },
+    "features": {
+      "research": {
+        "title": "Research Papers",
+        "description": "Access the latest research and studies in hair transplantation and restoration techniques."
+      },
+      "techniques": {
+        "title": "Video Tutorials",
+        "description": "Watch detailed video demonstrations of various hair transplant techniques and procedures."
+      },
+      "guidance": {
+        "title": "Expert Guidance",
+        "description": "Get professional insights and recommendations from experienced hair transplant specialists."
+      },
+      "resources": {
+        "title": "Learning Resources",
+        "description": "Download comprehensive guides and materials to enhance your understanding of hair care."
+      }
+    }
+  },
+  "gallery": {
+    "meta": {
+      "title": "Hair Transplant Before & After Gallery",
+      "description": "View our extensive gallery of successful hair transplant results. See real patient transformations and the natural-looking results we achieve.",
+      "keywords": ["before after gallery", "hair transplant results", "success stories", "patient transformations", "result photos"]
+    },
+    "title": "Before & After Gallery",
+    "subtitle": "Explore our collection of successful transformations and real patient results",
+    "before": "Before",
+    "after": "After",
+    "beforeAlt": "Before {{procedure}} treatment",
+    "afterAlt": "After {{procedure}} treatment",
+    "patientDetails": "Patient Details",
+    "details": {
+      "age": "Age",
+      "procedure": "Procedure",
+      "grafts": "Grafts",
+      "monthsAfter": "Months After",
+      "description": "Treatment Description",
+      "additionalInfo": "Additional Details"
+    },
+    "years": "years",
+    "grafts": "grafts",
+    "months": "months",
+    "categories": {
+      "all": "All Results",
+      "fue": "FUE",
+      "dhi": "DHI",
+      "combined": "Combined"
+    },
+    "viewDetails": "View Details",
+    "results": {
+      "fue1": {
+        "description": "Complete hairline restoration with natural density",
+        "details": "FUE procedure with 4400 grafts targeting the frontal and mid-scalp areas. Patient experienced significant improvement in density and natural hairline appearance."
+      },
+      "dhi1": {
+        "description": "Advanced DHI technique for precise implantation",
+        "details": "DHI procedure with 4000 grafts focusing on the crown area. The technique allowed for precise angle and depth control, resulting in natural hair growth direction."
+      },
+      "combined1": {
+        "description": "Crown and mid-scalp density restoration",
+        "details": "Combined approach using FUE and DHI techniques to address both crown area and hairline. Treatment included PRP therapy for enhanced results."
+      }
+    }
+  },
+  "medical": {
+    "meta": {
+      "title": "Medical Standards & Safety Protocols",
+      "description": "Learn about our rigorous medical standards, safety protocols, and state-of-the-art facilities that ensure the highest quality of care.",
+      "keywords": ["medical standards", "safety protocols", "quality care", "medical facilities", "patient safety"]
+    }
+  },
+  "trust": {
+    "title": "Trust & Safety",
+    "subtitle": "Your safety is our top priority",
+    "certifications": "International Certifications",
+    "standards": "Medical Standards",
+    "technology": "Advanced Technology",
+    "meta": {
+      "title": "Trust & Recognition - Estenove Hair Clinic",
+      "description": "Discover why Estenove Hair Clinic is trusted worldwide. View our certifications, accreditations, and patient testimonials."
+    },
+    "certifications": {
+      "title": "Certifications & Recognition",
+      "subtitle": "Our commitment to excellence is recognized by leading organizations in the field of hair restoration and healthcare.",
+      "items": {
+        "ishrs": {
+          "title": "ISHRS Certified",
+          "organization": "International Society of Hair Restoration Surgery",
+          "description": "Recognized for meeting the highest standards in hair restoration surgery and continuing education."
+        },
+        "jci": {
+          "title": "JCI Accredited",
+          "organization": "Joint Commission International",
+          "description": "Meeting global standards for quality and patient safety in healthcare services."
+        },
+        "ema": {
+          "title": "Excellence in Hair Restoration",
+          "organization": "European Medical Association",
+          "description": "Awarded for outstanding achievements in hair transplantation techniques and patient care."
+        }
+      }
+    },
+    "mediaMentions": {
+      "title": "Media Coverage",
+      "items": {
+        "medicalDaily": {
+          "source": "Medical Daily",
+          "title": "Revolutionary Approaches in Hair Transplantation",
+          "excerpt": "Estenove's innovative techniques are setting new standards in the field of hair restoration..."
+        },
+        "healthWellnessMagazine": {
+          "source": "Health & Wellness Magazine",
+          "title": "Leading the Way in Patient Care",
+          "excerpt": "The clinic's commitment to patient satisfaction and exceptional results has earned them recognition..."
+        },
+        "medicalInnovationWeekly": {
+          "source": "Medical Innovation Weekly",
+          "title": "Advancing Hair Restoration Technology",
+          "excerpt": "Estenove's adoption of cutting-edge technology demonstrates their dedication to excellence..."
+        }
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with our team",
+    "whatsapp": {
+      "url": "https://wa.me/902125555555",
+      "text": "Contact via WhatsApp"
+    },
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "phone": "Phone Number",
+      "message": "Your Message",
+      "submit": "Send Message"
     }
   },
   "footer": {
@@ -171,44 +465,366 @@
       }
     }
   },
-  "gallery": {
-    "title": "Patient Success Stories",
-    "subtitle": "Real results from our satisfied patients",
-    "loading": "Loading images...",
-    "before": "Before",
-    "after": "After",
-    "beforeAlt": "Before {{procedure}} procedure",
-    "afterAlt": "After {{procedure}} procedure",
-    "months": "months",
-    "years": "years",
-    "grafts": "grafts",
-    "categories": {
-      "all": "All Results",
-      "fue": "FUE Results",
-      "dhi": "DHI Results",
-      "combined": "Combined Procedures"
+  "whyEstenove": {
+    "meta": {
+      "title": "Why Choose Este Nove - Leading Hair Restoration Clinic",
+      "description": "Discover why Este Nove is a global leader in hair restoration, featuring Harvard-affiliated expertise, advanced technology, and a proven track record of success.",
+      "keywords": "hair restoration clinic, hair transplant experts, Harvard affiliation, advanced hair care"
     },
-    "details": {
-      "age": "Patient Age",
-      "procedure": "Procedure Type",
-      "grafts": "Total Grafts",
-      "monthsAfter": "Months After",
-      "description": "Result Description",
-      "additionalInfo": "Additional Details"
+    "hero": {
+      "title": "Why Choose Este Nove",
+      "subtitle": "Experience world-class hair restoration with proven results"
     },
-    "results": {
-      "fue1": {
-        "description": "Significant improvement in frontal hairline and density",
-        "details": "Patient received 4400 grafts using FUE technique. The procedure focused on rebuilding the frontal hairline and increasing overall density."
-      },
-      "dhi1": {
-        "description": "Natural hairline restoration with DHI technique",
-        "details": "DHI technique was used to achieve maximum density and natural-looking hairline. The procedure included 4000 grafts with custom angle control."
-      },
-      "combined1": {
-        "description": "Crown and mid-scalp density restoration",
-        "details": "Combined approach using FUE and DHI techniques to address both crown area and hairline. Treatment included PRP therapy for enhanced results."
+    "stats": {
+      "title": "Our Impact",
+      "subtitle": "A legacy of excellence in hair restoration",
+      "items": {
+        "experience": "Years Experience",
+        "successRate": "Success Rate",
+        "patients": "Patients Treated",
+        "countries": "Countries Served"
+      }
+    },
+    "features": {
+      "title": "What Sets Us Apart",
+      "items": {
+        "harvard": {
+          "title": "Harvard Collaboration",
+          "description": "Direct partnership with Harvard Medical School ensures cutting-edge techniques"
+        },
+        "technology": {
+          "title": "Advanced Technology",
+          "description": "State-of-the-art equipment and innovative procedures"
+        },
+        "excellence": {
+          "title": "Certified Excellence",
+          "description": "Internationally accredited with multiple quality certifications"
+        },
+        "ethics": {
+          "title": "Ethical Practice",
+          "description": "Transparent, patient-first approach in all procedures"
+        },
+        "support": {
+          "title": "Lifetime Support",
+          "description": "Comprehensive aftercare and ongoing guidance"
+        },
+        "expertise": {
+          "title": "Expert Team",
+          "description": "Highly skilled surgeons with extensive experience"
+        }
+      }
+    },
+    "globalReach": {
+      "title": "Global Reach",
+      "subtitle": "Serving patients from over 50 countries worldwide"
+    },
+    "certifications": {
+      "title": "Our Certifications",
+      "subtitle": "Internationally recognized standards of excellence",
+      "items": {
+        "iso": {
+          "title": "ISO 9001 Certified",
+          "description": "Meeting international quality management standards"
+        },
+        "jci": {
+          "title": "JCI Accredited",
+          "description": "Gold standard in global healthcare quality"
+        },
+        "harvard": {
+          "title": "Harvard Affiliated",
+          "description": "Academic collaboration for advanced research"
+        },
+        "medical": {
+          "title": "Medical Excellence",
+          "description": "Highest standards in medical care and safety"
+        }
       }
     }
+  },
+  "sapphireFue": {
+    "meta": {
+      "title": "Sapphire FUE Hair Transplant - Advanced Hair Restoration",
+      "description": "Experience the latest in FUE hair transplant technology with sapphire blades for minimal scarring and natural-looking results.",
+      "keywords": ["sapphire FUE", "hair transplant", "minimal scarring", "natural results", "hair restoration", "permanent solution"]
+    },
+    "title": "Sapphire FUE Hair Transplant",
+    "description": "Sapphire FUE is an advanced hair transplantation technique that uses specially designed sapphire blades for more precise and less traumatic incisions.",
+    "benefits": [
+      "Minimal scarring and faster healing",
+      "More precise and smaller incisions",
+      "Higher graft survival rate",
+      "Natural-looking results",
+      "Less post-operative discomfort",
+      "Quicker recovery time"
+    ],
+    "risks": [
+      "Temporary swelling and discomfort",
+      "Minor bleeding and scabbing",
+      "Temporary numbness in treated areas",
+      "Risk of infection (very rare)",
+      "Possibility of shock loss"
+    ],
+    "preparation": [
+      "Stop smoking at least one week before surgery",
+      "Avoid blood thinning medications",
+      "Don't drink alcohol 3 days before procedure",
+      "Get adequate rest before the surgery",
+      "Follow pre-operative washing instructions",
+      "Wear comfortable clothing on surgery day"
+    ],
+    "recovery": [
+      "Rest for 24-48 hours after the procedure",
+      "Sleep with head elevated for first week",
+      "Avoid direct sunlight for 2 weeks",
+      "Follow prescribed medication schedule",
+      "Gentle washing after 72 hours",
+      "Resume normal activities after 1 week"
+    ]
+  },
+  "dhi": {
+    "meta": {
+      "title": "DHI Hair Transplant - Direct Hair Implantation",
+      "description": "Experience the most advanced DHI hair transplant technique for natural-looking results with minimal recovery time.",
+      "keywords": ["DHI hair transplant", "direct hair implantation", "hair restoration", "hair loss treatment"]
+    },
+    "title": "DHI Hair Transplant",
+    "description": "Direct Hair Implantation (DHI) is an advanced hair transplant technique that enables precise placement of hair follicles for the most natural-looking results.",
+    "benefits": {
+      "precisionPlacement": "Maximum precision in hair placement",
+      "noScalpel": "No scalpel incision required",
+      "minimalTrauma": "Minimal trauma to scalp tissue",
+      "quickRecovery": "Faster recovery time",
+      "naturalResults": "Natural-looking results"
+    },
+    "risks": [
+      "Temporary swelling",
+      "Mild discomfort during recovery",
+      "Temporary numbness in treated areas",
+      "Minimal risk of infection"
+    ],
+    "preparation": [
+      "Stop blood-thinning medications",
+      "Avoid smoking for 2 weeks",
+      "No alcohol 3 days before",
+      "Follow pre-operative guidelines"
+    ],
+    "recovery": [
+      "24-48 hours initial rest",
+      "Sleep with elevated head",
+      "Follow medication schedule",
+      "Avoid sun exposure",
+      "Resume activities after 5-7 days"
+    ]
+  },
+  "stemCell": {
+    "meta": {
+      "title": "Stem Cell Hair Treatment - Advanced Hair Restoration",
+      "description": "Experience innovative stem cell therapy for natural hair regeneration with minimal recovery time.",
+      "keywords": ["stem cell treatment", "hair regeneration", "natural growth", "hair restoration"],
+      "benefits": ["Stimulates natural hair growth", "Strengthens existing hair follicles"],
+      "risks": ["Mild scalp sensitivity", "Temporary redness", "Minor swelling possible"],
+      "preparation": ["Complete medical evaluation", "Stop using hair products 24h before"],
+      "recovery": ["Avoid blood thinners", "Resume normal activities next day"]
+    },
+    "title": "Stem Cell Hair Treatment",
+    "description": "Our stem cell therapy harnesses your body's natural regenerative capabilities to stimulate hair growth and improve follicle health.",
+    "benefits": {
+      "naturalGrowth": "Stimulates natural hair growth",
+      "noSurgery": "Non-surgical procedure",
+      "minimalRecovery": "Quick recovery time",
+      "longLasting": "Long-lasting results",
+      "scalp": "Improves scalp health"
+    },
+    "risks": [
+      "Temporary scalp sensitivity",
+      "Mild discomfort at injection sites",
+      "Variable results between patients",
+      "Multiple sessions may be needed"
+    ],
+    "preparation": [
+      "Blood tests if required",
+      "Avoid blood thinners",
+      "Stop certain medications",
+      "Follow pre-treatment instructions"
+    ],
+    "recovery": [
+      "Resume normal activities next day",
+      "Avoid harsh hair products",
+      "Protect scalp from sun",
+      "Follow aftercare instructions"
+    ]
+  },
+  "patient": {
+    "meta": {
+      "title": "Patient Resources - Your Hair Restoration Journey",
+      "description": "Comprehensive resources for patients undergoing hair restoration procedures. Find preparation guides, recovery information, and patient testimonials.",
+      "keywords": ["patient resources", "hair transplant preparation", "recovery guide", "patient testimonials"]
+    },
+    "hero": {
+      "title": "Patient Resources",
+      "subtitle": "Everything you need to know about your hair restoration journey"
+    },
+    "beforeAfter": {
+      "meta": {
+        "title": "Before & After Gallery - Hair Transplant Results",
+        "description": "View our collection of before and after photos showcasing successful hair transplant transformations.",
+        "keywords": ["before after photos", "hair transplant results", "transformation gallery"]
+      },
+      "title": "Before & After Gallery",
+      "subtitle": "Real results from our satisfied patients"
+    },
+    "testimonials": {
+      "meta": {
+        "title": "Patient Testimonials - Hair Transplant Success Stories",
+        "description": "Read real testimonials from our patients about their hair restoration experience and results.",
+        "keywords": ["patient testimonials", "hair transplant reviews", "success stories"]
+      },
+      "title": "Patient Testimonials",
+      "subtitle": "Hear from our satisfied patients"
+    }
+  },
+  "education": {
+    "hero": {
+      "title": "Educational Resources",
+      "subtitle": "Explore our comprehensive collection of educational materials designed to help you understand hair transplantation better."
+    },
+    "features": {
+      "research": {
+        "title": "Research Papers",
+        "description": "Access the latest research and studies in hair transplantation and restoration techniques."
+      },
+      "techniques": {
+        "title": "Video Tutorials",
+        "description": "Watch detailed video demonstrations of various hair transplant techniques and procedures."
+      },
+      "guidance": {
+        "title": "Expert Guidance",
+        "description": "Get professional insights and recommendations from experienced hair transplant specialists."
+      },
+      "resources": {
+        "title": "Learning Resources",
+        "description": "Download comprehensive guides and materials to enhance your understanding of hair care."
+      }
+    }
+  },
+  "home": {
+    "seo": {
+      "title": "MyHairCare - Professional Hair Care Services",
+      "description": "Experience expert hair care services with our professional stylists. Specializing in cutting-edge treatments and personalized care for all hair types."
+    },
+    "hero": {
+      "title": "Transform Your Hair, Transform Your Life",
+      "subtitle": "Experience the perfect blend of expertise and care with our professional hair care services",
+      "cta": "Book an Appointment"
+    },
+    "features": {
+      "title": "Why Choose Us",
+      "expert": {
+        "title": "Expert Stylists",
+        "description": "Our team of certified professionals brings years of experience and continuous training to provide you with the best service."
+      },
+      "care": {
+        "title": "Personalized Care",
+        "description": "We understand that every client is unique. Our treatments are tailored to your specific hair needs and goals."
+      },
+      "quality": {
+        "title": "Premium Products",
+        "description": "We use only the highest quality, professional-grade products to ensure the best results for your hair."
+      }
+    },
+    "testimonials": {
+      "title": "What Our Clients Say",
+      "1": {
+        "name": "Sarah Johnson",
+        "content": "The best hair care experience I've ever had. The attention to detail and personalized service is outstanding!"
+      },
+      "2": {
+        "name": "Michael Smith",
+        "content": "Incredible results and professional service. My hair has never looked better!"
+      }
+    },
+    "awards": {
+      "title": "Our Recognition"
+    }
+  },
+  "procedures": {
+    "meta": {
+      "title": "Hair Transplant Procedures | MyHairCare",
+      "description": "Explore our advanced hair transplant procedures including Sapphire FUE, DHI, and Stem Cell treatments.",
+      "keywords": "hair transplant procedures, hair restoration, DHI, FUE, stem cell treatment"
+    },
+    "hero": {
+      "title": "Advanced Hair Transplant Procedures",
+      "subtitle": "Discover our state-of-the-art hair restoration techniques tailored to your needs"
+    },
+    "types": {
+      "title": "Our Procedures",
+      "subtitle": "Choose from our range of advanced hair transplant procedures",
+      "sapphireFue": {
+        "title": "Sapphire FUE",
+        "description": "Advanced follicular unit extraction using precision sapphire blades for minimal scarring"
+      },
+      "dhi": {
+        "title": "DHI Technique",
+        "description": "Direct hair implantation for precise placement and natural-looking results"
+      },
+      "stemCell": {
+        "title": "Stem Cell Treatment",
+        "description": "Innovative stem cell therapy to enhance hair growth and restoration"
+      }
+    },
+    "features": {
+      "title": "Why Choose Us",
+      "expertise": {
+        "title": "Expert Team",
+        "description": "Highly skilled surgeons with years of specialized experience"
+      },
+      "technology": {
+        "title": "Advanced Technology",
+        "description": "State-of-the-art equipment and innovative techniques"
+      },
+      "results": {
+        "title": "Natural Results",
+        "description": "Consistently achieving natural-looking, lasting outcomes"
+      },
+      "support": {
+        "title": "Comprehensive Support",
+        "description": "Dedicated care and support throughout your journey"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": {
+        "procedureTime": {
+          "question": "How long does the procedure take?",
+          "answer": "Most procedures take 6-8 hours, depending on the extent of transplantation needed"
+        },
+        "resultsTime": {
+          "question": "When will I see results?",
+          "answer": "Initial growth begins in 3-4 months, with full results visible in 12-18 months"
+        },
+        "painLevel": {
+          "question": "Is the procedure painful?",
+          "answer": "The procedure is performed under local anesthesia, ensuring minimal discomfort"
+        },
+        "recoveryTime": {
+          "question": "What is the recovery time?",
+          "answer": "Most patients return to work within 3-5 days, with full recovery in 2-3 weeks"
+        }
+      }
+    }
+  },
+  "common": {
+    "bookConsultation": "Book a Consultation",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success",
+    "readMore": "Read More",
+    "viewAll": "View All",
+    "next": "Next",
+    "previous": "Previous",
+    "close": "Close",
+    "backToHome": "Back to Home",
+    "goBack": "Go Back"
   }
 }

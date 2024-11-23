@@ -1,501 +1,242 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { MapPin, Award, Users, Star, ChevronDown, Microscope, Heart, Clock, Shield, ArrowRight } from 'lucide-react';
-import SEO from '../../components/SEO';
-import { generateLocalBusinessSchema } from '../../utils/structuredData';
+import { MapPin, Award, Users, Star, ChevronDown, Microscope, Heart, Clock, Shield, ArrowRight, GraduationCap, Building } from 'lucide-react';
+import { useTranslation } from '../../hooks/useTranslation';
 import GlobalReach from '../../components/map/GlobalReach';
-import { GradientSection } from '../../components/ui/GradientSection'; // Import the GradientSection component
+import { GradientSection } from '../../components/ui/GradientSection';
 
 const stats = [
-  { label: 'Years Experience', value: '20+' },
-  { label: 'Success Rate', value: '97%' },
-  { label: 'Patients Treated', value: '15,000+' },
-  { label: 'Countries Served', value: '50+' },
+  {
+    key: 'experience',
+    value: '20+',
+    icon: Clock
+  },
+  {
+    key: 'successRate',
+    value: '97%',
+    icon: Star
+  },
+  {
+    key: 'patients',
+    value: '15,000+',
+    icon: Users
+  },
+  {
+    key: 'countries',
+    value: '50+',
+    icon: MapPin
+  }
 ];
 
 const features = [
   {
-    icon: <Shield className="w-8 h-8 text-navy-900" />,
-    title: 'Harvard Collaboration',
-    description: 'Direct partnership with Harvard Medical School ensures cutting-edge techniques and research-backed procedures.',
+    key: 'harvard',
+    icon: Shield
   },
   {
-    icon: <Microscope className="w-8 h-8 text-navy-900" />,
-    title: 'Advanced Technology',
-    description: 'State-of-the-art FUE and DHI techniques combined with stem cell research for optimal results.',
+    key: 'technology',
+    icon: Microscope
   },
   {
-    icon: <Award className="w-8 h-8 text-navy-900" />,
-    title: 'Certified Excellence',
-    description: 'Internationally accredited clinic with multiple certifications and quality assurance standards.',
+    key: 'excellence',
+    icon: Award
   },
   {
-    icon: <Heart className="w-8 h-8 text-navy-900" />,
-    title: 'Ethical Practice',
-    description: 'Commitment to transparency, honest consultations, and patient-first approach in all procedures.',
+    key: 'ethics',
+    icon: Heart
   },
   {
-    icon: <Clock className="w-8 h-8 text-navy-900" />,
-    title: 'Lifetime Support',
-    description: 'Comprehensive aftercare program with lifetime guarantee and ongoing support for optimal results.',
+    key: 'support',
+    icon: Clock
   },
   {
-    icon: <Users className="w-8 h-8 text-navy-900" />,
-    title: 'Expert Team',
-    description: 'Highly skilled surgeons and medical staff with extensive experience in hair restoration.',
-  },
+    key: 'expertise',
+    icon: Users
+  }
 ];
 
-const achievements = [
+const certifications = [
   {
-    title: 'Harvard Affiliation',
-    description: 'Collaboration with Harvard-affiliated medical experts',
-    icon: '/images/harvard-logo.png',
+    key: 'iso',
+    icon: Shield
   },
   {
-    title: 'JCI Accreditation',
-    description: 'Meeting the highest international healthcare standards',
-    icon: '/images/jci-logo.png',
+    key: 'jci',
+    icon: Award
   },
   {
-    title: 'ISO 9001 Certified',
-    description: 'Quality management system certification',
-    icon: '/images/iso-logo.png',
+    key: 'harvard',
+    icon: GraduationCap
   },
   {
-    title: 'ISHRS Member',
-    description: 'International Society of Hair Restoration Surgery',
-    icon: '/images/ishrs-logo.png',
-  },
-];
-
-const techniques = [
-  {
-    title: 'Sapphire FUE',
-    description: 'Advanced precision with sapphire blades for minimal scarring',
-    image: '/images/sapphire-fue.jpg',
-  },
-  {
-    title: 'DHI Technique',
-    description: 'Direct implantation for maximum density and natural results',
-    image: '/images/dhi-technique.jpg',
-  },
-  {
-    title: 'Stem Cell Therapy',
-    description: 'Cutting-edge regenerative treatment for enhanced results',
-    image: '/images/stem-cell.jpg',
-  },
-];
-
-const journeySteps = [
-  {
-    step: '01',
-    title: 'Free Consultation',
-    description: 'Begin with a detailed analysis of your hair loss and personalized treatment plan.',
-    image: '/images/consultation.jpg',
-  },
-  {
-    step: '02',
-    title: 'Treatment Planning',
-    description: 'Customize your procedure based on your unique needs and desired outcomes.',
-    image: '/images/planning.jpg',
-  },
-  {
-    step: '03',
-    title: 'Expert Care',
-    description: 'Experience world-class treatment with our skilled medical team.',
-    image: '/images/treatment.jpg',
-  },
-  {
-    step: '04',
-    title: 'Lifetime Support',
-    description: 'Enjoy ongoing care and support throughout your hair restoration journey.',
-    image: '/images/support.jpg',
-  },
-];
-
-const pressFeatures = [
-  { name: 'BBC', logo: '/images/press/bbc.png', link: '#' },
-  { name: 'Forbes', logo: '/images/press/forbes.png', link: '#' },
-  { name: 'Bloomberg', logo: '/images/press/bloomberg.png', link: '#' },
+    key: 'medical',
+    icon: Building
+  }
 ];
 
 export default function WhyEstenovePage() {
-  const scrollToContent = () => {
-    const expertiseSection = document.getElementById('expertise');
-    if (expertiseSection) {
-      const yOffset = -80; // Account for fixed header
-      const y = expertiseSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
-      window.scrollTo({ top: y, behavior: 'smooth' });
-    }
-  };
+  const { t } = useTranslation();
 
   return (
-    <>
-      <SEO
-        title="Why Choose Estenove"
-        description="Discover why Estenove is a global leader in hair transplantation, featuring Harvard collaboration, advanced technology, and a 97% success rate across 50+ countries."
-        path="/why-estenove"
-        keywords={['hair transplant', 'Harvard collaboration', 'advanced technology', 'global reach']}
-        structuredData={generateLocalBusinessSchema()}
-        ogImage="/images/why-estenove-og.jpg"
-      />
-      <div className="min-h-screen bg-white">
-        {/* Hero Section */}
-        <section className="relative h-screen flex items-center justify-center text-center bg-gradient-to-br from-blue-900 to-blue-950 text-white" aria-labelledby="hero-heading">
-          <div className="absolute inset-0">
-            <img
-              src="/images/clinic-hero.jpg"
-              alt="Este Nove Clinic"
-              className="w-full h-full object-cover opacity-20"
-            />
-          </div>
-          <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 id="hero-heading" className="text-5xl md:text-6xl font-bold mb-6">
-              Why Choose Este Nove for Your Hair Restoration Journey?
-            </h2>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100">
-              World-Class Expertise, Proven Results, and Global Trust
-            </p>
-            <motion.button
-              initial={{ opacity: 0, y: -20 }}
+    <div className="min-h-screen">
+      <Helmet>
+        <title>{t('whyEstenove.meta.title')}</title>
+        <meta
+          name="description"
+          content={t('whyEstenove.meta.description')}
+        />
+        <meta
+          name="keywords"
+          content={t('whyEstenove.meta.keywords')}
+        />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="relative h-[80vh] min-h-[600px] w-full bg-gradient-to-br from-blue-900 to-blue-950 text-white">
+        <div className="container mx-auto h-full px-4 flex items-center">
+          <div className="max-w-3xl">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-5xl md:text-6xl font-bold mb-6"
+            >
+              {t('whyEstenove.hero.title')}
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="text-xl text-blue-100 mb-8"
+            >
+              {t('whyEstenove.hero.subtitle')}
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              onClick={scrollToContent}
-              className="inline-flex items-center px-8 py-3 border-2 border-white rounded-full text-lg font-medium hover:bg-white hover:text-blue-900 transition-colors"
-              aria-label="Discover Our Difference"
+              className="flex flex-col sm:flex-row gap-4"
             >
-              Discover Our Difference
-              <ChevronDown className="ml-2 h-5 w-5" />
-            </motion.button>
+              <a
+                href="/consultation"
+                className="inline-flex items-center px-8 py-4 border border-transparent rounded-full text-lg font-medium text-blue-600 bg-white hover:bg-blue-50"
+              >
+                {t('buttons.bookConsultation')}
+              </a>
+            </motion.div>
           </div>
-        </section>
+        </div>
+      </section>
 
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Stats Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-50 to-white" aria-labelledby="stats-heading">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 id="stats-heading" className="text-4xl font-bold text-gray-900 mb-4">
-              Our Achievements
+        <div className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              {t('whyEstenove.stats.title')}
             </h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="text-center"
-                >
-                  <div className="text-4xl font-bold text-blue-900 mb-2">{stat.value}</div>
-                  <div className="text-gray-600">{stat.label}</div>
-                </motion.div>
-              ))}
-            </div>
+            <p className="text-xl text-gray-600">
+              {t('whyEstenove.stats.subtitle')}
+            </p>
           </div>
-        </section>
-
-        {/* Expertise Section */}
-        <section id="expertise" className="py-20 bg-white" aria-labelledby="expertise-heading">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 id="expertise-heading" className="text-4xl font-bold text-gray-900 mb-4">
-                Global Excellence in Hair Restoration
-              </h2>
-              <p className="text-xl text-gray-600">
-                Backed by world-renowned institutions and certifications
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {achievements.map((achievement, index) => (
-                <motion.div
-                  key={achievement.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg p-6 text-center"
-                  role="article"
-                >
-                  <img
-                    src={achievement.icon}
-                    alt={`${achievement.title} certification`}
-                    className="h-16 w-auto mx-auto mb-4"
-                  />
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    {achievement.title}
-                  </h3>
-                  <p className="text-gray-600">{achievement.description}</p>
-                </motion.div>
-              ))}
-            </div>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+            {stats.map((stat) => (
+              <motion.div
+                key={stat.key}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                className="bg-white p-6 rounded-xl shadow-sm text-center"
+              >
+                <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4 mx-auto">
+                  <stat.icon className="h-6 w-6 text-blue-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  {stat.value}
+                </h3>
+                <p className="text-gray-600">
+                  {t(`whyEstenove.stats.items.${stat.key}`)}
+                </p>
+              </motion.div>
+            ))}
           </div>
-        </section>
+        </div>
 
         {/* Features Section */}
-        <section className="py-20 bg-blue-50" aria-labelledby="features-heading">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 id="features-heading" className="text-4xl font-bold text-gray-900 mb-4">
-                What Sets Us Apart
-              </h2>
-              <p className="text-xl text-gray-600">
-                Our unique approach to hair restoration
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <motion.div
-                  key={feature.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg p-6"
-                  role="article"
-                >
-                  <div className="flex justify-center mb-4" aria-hidden="true">
-                    {feature.icon}
+        <div className="bg-white rounded-2xl p-8 mb-16">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            {t('whyEstenove.features.title')}
+          </h2>
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {features.map((feature) => (
+              <motion.div
+                key={feature.key}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                className="flex gap-4"
+              >
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                    <feature.icon className="h-6 w-6 text-blue-600" />
                   </div>
+                </div>
+                <div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    {feature.title}
+                    {t(`whyEstenove.features.items.${feature.key}.title`)}
                   </h3>
-                  <p className="text-gray-600">{feature.description}</p>
-                </motion.div>
-              ))}
-            </div>
+                  <p className="text-gray-600">
+                    {t(`whyEstenove.features.items.${feature.key}.description`)}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
           </div>
-        </section>
-
-        {/* Journey Steps Section */}
-        <section className="py-20 bg-white" aria-labelledby="journey-steps-heading">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 id="journey-steps-heading" className="text-4xl font-bold text-gray-900 mb-4">
-                Your Hair Restoration Journey
-              </h2>
-              <p className="text-xl text-gray-600">
-                A step-by-step guide to achieving your desired results
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {journeySteps.map((step, index) => (
-                <motion.div
-                  key={step.step}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg p-6"
-                  role="article"
-                >
-                  <div className="flex justify-center mb-4">
-                    <img
-                      src={step.image}
-                      alt={step.title}
-                      className="h-16 w-auto mx-auto"
-                    />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    {step.title}
-                  </h3>
-                  <p className="text-gray-600">{step.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Advanced Techniques Section */}
-        <section className="py-20 bg-blue-50" aria-labelledby="advanced-techniques-heading">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 id="advanced-techniques-heading" className="text-4xl font-bold text-gray-900 mb-4">
-                Advanced Hair Restoration Techniques
-              </h2>
-              <p className="text-xl text-gray-600">
-                Cutting-edge procedures for optimal results
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {techniques.map((technique, index) => (
-                <motion.div
-                  key={technique.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-white rounded-xl overflow-hidden shadow-lg"
-                  role="article"
-                >
-                  <img
-                    src={technique.image}
-                    alt={technique.title}
-                    className="w-full h-48 object-cover"
-                  />
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                      {technique.title}
-                    </h3>
-                    <p className="text-gray-600">{technique.description}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Press Section */}
-        <section className="py-20 bg-white" aria-labelledby="press-features-heading">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 id="press-features-heading" className="text-4xl font-bold text-gray-900 mb-4">
-                Featured In Global Media
-              </h2>
-              <p className="text-xl text-gray-600">
-                Recognized by leading international publications
-              </p>
-            </div>
-            <div className="flex justify-center items-center space-x-12">
-              {pressFeatures.map((press, index) => (
-                <motion.a
-                  key={press.name}
-                  href={press.link}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="grayscale hover:grayscale-0 transition-all"
-                  aria-label={press.name}
-                >
-                  <img
-                    src={press.logo}
-                    alt={`${press.name} logo`}
-                    className="h-12 w-auto"
-                  />
-                </motion.a>
-              ))}
-            </div>
-          </div>
-        </section>
+        </div>
 
         {/* Global Reach Section */}
-        <GlobalReach />
-
-        {/* Testimonials Section */}
-        <section className="py-20 bg-white" aria-labelledby="testimonials-heading">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 id="testimonials-heading" className="text-4xl font-bold text-gray-900 mb-4">
-                Patient Success Stories
-              </h2>
-              <p className="text-xl text-gray-600">
-                Real experiences from our satisfied patients
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  name: 'John D.',
-                  location: 'United States',
-                  image: '/images/testimonials/john.jpg',
-                  quote: 'The level of care and expertise at Este Nove is unmatched. My results exceeded all expectations.',
-                  rating: 5,
-                  procedure: 'Sapphire FUE',
-                },
-                {
-                  name: 'Michael R.',
-                  location: 'United Kingdom',
-                  image: '/images/testimonials/michael.jpg',
-                  quote: 'From consultation to aftercare, every step was handled with utmost professionalism. Highly recommended!',
-                  rating: 5,
-                  procedure: 'DHI Technique',
-                },
-                {
-                  name: 'Thomas B.',
-                  location: 'Germany',
-                  image: '/images/testimonials/thomas.jpg',
-                  quote: 'The attention to detail and personalized care made all the difference in my transformation journey.',
-                  rating: 5,
-                  procedure: 'Combined FUE + DHI',
-                },
-              ].map((testimonial, index) => (
-                <motion.div
-                  key={testimonial.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg overflow-hidden"
-                  role="article"
-                >
-                  <div className="relative h-48">
-                    <img
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                    <div className="absolute bottom-4 left-4 text-white">
-                      <div className="font-semibold">{testimonial.name}</div>
-                      <div className="text-sm opacity-90">{testimonial.location}</div>
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <div className="flex items-center mb-4">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star
-                          key={i}
-                          className="w-5 h-5 text-yellow-400 fill-current"
-                        />
-                      ))}
-                    </div>
-                    <blockquote className="text-gray-600 mb-4">
-                      "{testimonial.quote}"
-                    </blockquote>
-                    <div className="text-sm text-gray-500">
-                      Procedure: {testimonial.procedure}
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
+        <div className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              {t('whyEstenove.globalReach.title')}
+            </h2>
+            <p className="text-xl text-gray-600">
+              {t('whyEstenove.globalReach.subtitle')}
+            </p>
           </div>
-        </section>
+          <GlobalReach />
+        </div>
 
-        {/* CTA Section */}
-        <GradientSection
-          className="py-20"
-          backgroundImage="/images/clinic-hero.jpg"
-          containerClassName="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
-          aria-label="Call to Action"
-        >
-          <h2 className="text-4xl font-bold mb-6">
-            Start Your Journey with Este Nove Today
-          </h2>
-          <p className="text-xl mb-8 text-white">
-            Take the first step towards restoring your confidence
-          </p>
-          <div className="flex justify-center space-x-4" role="group" aria-label="Action buttons">
-            <motion.a
-              href="/consultation"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center px-8 py-3 border-2 border-white bg-white text-navy-900 rounded-full text-lg font-medium shadow-lg hover:bg-opacity-90 hover:border-opacity-90 transition-all"
-              role="button"
-              aria-label="Book Free Consultation"
-            >
-              Book Free Consultation
-            </motion.a>
-            <motion.a
-              href="/contact"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center px-8 py-3 border-2 border-white rounded-full text-lg font-medium shadow-lg hover:bg-white hover:text-navy-900 transition-all"
-              role="button"
-              aria-label="Contact Us"
-            >
-              Contact Us
-            </motion.a>
+        {/* Certifications Section */}
+        <div className="bg-white rounded-2xl p-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              {t('whyEstenove.certifications.title')}
+            </h2>
+            <p className="text-xl text-gray-600">
+              {t('whyEstenove.certifications.subtitle')}
+            </p>
           </div>
-        </GradientSection>
-
-        {/* Rest of the code remains the same */}
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            {certifications.map((cert) => (
+              <motion.div
+                key={cert.key}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                className="text-center"
+              >
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                  <cert.icon className="h-8 w-8 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  {t(`whyEstenove.certifications.items.${cert.key}.title`)}
+                </h3>
+                <p className="text-gray-600">
+                  {t(`whyEstenove.certifications.items.${cert.key}.description`)}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
       </div>
-    </>
+    </div>
   );
 }

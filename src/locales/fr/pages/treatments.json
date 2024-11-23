@@ -1,0 +1,75 @@
+{
+  "hero": {
+    "title": "Nos Traitements",
+    "subtitle": "Solutions Avancées de Restauration Capillaire",
+    "description": "Découvrez nos traitements innovants de restauration capillaire adaptés à vos besoins spécifiques"
+  },
+  "treatments": {
+    "fue": {
+      "title": "FUE Saphir",
+      "description": "Extraction d'unités folliculaires avec technologie saphir pour des résultats naturels",
+      "benefits": [
+        "Cicatrices minimales",
+        "Récupération rapide",
+        "Résultats naturels",
+        "Précision maximale"
+      ]
+    },
+    "dhi": {
+      "title": "Implantation Directe de Cheveux (DHI)",
+      "description": "Technique avancée d'implantation directe pour une densité optimale",
+      "benefits": [
+        "Contrôle précis de l'angle",
+        "Temps de cicatrisation réduit",
+        "Densité maximale",
+        "Résultats durables"
+      ]
+    },
+    "stemCell": {
+      "title": "Traitement par Cellules Souches",
+      "description": "Thérapie régénérative utilisant vos propres cellules souches",
+      "benefits": [
+        "Stimulation naturelle",
+        "Non chirurgical",
+        "Régénération continue",
+        "Traitement personnalisé"
+      ]
+    }
+  },
+  "process": {
+    "title": "Notre Processus",
+    "steps": {
+      "consultation": {
+        "title": "Consultation",
+        "description": "Évaluation personnalisée de vos besoins"
+      },
+      "planning": {
+        "title": "Planification",
+        "description": "Création d'un plan de traitement sur mesure"
+      },
+      "procedure": {
+        "title": "Procédure",
+        "description": "Réalisation du traitement par nos experts"
+      },
+      "aftercare": {
+        "title": "Suivi",
+        "description": "Support continu et soins post-traitement"
+      }
+    }
+  },
+  "technology": {
+    "title": "Notre Technologie",
+    "description": "Équipements et techniques de pointe pour des résultats optimaux",
+    "features": [
+      "Instruments de précision Saphir",
+      "Systèmes d'implantation DHI",
+      "Équipement de traitement cellulaire",
+      "Systèmes de visualisation avancés"
+    ]
+  },
+  "cta": {
+    "consultation": "Réserver une Consultation",
+    "learn": "En Savoir Plus",
+    "compare": "Comparer les Traitements"
+  }
+}

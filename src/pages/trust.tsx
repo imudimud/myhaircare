@@ -1,17 +1,20 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from '../hooks/useTranslation';
 import Certifications from '../components/trust/Certifications';
 import Testimonials from '../components/Testimonials';
 import Contact from '../components/Contact';
 
 export default function TrustPage() {
+  const { t } = useTranslation();
+  
   return (
     <>
       <Helmet>
-        <title>Trust & Recognition - Estenove Hair Clinic</title>
+        <title>{t('trust.meta.title')}</title>
         <meta
           name="description"
-          content="Discover why Estenove Hair Clinic is trusted worldwide. View our certifications, accreditations, and patient testimonials."
+          content={t('trust.meta.description')}
         />
       </Helmet>
       <div className="pt-20">

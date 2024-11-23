@@ -1,0 +1,50 @@
+{
+  "section": {
+    "title": "Galerie Avant & Après",
+    "subtitle": "Résultats Réels de Patients Réels",
+    "description": "Parcourez notre collection de réussites en restauration capillaire"
+  },
+  "filters": {
+    "all": "Tous les Résultats",
+    "procedure": {
+      "title": "Type de Procédure",
+      "sapphireFue": "FUE Saphir",
+      "dhi": "DHI",
+      "stemCell": "Cellules Souches"
+    },
+    "timeline": {
+      "title": "Chronologie",
+      "month3": "3 Mois",
+      "month6": "6 Mois",
+      "month12": "12 Mois",
+      "final": "Résultats Finaux"
+    },
+    "gender": {
+      "title": "Genre",
+      "male": "Homme",
+      "female": "Femme"
+    }
+  },
+  "image": {
+    "before": "Avant",
+    "after": "Après",
+    "months": "{{count}} Mois Post-Procédure",
+    "procedure": "Procédure : {{name}}",
+    "zoom": "Cliquez pour Zoomer",
+    "next": "Image Suivante",
+    "previous": "Image Précédente"
+  },
+  "details": {
+    "patient": "Détails du Patient",
+    "age": "Âge : {{age}}",
+    "gender": "Genre : {{gender}}",
+    "grafts": "Greffons : {{count}}",
+    "date": "Date de Procédure : {{date}}",
+    "doctor": "Docteur : Dr. {{name}}"
+  },
+  "cta": {
+    "consultation": "Réservez Votre Consultation",
+    "learn": "En Savoir Plus sur {{procedure}}",
+    "share": "Partagez Vos Résultats"
+  }
+}

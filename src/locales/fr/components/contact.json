@@ -1,0 +1,80 @@
+{
+  "section": {
+    "title": "Contactez-Nous",
+    "subtitle": "Entrez en Contact",
+    "description": "Nous sommes là pour répondre à vos questions et vous apporter notre soutien"
+  },
+  "form": {
+    "title": "Envoyez-nous un Message",
+    "fields": {
+      "name": {
+        "label": "Nom Complet",
+        "placeholder": "Entrez votre nom complet"
+      },
+      "email": {
+        "label": "Adresse Email",
+        "placeholder": "Entrez votre adresse email"
+      },
+      "phone": {
+        "label": "Numéro de Téléphone",
+        "placeholder": "Entrez votre numéro de téléphone"
+      },
+      "subject": {
+        "label": "Sujet",
+        "placeholder": "Sélectionnez le sujet",
+        "options": {
+          "general": "Renseignement Général",
+          "consultation": "Demande de Consultation",
+          "booking": "Informations de Réservation",
+          "aftercare": "Support Post-traitement",
+          "other": "Autre"
+        }
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Tapez votre message ici"
+      }
+    },
+    "submit": "Envoyer le Message",
+    "success": "Message envoyé avec succès",
+    "error": "Erreur lors de l'envoi du message"
+  },
+  "info": {
+    "address": {
+      "title": "Adresse",
+      "line1": "123 Rue des Soins Capillaires",
+      "line2": "Quartier Médical",
+      "city": "Istanbul",
+      "country": "Turquie",
+      "postal": "34000"
+    },
+    "phone": {
+      "title": "Téléphone",
+      "main": "+90 123 456 7890",
+      "whatsapp": "+90 123 456 7891"
+    },
+    "email": {
+      "title": "Email",
+      "general": "info@myhaircare.com",
+      "support": "support@myhaircare.com"
+    },
+    "hours": {
+      "title": "Heures d'Ouverture",
+      "weekdays": "Lundi - Vendredi : 9h00 - 18h00",
+      "weekend": "Samedi : 10h00 - 16h00",
+      "timezone": "(UTC+3 Heure d'Istanbul)"
+    }
+  },
+  "social": {
+    "title": "Suivez-Nous",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "twitter": "Twitter",
+    "youtube": "YouTube"
+  },
+  "map": {
+    "title": "Notre Emplacement",
+    "directions": "Obtenir l'Itinéraire",
+    "viewLarger": "Voir une Carte Plus Grande"
+  }
+}

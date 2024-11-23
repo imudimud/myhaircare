@@ -1,81 +1,99 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from '../hooks/useTranslation';
+import { useLocation } from 'react-router-dom';
+import { SUPPORTED_LANGUAGES } from '../i18n';
 
 interface SEOProps {
   title?: string;
   description?: string;
-  keywords?: string[];
-  path?: string;
-  structuredData?: Record<string, any>;
-  ogImage?: string;
+  keywords?: string;
+  image?: string;
+  article?: boolean;
+  noindex?: boolean;
+  canonicalUrl?: string;
+  schema?: object;
 }
 
-export default function SEO({ 
-  title, 
-  description, 
-  keywords = [],
-  path = '',
-  structuredData,
-  ogImage
+export default function SEO({
+  title,
+  description,
+  keywords,
+  image,
+  article = false,
+  noindex = false,
+  canonicalUrl,
+  schema,
 }: SEOProps) {
-  const { i18n, t } = useTranslation();
-  const currentLanguage = i18n.language;
-  const isDefault = currentLanguage === 'en';
+  const { t, i18n } = useTranslation();
+  const location = useLocation();
+  const siteUrl = process.env.REACT_APP_SITE_URL || 'https://myhaircare.com';
 
-  // Base URL should be your production domain
-  const baseUrl = 'https://www.estenove.com';
-  const currentUrl = `${baseUrl}${path}`;
-  const alternateUrl = `${baseUrl}${currentLanguage === 'en' ? '/fr' : ''}${path}`;
+  const seo = {
+    title: title || t('meta.defaultTitle'),
+    description: description || t('meta.defaultDescription'),
+    keywords: keywords || t('meta.defaultKeywords'),
+    image: image || `${siteUrl}/images/default-og-image.jpg`,
+    url: `${siteUrl}${location.pathname}`,
+  };
 
-  const defaultTitle = t('seo.defaultTitle');
-  const defaultDescription = t('seo.defaultDescription');
-  const defaultKeywords = t('seo.defaultKeywords', { returnObjects: true }) as string[];
+  // Generate alternate language URLs
+  const alternateUrls = SUPPORTED_LANGUAGES.map(lang => ({
+    lang,
+    url: `${siteUrl}/${lang}${location.pathname}`,
+  }));
 
-  const pageTitle = title ? `${title} | ${defaultTitle}` : defaultTitle;
-  const pageDescription = description || defaultDescription;
-  const pageKeywords = [...defaultKeywords, ...keywords].join(', ');
+  // Generate structured data
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': article ? 'Article' : 'WebPage',
+    url: seo.url,
+    headline: seo.title,
+    image: seo.image,
+    description: seo.description,
+    ...schema,
+  };
 
   return (
     <Helmet>
-      {/* Basic meta tags */}
-      <html lang={currentLanguage} />
-      <title>{pageTitle}</title>
-      <meta name="description" content={pageDescription} />
-      <meta name="keywords" content={pageKeywords} />
+      {/* Basic Meta Tags */}
+      <html lang={i18n.language} />
+      <title>{seo.title}</title>
+      <meta name="description" content={seo.description} />
+      {keywords && <meta name="keywords" content={seo.keywords} />}
+      {noindex && <meta name="robots" content="noindex,nofollow" />}
+      
+      {/* Canonical URL */}
+      <link rel="canonical" href={canonicalUrl || seo.url} />
 
-      {/* Open Graph tags */}
-      <meta property="og:title" content={pageTitle} />
-      <meta property="og:description" content={pageDescription} />
-      <meta property="og:url" content={currentUrl} />
-      <meta property="og:type" content="website" />
-      <meta property="og:locale" content={currentLanguage === 'en' ? 'en_US' : 'fr_FR'} />
-      {ogImage && <meta property="og:image" content={`${baseUrl}${ogImage}`} />}
+      {/* Open Graph */}
+      <meta property="og:type" content={article ? 'article' : 'website'} />
+      <meta property="og:title" content={seo.title} />
+      <meta property="og:description" content={seo.description} />
+      <meta property="og:image" content={seo.image} />
+      <meta property="og:url" content={seo.url} />
+      <meta property="og:site_name" content={t('meta.siteName')} />
 
-      {/* Alternate language URLs */}
-      <link rel="canonical" href={currentUrl} />
-      <link 
-        rel="alternate" 
-        hrefLang={currentLanguage === 'en' ? 'fr' : 'en'} 
-        href={alternateUrl}
-      />
-      <link 
-        rel="alternate" 
-        href={currentUrl} 
-        hrefLang={currentLanguage} 
-      />
-      <link 
-        rel="alternate" 
-        href={baseUrl} 
-        hrefLang="x-default" 
-      />
+      {/* Twitter Card */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={seo.title} />
+      <meta name="twitter:description" content={seo.description} />
+      <meta name="twitter:image" content={seo.image} />
+
+      {/* Alternate Language URLs */}
+      {alternateUrls.map(({ lang, url }) => (
+        <link
+          key={lang}
+          rel="alternate"
+          hrefLang={lang}
+          href={url}
+        />
+      ))}
 
       {/* Structured Data */}
-      {structuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-      )}
+      <script type="application/ld+json">
+        {JSON.stringify(structuredData)}
+      </script>
     </Helmet>
   );
 }

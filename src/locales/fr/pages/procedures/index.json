@@ -1,0 +1,152 @@
+{
+  "meta": {
+    "title": "Procédures de Restauration Capillaire - Options de Traitement Avancées",
+    "description": "Découvrez notre gamme complète de procédures de restauration capillaire et options de traitement.",
+    "keywords": ["procédures restauration capillaire", "options traitement", "techniques greffe cheveux", "soins capillaires avancés"]
+  },
+  "hero": {
+    "title": "Nos Procédures",
+    "subtitle": "Solutions Avancées de Restauration Capillaire",
+    "description": "Découvrez notre gamme de procédures de restauration capillaire de pointe"
+  },
+  "treatments": {
+    "title": "Options de Traitement",
+    "categories": {
+      "surgical": {
+        "title": "Procédures Chirurgicales",
+        "procedures": {
+          "sapphireFue": {
+            "title": "FUE Saphir",
+            "description": "Extraction avancée d'unités folliculaires",
+            "benefits": [
+              "Cicatrisation minimale",
+              "Résultats naturels",
+              "Temps de récupération rapide",
+              "Implantation précise"
+            ],
+            "process": [
+              "Consultation initiale",
+              "Préparation de la zone donneuse",
+              "Extraction des greffons",
+              "Création des sites receveurs",
+              "Placement des greffons"
+            ]
+          },
+          "dhi": {
+            "title": "Technique DHI",
+            "description": "Implantation directe des cheveux",
+            "benefits": [
+              "Pas d'incisions nécessaires",
+              "Temps d'arrêt minimal",
+              "Haute densité possible",
+              "Direction de croissance naturelle"
+            ],
+            "process": [
+              "Phase de planification",
+              "Processus d'extraction",
+              "Implantation directe",
+              "Période de récupération"
+            ]
+          }
+        }
+      },
+      "nonsurgical": {
+        "title": "Traitements Non-Chirurgicaux",
+        "procedures": {
+          "prp": {
+            "title": "Thérapie PRP",
+            "description": "Traitement au plasma riche en plaquettes",
+            "benefits": [
+              "Stimulation de la croissance naturelle",
+              "Invasivité minimale",
+              "Procédure rapide",
+              "Pas de temps d'arrêt"
+            ]
+          },
+          "mesotherapy": {
+            "title": "Mésothérapie",
+            "description": "Thérapie par injection de nutriments",
+            "benefits": [
+              "Rajeunissement du cuir chevelu",
+              "Amélioration de la circulation sanguine",
+              "Amélioration de la qualité des cheveux",
+              "Résultats progressifs"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "technology": {
+    "title": "Technologie Avancée",
+    "sections": {
+      "equipment": {
+        "title": "Équipement de Pointe",
+        "description": "Dernières innovations technologiques"
+      },
+      "techniques": {
+        "title": "Techniques Avancées",
+        "description": "Méthodes procédurales de pointe"
+      }
+    }
+  },
+  "process": {
+    "title": "Processus de Traitement",
+    "stages": {
+      "consultation": {
+        "title": "Consultation Initiale",
+        "description": "Évaluation et planification complètes"
+      },
+      "preparation": {
+        "title": "Préparation Pré-procédure",
+        "description": "Se préparer pour le traitement"
+      },
+      "procedure": {
+        "title": "Pendant la Procédure",
+        "description": "Détails de la procédure étape par étape"
+      },
+      "aftercare": {
+        "title": "Soins Post-procédure",
+        "description": "Récupération et entretien"
+      }
+    }
+  },
+  "results": {
+    "title": "Résultats Attendus",
+    "sections": {
+      "timeline": {
+        "title": "Calendrier de Croissance",
+        "stages": [
+          "Guérison initiale",
+          "Phase de chute",
+          "Phase de croissance",
+          "Résultats finaux"
+        ]
+      },
+      "maintenance": {
+        "title": "Entretien à Long Terme",
+        "description": "Maintenir vos résultats"
+      }
+    }
+  },
+  "comparison": {
+    "title": "Comparaison des Traitements",
+    "description": "Comparer différentes options de traitement",
+    "factors": [
+      "Durée de la procédure",
+      "Temps de récupération",
+      "Résultats attendus",
+      "Considérations de coût",
+      "Exigences d'entretien"
+    ]
+  },
+  "faq": {
+    "title": "FAQ sur les Procédures",
+    "description": "Questions fréquentes sur nos procédures"
+  },
+  "consultation": {
+    "title": "Réserver une Consultation",
+    "description": "Planifiez votre consultation personnelle",
+    "cta": "Réserver Maintenant"
+  }
+}

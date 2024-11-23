@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "title": "Patient Information - Your Hair Restoration Journey",
+    "description": "Essential information for patients about hair restoration procedures, preparation, and aftercare.",
+    "keywords": ["patient info", "hair restoration care", "treatment preparation", "aftercare"]
+  },
+  "hero": {
+    "title": "Patient Information Center",
+    "subtitle": "Your Guide to Hair Restoration",
+    "description": "Everything you need to know about your treatment journey"
+  },
+  "journey": {
+    "title": "Your Treatment Journey",
+    "steps": {
+      "consultation": {
+        "title": "Initial Consultation",
+        "description": "Understanding your needs and planning your treatment"
+      },
+      "preparation": {
+        "title": "Treatment Preparation",
+        "description": "Getting ready for your procedure"
+      },
+      "procedure": {
+        "title": "Day of Procedure",
+        "description": "What to expect during treatment"
+      },
+      "recovery": {
+        "title": "Recovery Period",
+        "description": "Post-treatment care and healing"
+      },
+      "results": {
+        "title": "Results and Follow-up",
+        "description": "Monitoring your progress"
+      }
+    }
+  },
+  "preparation": {
+    "title": "Preparing for Treatment",
+    "sections": {
+      "lifestyle": {
+        "title": "Lifestyle Adjustments",
+        "items": [
+          "Dietary recommendations",
+          "Exercise guidelines",
+          "Medication adjustments",
+          "Smoking and alcohol"
+        ]
+      },
+      "medications": {
+        "title": "Medication Guidelines",
+        "description": "Important information about medications"
+      },
+      "timeline": {
+        "title": "Preparation Timeline",
+        "description": "Week-by-week preparation guide"
+      }
+    }
+  },
+  "aftercare": {
+    "title": "Aftercare Instructions",
+    "sections": {
+      "immediate": {
+        "title": "Immediate Care",
+        "instructions": [
+          "First 24 hours",
+          "Sleeping position",
+          "Activity restrictions",
+          "Wound care"
+        ]
+      },
+      "weekly": {
+        "title": "Weekly Care",
+        "instructions": [
+          "Washing routine",
+          "Exercise resumption",
+          "Medication schedule",
+          "Progress monitoring"
+        ]
+      },
+      "longTerm": {
+        "title": "Long-term Care",
+        "instructions": [
+          "Hair care routine",
+          "Lifestyle maintenance",
+          "Follow-up schedule",
+          "Expected timeline"
+        ]
+      }
+    }
+  },
+  "expectations": {
+    "title": "Setting Expectations",
+    "sections": {
+      "timeline": {
+        "title": "Growth Timeline",
+        "description": "Understanding the hair growth process"
+      },
+      "results": {
+        "title": "Expected Results",
+        "description": "What to expect at different stages"
+      },
+      "maintenance": {
+        "title": "Long-term Maintenance",
+        "description": "Maintaining your results"
+      }
+    }
+  },
+  "support": {
+    "title": "Patient Support",
+    "sections": {
+      "contact": {
+        "title": "Contact Information",
+        "description": "How to reach our support team"
+      },
+      "resources": {
+        "title": "Additional Resources",
+        "description": "Helpful information and guides"
+      },
+      "faq": {
+        "title": "Common Questions",
+        "description": "Answers to frequent patient inquiries"
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Patient Experiences",
+    "description": "Real stories from our patients"
+  }
+}

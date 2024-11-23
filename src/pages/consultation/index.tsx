@@ -1,87 +1,123 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import ConsultationForm from '../../components/consultation/ConsultationForm';
 import { motion } from 'framer-motion';
-import { Clock, Calendar, MessageCircle, Video } from 'lucide-react';
+import { Calendar, MessageCircle, Video } from 'lucide-react';
+import { useTranslation } from '../../hooks/useTranslation';
+import { SEOHelmet } from '../../components/SEOHelmet';
+import ConsultationForm from '../../components/consultation/ConsultationForm';
 
-const features = [
+const consultationTypes = [
   {
-    icon: Clock,
-    title: 'Quick Response',
-    description: 'Get a response within 24 hours',
-  },
-  {
+    key: 'inPerson',
     icon: Calendar,
-    title: 'Flexible Scheduling',
-    description: 'Choose a time that works best for you',
   },
   {
-    icon: MessageCircle,
-    title: 'Multi-Language Support',
-    description: 'Consult in your preferred language',
-  },
-  {
+    key: 'video',
     icon: Video,
-    title: 'Virtual Consultation',
-    description: 'Online video consultation available',
+  },
+  {
+    key: 'chat',
+    icon: MessageCircle,
   },
 ];
 
 export default function ConsultationPage() {
+  const { t } = useTranslation();
+
   return (
-    <div className="min-h-screen pt-20 pb-12 bg-gray-50">
-      <Helmet>
-        <title>Book a Consultation - Estenove Hair Clinic</title>
-        <meta
-          name="description"
-          content="Schedule a free consultation with our expert medical team at Estenove Hair Clinic. Get personalized treatment plans and discuss your hair restoration options."
-        />
-      </Helmet>
+    <div className="min-h-screen pt-20 bg-gray-50">
+      <SEOHelmet
+        titleKey="consultation.meta.title"
+        descriptionKey="consultation.meta.description"
+        keywordsKey="consultation.meta.keywords"
+        path="/consultation"
+      />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <motion.h1
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-4xl font-bold text-gray-900 sm:text-5xl"
-          >
-            Book Your Free Consultation
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="mt-4 text-xl text-gray-600"
-          >
-            Take the first step towards your hair restoration journey
-          </motion.p>
-        </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 mb-16"
-        >
-          {features.map((feature, index) => (
+      <div className="relative h-[80vh] min-h-[600px] w-full bg-gradient-to-br from-blue-900 to-blue-950 text-white">
+        <div className="container mx-auto h-full px-4 flex items-center">
+          <div className="max-w-3xl">
             <motion.div
-              key={feature.title}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 + index * 0.1 }}
-              className="bg-white p-6 rounded-2xl shadow-sm"
+              className="text-center"
             >
-              <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
-                <feature.icon className="h-6 w-6 text-blue-600" />
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900">{feature.title}</h3>
-              <p className="mt-2 text-gray-600">{feature.description}</p>
+              <h1 className="text-5xl md:text-6xl font-bold mb-6">
+                {t('consultation.hero.title')}
+              </h1>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                {t('consultation.hero.subtitle')}
+              </p>
             </motion.div>
-          ))}
-        </motion.div>
-
-        <ConsultationForm />
+          </div>
+        </div>
       </div>
+
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              {t('consultation.types.title')}
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              {t('consultation.types.subtitle')}
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-3">
+            {consultationTypes.map((type) => {
+              const Icon = type.icon;
+              return (
+                <motion.div
+                  key={type.key}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="bg-white rounded-xl shadow-sm p-6 border border-gray-100"
+                >
+                  <div className="flex items-center mb-4">
+                    <Icon className="h-6 w-6 text-blue-600" />
+                    <h3 className="text-lg font-semibold ml-2">
+                      {t(`consultation.types.items.${type.key}.title`)}
+                    </h3>
+                  </div>
+                  <p className="text-gray-600 mb-4">
+                    {t(`consultation.types.items.${type.key}.description`)}
+                  </p>
+                  <button
+                    onClick={() => {}}
+                    className="inline-flex items-center px-4 py-2 border border-transparent rounded-md text-sm font-medium text-white bg-blue-600 hover:bg-blue-700"
+                  >
+                    {t('consultation.types.bookButton')}
+                  </button>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <ConsultationForm />
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="py-20 bg-gradient-to-br from-blue-900 to-blue-950 text-white"
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold mb-6">
+            {t('consultation.cta.title')}
+          </h2>
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            {t('consultation.cta.description')}
+          </p>
+          <div className="flex justify-center gap-4">
+            <a
+              href="/contact"
+              className="inline-flex items-center px-8 py-4 border border-white text-lg font-medium rounded-full text-white hover:bg-blue-900"
+            >
+              {t('consultation.cta.contactButton')}
+            </a>
+          </div>
+        </div>
+      </motion.div>
     </div>
   );
 }

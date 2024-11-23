@@ -1,0 +1,93 @@
+{
+  "meta": {
+    "title": "Hair Restoration Education - Understanding Hair Loss and Treatment",
+    "description": "Learn about hair loss causes, treatment options, and the latest advancements in hair restoration technology.",
+    "keywords": ["hair loss education", "hair restoration guide", "hair transplant information", "hair loss treatment"]
+  },
+  "hero": {
+    "title": "Hair Restoration Education Center",
+    "subtitle": "Understanding Hair Loss and Treatment Options",
+    "description": "Comprehensive resources to help you make informed decisions about your hair restoration journey"
+  },
+  "topics": {
+    "hairLoss": {
+      "title": "Understanding Hair Loss",
+      "sections": {
+        "causes": {
+          "title": "Causes of Hair Loss",
+          "description": "Learn about the various factors contributing to hair loss"
+        },
+        "patterns": {
+          "title": "Hair Loss Patterns",
+          "description": "Understand different types of hair loss patterns"
+        },
+        "prevention": {
+          "title": "Prevention Strategies",
+          "description": "Discover ways to prevent and slow down hair loss"
+        }
+      }
+    },
+    "treatments": {
+      "title": "Treatment Options",
+      "sections": {
+        "surgical": {
+          "title": "Surgical Treatments",
+          "description": "Explore various hair transplant techniques"
+        },
+        "nonsurgical": {
+          "title": "Non-surgical Treatments",
+          "description": "Learn about medication and alternative therapies"
+        },
+        "combined": {
+          "title": "Combined Approaches",
+          "description": "Understanding comprehensive treatment plans"
+        }
+      }
+    }
+  },
+  "resources": {
+    "title": "Educational Resources",
+    "types": {
+      "articles": {
+        "title": "Articles",
+        "description": "In-depth articles about hair restoration"
+      },
+      "videos": {
+        "title": "Video Library",
+        "description": "Educational videos and procedure demonstrations"
+      },
+      "guides": {
+        "title": "Patient Guides",
+        "description": "Comprehensive guides for hair restoration"
+      },
+      "research": {
+        "title": "Research Papers",
+        "description": "Scientific studies and clinical research"
+      }
+    }
+  },
+  "faq": {
+    "title": "Common Questions",
+    "description": "Find answers to frequently asked questions about hair restoration",
+    "categories": {
+      "general": "General Questions",
+      "medical": "Medical Concerns",
+      "procedure": "Procedure Details",
+      "aftercare": "Aftercare Information"
+    }
+  },
+  "blog": {
+    "title": "Hair Restoration Blog",
+    "categories": {
+      "news": "Latest News",
+      "tips": "Hair Care Tips",
+      "stories": "Patient Stories",
+      "research": "Research Updates"
+    }
+  },
+  "cta": {
+    "consultation": "Schedule a Consultation",
+    "download": "Download Education Pack",
+    "subscribe": "Subscribe to Updates"
+  }
+}
