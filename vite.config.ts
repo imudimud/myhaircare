@@ -73,7 +73,7 @@ export default defineConfig({
         manualChunks: {
           'react-vendor': ['react', 'react-dom', 'react-router-dom'],
           'ui-vendor': ['framer-motion', 'lucide-react'],
-          'utils-vendor': ['date-fns', 'axios']
+          'utils-vendor': ['axios']
         }
       }
     },
