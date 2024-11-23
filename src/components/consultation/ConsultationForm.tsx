@@ -57,7 +57,7 @@ export default function ConsultationForm() {
       className="max-w-2xl mx-auto p-6 bg-white rounded-2xl shadow-sm"
     >
       <section id="consultation" className="bg-white">
-        <div className="bg-blue-600 py-20 mb-16">
+        <div className="bg-gradient-to-b from-navy-900 to-navy-800 text-white py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl font-bold mb-4 text-white">Book Your Free Consultation</h2>

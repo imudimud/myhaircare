@@ -86,46 +86,93 @@ export default function SapphireFue() {
       </Helmet>
 
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-blue-700 py-16 mb-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-          <motion.h1
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-4xl font-bold sm:text-5xl mb-6"
-          >
-            Sapphire FUE: Precision, Comfort, and Natural Results
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto"
-          >
-            Revolutionizing Hair Restoration with Advanced Technology
-          </motion.p>
-          <motion.a
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            href="/consultation"
-            className="inline-flex items-center px-8 py-4 border border-transparent rounded-full text-lg font-medium text-blue-600 bg-white hover:bg-blue-50"
-          >
-            Book Free Consultation
-          </motion.a>
+      <div className="relative h-[80vh] min-h-[600px] w-full bg-gradient-to-br from-blue-900 to-blue-950 text-white">
+        <div className="container mx-auto h-full px-4 flex items-center">
+          <div className="max-w-3xl">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+             animate={{ opacity: 1, y: 0 }}
+              className="text-5xl md:text-6xl font-bold mb-6"
+            >
+             Sapphire FUE: Precision, Comfort, and Natural Results
+           </motion.h1>
+           <motion.p
+              initial={{ opacity: 0, y: 20 }}
+             animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto"
+           >
+             Revolutionizing Hair Restoration with Advanced Technology
+           </motion.p>
+           <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+             transition={{ delay: 0.4 }}
+             className="flex flex-col sm:flex-row gap-4"
+             >
+                <a href="#learn-more" className="btn-primary">
+                  Learn More About Sapphire FUE
+                </a>
+                <a href="/consultation" className="btn-secondary">
+                  Book Your Free Consultation
+                </a>
+            </motion.div>
+          </div>
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* What Is Sapphire FUE Section */}
-        <div className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">What Makes Sapphire FUE Unique?</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Sapphire FUE represents the cutting edge of hair transplant technology, using precision-engineered
-              sapphire blades for unparalleled accuracy and minimal tissue damage during the procedure.
+        <section id="learn-more" className="py-20 bg-white">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-6">What Is Sapphire FUE?</h2>
+            <p className="text-lg text-gray-600 mb-12">
+              Sapphire FUE represents the latest advancement in hair transplantation technology, 
+              utilizing precision-engineered sapphire blades for unparalleled accuracy and natural-looking results.
             </p>
           </div>
-        </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+              <h3 className="text-2xl font-semibold mb-4">The Sapphire Advantage</h3>
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <CheckCircle2 className="w-6 h-6 text-navy-800 mt-1 mr-2" />
+                  <span>Smoother, more precise incisions</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle2 className="w-6 h-6 text-navy-800 mt-1 mr-2" />
+                  <span>Faster healing and recovery</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle2 className="w-6 h-6 text-navy-800 mt-1 mr-2" />
+                  <span>Minimal scarring and natural results</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-2xl font-semibold mb-4">Why Choose Sapphire FUE?</h3>
+              <p className="text-gray-600 mb-4">
+                The sapphire blade's superior edge quality and durability enable our surgeons to create 
+                smaller, more precise incisions. This results in:
+              </p>
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <CheckCircle2 className="w-6 h-6 text-navy-800 mt-1 mr-2" />
+                  <span>Higher graft survival rate</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle2 className="w-6 h-6 text-navy-800 mt-1 mr-2" />
+                  <span>More natural-looking hairline</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle2 className="w-6 h-6 text-navy-800 mt-1 mr-2" />
+                  <span>Reduced recovery time</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
 
         {/* Benefits Section */}
         <div className="bg-white rounded-2xl p-8 mb-16">
@@ -255,29 +302,31 @@ export default function SapphireFue() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-12 text-center text-white"
+          className="py-20 bg-gradient-to-br from-blue-900 to-blue-950 text-white"
         >
-          <h2 className="text-3xl font-bold mb-6">
-            Ready to Transform Your Appearance?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Take the first step towards restoring your natural hair with Sapphire FUE.
-            Schedule a consultation with our expert team to discuss your personalized treatment plan.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-            <a
-              href="/consultation"
-              className="inline-flex items-center px-8 py-4 border border-transparent rounded-full text-lg font-medium text-blue-600 bg-white hover:bg-blue-50"
-            >
-              Book Free Consultation
-            </a>
-            <a
-              href="/contact"
-              className="inline-flex items-center px-8 py-4 border-2 border-white rounded-full text-lg font-medium text-white hover:bg-white/10"
-            >
-              <MessageSquare className="h-5 w-5 mr-2" />
-              Chat with Us
-            </a>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl font-bold mb-6">
+              Ready to Transform Your Appearance?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+              Take the first step towards restoring your natural hair with Sapphire FUE.
+              Schedule a consultation with our expert team to discuss your personalized treatment plan.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+              <a
+                href="/consultation"
+                className="inline-flex items-center px-8 py-4 border border-transparent rounded-full text-lg font-medium text-blue-600 bg-white hover:bg-blue-50"
+              >
+                Book Free Consultation
+              </a>
+              <a
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 border-2 border-white rounded-full text-lg font-medium text-white hover:bg-white/10"
+              >
+                <MessageSquare className="h-5 w-5 mr-2" />
+                Chat with Us
+              </a>
+            </div>
           </div>
         </motion.div>
       </div>

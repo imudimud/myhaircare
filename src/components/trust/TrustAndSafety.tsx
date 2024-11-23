@@ -76,8 +76,14 @@ export default function TrustAndSafety() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative h-[80vh] flex items-center justify-center bg-gradient-to-r from-blue-600 to-blue-700 text-white">
-        <div className="absolute inset-0 bg-black/40" />
+      <section className="relative h-[80vh] flex items-center justify-center bg-gradient-to-br from-blue-900 to-blue-950 text-white">
+        <div className="absolute inset-0">
+          <img
+            src="/images/clinic-hero.jpg"
+            alt="Este Nove Clinic"
+            className="w-full h-full object-cover opacity-20"
+          />
+        </div>
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
@@ -244,23 +250,30 @@ export default function TrustAndSafety() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
-        <div className="max-w-7xl mx-auto px-4 text-center">
+      <section className="relative py-20 bg-gradient-to-br from-blue-900 to-blue-950 text-white">
+        <div className="absolute inset-0">
+          <img
+            src="/images/clinic-hero.jpg"
+            alt="Este Nove Clinic"
+            className="w-full h-full object-cover opacity-20"
+          />
+        </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-8">
-            Choose Este Nove for a Safe and Trusted Hair Restoration Journey
+            Experience World-Class Care with Complete Peace of Mind
           </h2>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Link
               to="/consultation"
-              className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-white text-blue-600 font-semibold hover:bg-blue-50 transition-colors"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-white text-blue-900 font-semibold hover:bg-blue-50 transition-colors"
             >
-              Book Free Consultation
+              Book a Free Consultation
             </Link>
             <Link
               to="/contact"
               className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-transparent border-2 border-white text-white font-semibold hover:bg-white/10 transition-colors"
             >
-              Contact Us
+              Contact Our Team
             </Link>
           </div>
         </div>

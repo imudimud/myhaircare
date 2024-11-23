@@ -97,32 +97,38 @@ export default function ProceduresPage() {
       </Helmet>
 
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-blue-700 py-16 mb-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-          <motion.h1
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-4xl font-bold sm:text-5xl mb-6"
-          >
-            Advanced Hair Restoration Solutions
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto"
-          >
-            Discover our comprehensive range of cutting-edge procedures designed to restore your natural hair with lasting results.
-          </motion.p>
-          <motion.a
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            href="/consultation"
-            className="inline-flex items-center px-8 py-4 border border-transparent rounded-full text-lg font-medium text-blue-600 bg-white hover:bg-blue-50"
-          >
-            Schedule Free Consultation
-          </motion.a>
+      <div className="relative h-[80vh] min-h-[600px] w-full bg-gradient-to-br from-blue-900 to-blue-950 text-white">
+        <div className="container mx-auto h-full px-4 flex items-center">
+          <div className="max-w-3xl">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-5xl md:text-6xl font-bold mb-6"
+            >
+              Advanced Hair Restoration Solutions
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto"
+            >
+              Discover our comprehensive range of cutting-edge procedures designed to restore your natural hair with lasting results.
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+              className="flex flex-col sm:flex-row gap-4"
+            >
+              <a
+                href="/consultation"
+                className="inline-flex items-center px-8 py-4 border border-transparent rounded-full text-lg font-medium text-blue-600 bg-white hover:bg-blue-50"
+              >
+                Schedule Free Consultation
+              </a>
+            </motion.div>
+          </div>
         </div>
       </div>
 
@@ -276,21 +282,25 @@ export default function ProceduresPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-12 text-center text-white"
+          className="py-20 bg-gradient-to-br from-blue-900 to-blue-950 text-white"
         >
-          <h2 className="text-3xl font-bold mb-6">
-            Ready to Transform Your Appearance?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Take the first step towards restoring your natural hair. Schedule a consultation
-            with our expert team to discuss your personalized treatment plan.
-          </p>
-          <a
-            href="/consultation"
-            className="inline-flex items-center px-8 py-4 border border-transparent rounded-full text-lg font-medium text-blue-600 bg-white hover:bg-blue-50"
-          >
-            Book Your Free Consultation
-          </a>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl font-bold mb-6">
+              Ready to Transform Your Appearance?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+              Take the first step towards restoring your natural hair. Schedule a consultation
+              with our expert team to discuss your personalized treatment plan.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+              <a
+                href="/consultation"
+                className="inline-flex items-center px-8 py-4 border border-transparent rounded-full text-lg font-medium text-blue-600 bg-white hover:bg-blue-50"
+              >
+                Book Your Free Consultation
+              </a>
+            </div>
+          </div>
         </motion.div>
       </div>
     </div>

@@ -48,7 +48,7 @@ export default function Header() {
             </a>
             <button
               onClick={scrollToContact}
-              className="rounded-full bg-blue-600 px-6 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              className="rounded-full bg-gradient-to-r from-blue-900 to-blue-800 px-6 py-2.5 text-sm font-semibold text-white shadow-sm hover:from-blue-800 hover:to-blue-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:ring-offset-2"
               aria-label="Book a free consultation"
             >
               {t('buttons.bookConsultation')}

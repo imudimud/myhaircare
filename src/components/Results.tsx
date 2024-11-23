@@ -1,6 +1,7 @@
 import React, { useState, useCallback, memo, Suspense, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Calendar, Users, Activity, Sparkles, Timer, Droplets, Brain, ChevronLeft, ChevronRight, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const RESULTS = [
   {
@@ -499,10 +500,13 @@ export default function Results() {
         </div>
 
         <div className="text-center mt-12">
-          <button className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-full font-medium hover:bg-blue-700 transition-colors">
+          <Link
+            to="/gallery"
+            className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-full font-medium hover:bg-blue-700 transition-colors"
+          >
             View More Results
             <ArrowRight className="w-5 h-5" />
-          </button>
+          </Link>
         </div>
       </div>
     </section>

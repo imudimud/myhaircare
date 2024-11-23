@@ -123,7 +123,9 @@ export default function WhyEstenovePage() {
   const scrollToContent = () => {
     const expertiseSection = document.getElementById('expertise');
     if (expertiseSection) {
-      expertiseSection.scrollIntoView({ behavior: 'smooth' });
+      const yOffset = -80; // Account for fixed header
+      const y = expertiseSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
     }
   };
 
@@ -139,7 +141,7 @@ export default function WhyEstenovePage() {
       />
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
-        <section className="relative h-screen flex items-center justify-center text-center bg-gradient-to-r from-blue-900 to-blue-800 text-white">
+        <section className="relative h-screen flex items-center justify-center text-center bg-gradient-to-br from-blue-900 to-blue-950 text-white">
           <div className="absolute inset-0">
             <img
               src="/images/clinic-hero.jpg"

@@ -120,32 +120,38 @@ export default function StemCell() {
       </Helmet>
 
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-blue-700 py-16 mb-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-          <motion.h1
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-4xl font-bold sm:text-5xl mb-6"
-          >
-            Stem Cell Therapy: Revitalize Your Hair Naturally
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto"
-          >
-            Harnessing the Power of Regenerative Medicine for Hair Restoration
-          </motion.p>
-          <motion.a
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            href="/consultation"
-            className="inline-flex items-center px-8 py-4 border border-transparent rounded-full text-lg font-medium text-blue-600 bg-white hover:bg-blue-50"
-          >
-            Book Free Consultation
-          </motion.a>
+      <div className="relative h-[80vh] min-h-[600px] w-full bg-gradient-to-br from-blue-900 to-blue-950 text-white">
+        <div className="container mx-auto h-full px-4 flex items-center justify-center">
+          <div className="max-w-3xl mx-auto text-center">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 px-4"
+            >
+              Stem Cell Therapy: Revitalize Your Hair Naturally
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="text-lg sm:text-xl text-blue-100 mb-8 max-w-3xl mx-auto px-4"
+            >
+              Harnessing the Power of Regenerative Medicine for Hair Restoration
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center px-4"
+            >
+              <a
+                href="/consultation"
+                className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 border border-transparent rounded-full text-base sm:text-lg font-medium text-blue-600 bg-white hover:bg-blue-50 w-auto max-w-[280px] mx-auto"
+              >
+                Book Free Consultation
+              </a>
+            </motion.div>
+          </div>
         </div>
       </div>
 
@@ -310,29 +316,31 @@ export default function StemCell() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-12 text-center text-white"
+          className="py-20 bg-gradient-to-br from-blue-900 to-blue-950 text-white"
         >
-          <h2 className="text-3xl font-bold mb-6">
-            Take the First Step Toward Healthier, Fuller Hair
-          </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Experience the power of regenerative medicine with our advanced stem cell therapy.
-            Schedule a consultation with our experts to discover if this treatment is right for you.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-            <a
-              href="/consultation"
-              className="inline-flex items-center px-8 py-4 border border-transparent rounded-full text-lg font-medium text-blue-600 bg-white hover:bg-blue-50"
-            >
-              Schedule Free Consultation
-            </a>
-            <a
-              href="/contact"
-              className="inline-flex items-center px-8 py-4 border-2 border-white rounded-full text-lg font-medium text-white hover:bg-white/10"
-            >
-              <MessageSquare className="h-5 w-5 mr-2" />
-              Chat with Our Experts
-            </a>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl font-bold mb-6">
+              Take the First Step Toward Healthier, Fuller Hair
+            </h2>
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+              Experience the power of regenerative medicine with our advanced stem cell therapy.
+              Schedule a consultation with our experts to discover if this treatment is right for you.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+              <a
+                href="/consultation"
+                className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 border border-transparent rounded-full text-base sm:text-lg font-medium text-blue-600 bg-white hover:bg-blue-50 w-auto max-w-[280px] mx-auto"
+              >
+                Schedule Free Consultation
+              </a>
+              <a
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 border-2 border-white rounded-full text-lg font-medium text-white hover:bg-white/10"
+              >
+                <MessageSquare className="h-5 w-5 mr-2" />
+                Chat with Our Experts
+              </a>
+            </div>
           </div>
         </motion.div>
       </div>

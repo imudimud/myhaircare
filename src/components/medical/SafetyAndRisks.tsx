@@ -4,7 +4,7 @@ import { Shield, AlertCircle, Heart } from 'lucide-react';
 export default function SafetyAndRisks() {
   return (
     <section className="bg-white">
-      <div className="bg-blue-600 py-20 mb-16">
+      <div className="bg-gradient-to-b from-navy-900 to-navy-800 text-white py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4 text-white">Safety Information & Risk Management</h2>

@@ -49,22 +49,24 @@ export default function MedicalInformationPage() {
         />
       </Helmet>
 
-      <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-center"
-          >
-            <Stethoscope className="h-16 w-16 mx-auto mb-6 text-blue-100" />
-            <h1 className="text-4xl font-bold mb-4">
-              Medical Excellence & Patient Safety
-            </h1>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              Our commitment to the highest medical standards and patient care
-              protocols ensures safe and effective hair restoration procedures.
-            </p>
-          </motion.div>
+      <div className="relative h-[80vh] min-h-[600px] w-full bg-gradient-to-br from-blue-900 to-blue-950 text-white">
+        <div className="container mx-auto h-full px-4 flex items-center">
+          <div className="max-w-3xl">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-center"
+            >
+              <Stethoscope className="h-16 w-16 mx-auto mb-6 text-blue-100" />
+              <h1 className="text-5xl md:text-6xl font-bold mb-6">
+                Medical Excellence & Patient Safety
+              </h1>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Our commitment to the highest medical standards and patient care
+                protocols ensures safe and effective hair restoration procedures.
+              </p>
+            </motion.div>
+          </div>
         </div>
       </div>
 
@@ -111,21 +113,23 @@ export default function MedicalInformationPage() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-white rounded-2xl p-8 text-center mt-16"
+          className="py-20 bg-gradient-to-br from-blue-900 to-blue-950 text-white mt-16"
         >
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">
-            Have Questions About Our Medical Procedures?
-          </h2>
-          <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-            Our medical team is here to address any concerns you may have about our
-            procedures, safety standards, or care protocols.
-          </p>
-          <a
-            href="/consultation"
-            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-white bg-blue-600 hover:bg-blue-700"
-          >
-            Schedule a Free Consultation
-          </a>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl font-bold mb-6">
+              Have Questions About Our Medical Procedures?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+              Our medical team is here to address any concerns you may have about our
+              procedures, safety standards, or care protocols.
+            </p>
+            <a
+              href="/consultation"
+              className="inline-flex items-center px-8 py-4 border border-transparent rounded-full text-lg font-medium text-blue-600 bg-white hover:bg-blue-50"
+            >
+              Schedule a Free Consultation
+            </a>
+          </div>
         </motion.div>
       </div>
     </div>
