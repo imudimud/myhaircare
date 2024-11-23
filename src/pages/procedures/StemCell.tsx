@@ -122,11 +122,11 @@ export default function StemCell() {
       {/* Hero Section */}
       <div className="relative h-[80vh] min-h-[600px] w-full bg-gradient-to-br from-blue-900 to-blue-950 text-white">
         <div className="container mx-auto h-full px-4 flex items-center justify-center">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="w-full max-w-3xl mx-auto text-center">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 px-4"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
             >
               Stem Cell Therapy: Revitalize Your Hair Naturally
             </motion.h1>
@@ -134,7 +134,7 @@ export default function StemCell() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-lg sm:text-xl text-blue-100 mb-8 max-w-3xl mx-auto px-4"
+              className="text-base sm:text-lg md:text-xl text-blue-100 mb-8 max-w-3xl mx-auto"
             >
               Harnessing the Power of Regenerative Medicine for Hair Restoration
             </motion.p>
@@ -230,46 +230,50 @@ export default function StemCell() {
         </div>
 
         {/* Comparison Section */}
-        <div className="bg-white rounded-2xl p-8 mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Treatment Comparison</h2>
-            <p className="text-xl text-gray-600">How stem cell therapy compares to other treatments</p>
+        <div className="bg-white rounded-2xl p-4 sm:p-8 mb-16">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Treatment Comparison</h2>
+            <p className="text-lg sm:text-xl text-gray-600">How stem cell therapy compares to other treatments</p>
           </div>
-          <div className="overflow-x-auto">
-            <table className="w-full">
-              <thead>
-                <tr className="border-b-2 border-gray-200">
-                  <th className="px-6 py-3 text-left text-gray-600">Feature</th>
-                  <th className="px-6 py-3 text-left text-blue-600">Stem Cell Therapy</th>
-                  <th className="px-6 py-3 text-left text-gray-600">FUE</th>
-                  <th className="px-6 py-3 text-left text-gray-600">DHI</th>
-                </tr>
-              </thead>
-              <tbody>
-                {comparisons.map((row, index) => (
-                  <tr key={index} className="border-b border-gray-200">
-                    <td className="px-6 py-4 font-medium text-gray-900">{row.feature}</td>
-                    <td className="px-6 py-4 text-blue-600">{row.stemCell}</td>
-                    <td className="px-6 py-4 text-gray-600">{row.fue}</td>
-                    <td className="px-6 py-4 text-gray-600">{row.dhi}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <div className="overflow-x-auto -mx-4 sm:mx-0">
+            <div className="min-w-full inline-block align-middle">
+              <div className="overflow-hidden">
+                <table className="min-w-full divide-y divide-gray-200">
+                  <thead>
+                    <tr className="border-b-2 border-gray-200">
+                      <th className="px-3 sm:px-6 py-3 text-left text-sm sm:text-base text-gray-600 font-semibold">Feature</th>
+                      <th className="px-3 sm:px-6 py-3 text-left text-sm sm:text-base text-blue-600 font-semibold">Stem Cell Therapy</th>
+                      <th className="px-3 sm:px-6 py-3 text-left text-sm sm:text-base text-gray-600 font-semibold">FUE</th>
+                      <th className="px-3 sm:px-6 py-3 text-left text-sm sm:text-base text-gray-600 font-semibold">DHI</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-200">
+                    {comparisons.map((row, index) => (
+                      <tr key={index}>
+                        <td className="px-3 sm:px-6 py-4 text-sm sm:text-base font-medium text-gray-900">{row.feature}</td>
+                        <td className="px-3 sm:px-6 py-4 text-sm sm:text-base text-blue-600">{row.stemCell}</td>
+                        <td className="px-3 sm:px-6 py-4 text-sm sm:text-base text-gray-600">{row.fue}</td>
+                        <td className="px-3 sm:px-6 py-4 text-sm sm:text-base text-gray-600">{row.dhi}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
         </div>
 
         {/* Scientific Backing */}
-        <div className="bg-blue-50 rounded-2xl p-8 mb-16">
+        <div className="bg-blue-50 rounded-2xl p-4 sm:p-8 mb-16">
           <div className="max-w-3xl mx-auto text-center">
-            <HeartPulse className="h-12 w-12 text-blue-600 mx-auto mb-6" />
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Scientific Backing</h2>
-            <p className="text-xl text-gray-600 mb-8">
+            <HeartPulse className="h-10 w-10 sm:h-12 sm:w-12 text-blue-600 mx-auto mb-6" />
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Scientific Backing</h2>
+            <p className="text-base sm:text-xl text-gray-600 mb-8">
               Our stem cell therapy is supported by extensive clinical research and proven results.
               Multiple studies have shown significant improvement in hair density and growth after
               treatment, with success rates exceeding 80% in suitable candidates.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 text-left">
               <div className="bg-white rounded-xl p-6">
                 <div className="text-3xl font-bold text-blue-600 mb-2">85%</div>
                 <p className="text-gray-600">Patient satisfaction rate</p>

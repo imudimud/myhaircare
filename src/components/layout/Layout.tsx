@@ -15,9 +15,10 @@ export default function Layout({ children }: LayoutProps) {
       <Header />
       <button
         onClick={() => setIsNavOpen(!isNavOpen)}
-        className="fixed top-24 left-4 z-50 p-2 rounded-full bg-navy-900 text-white hover:bg-navy-800 lg:hidden"
+        className="fixed top-20 left-4 z-40 p-2 rounded-full bg-navy-900 text-white hover:bg-navy-800 lg:hidden"
+        aria-label="Toggle navigation menu"
       >
-        <Menu size={20} />
+        <Menu size={20} aria-hidden="true" />
       </button>
       <div className="flex pt-[72px]">
         <Navbar isOpen={isNavOpen} setIsOpen={setIsNavOpen} />

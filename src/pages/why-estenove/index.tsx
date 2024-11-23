@@ -142,7 +142,7 @@ export default function WhyEstenovePage() {
       />
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
-        <section className="relative h-screen flex items-center justify-center text-center bg-gradient-to-br from-blue-900 to-blue-950 text-white">
+        <section className="relative h-screen flex items-center justify-center text-center bg-gradient-to-br from-blue-900 to-blue-950 text-white" aria-labelledby="hero-heading">
           <div className="absolute inset-0">
             <img
               src="/images/clinic-hero.jpg"
@@ -151,27 +151,19 @@ export default function WhyEstenovePage() {
             />
           </div>
           <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.h1
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-5xl md:text-6xl font-bold mb-6"
-            >
+            <h2 id="hero-heading" className="text-5xl md:text-6xl font-bold mb-6">
               Why Choose Este Nove for Your Hair Restoration Journey?
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="text-xl md:text-2xl mb-8 text-blue-100"
-            >
+            </h2>
+            <p className="text-xl md:text-2xl mb-8 text-blue-100">
               World-Class Expertise, Proven Results, and Global Trust
-            </motion.p>
+            </p>
             <motion.button
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
               onClick={scrollToContent}
               className="inline-flex items-center px-8 py-3 border-2 border-white rounded-full text-lg font-medium hover:bg-white hover:text-blue-900 transition-colors"
+              aria-label="Discover Our Difference"
             >
               Discover Our Difference
               <ChevronDown className="ml-2 h-5 w-5" />
@@ -180,8 +172,11 @@ export default function WhyEstenovePage() {
         </section>
 
         {/* Stats Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-50 to-white">
+        <section className="py-20 bg-gradient-to-r from-blue-50 to-white" aria-labelledby="stats-heading">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 id="stats-heading" className="text-4xl font-bold text-gray-900 mb-4">
+              Our Achievements
+            </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
                 <motion.div
@@ -200,10 +195,10 @@ export default function WhyEstenovePage() {
         </section>
 
         {/* Expertise Section */}
-        <section id="expertise" className="py-20 bg-white">
+        <section id="expertise" className="py-20 bg-white" aria-labelledby="expertise-heading">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              <h2 id="expertise-heading" className="text-4xl font-bold text-gray-900 mb-4">
                 Global Excellence in Hair Restoration
               </h2>
               <p className="text-xl text-gray-600">
@@ -218,10 +213,11 @@ export default function WhyEstenovePage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                   className="bg-white rounded-xl shadow-lg p-6 text-center"
+                  role="article"
                 >
                   <img
                     src={achievement.icon}
-                    alt={achievement.title}
+                    alt={`${achievement.title} certification`}
                     className="h-16 w-auto mx-auto mb-4"
                   />
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
@@ -235,10 +231,10 @@ export default function WhyEstenovePage() {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 bg-blue-50">
+        <section className="py-20 bg-blue-50" aria-labelledby="features-heading">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              <h2 id="features-heading" className="text-4xl font-bold text-gray-900 mb-4">
                 What Sets Us Apart
               </h2>
               <p className="text-xl text-gray-600">
@@ -253,8 +249,9 @@ export default function WhyEstenovePage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                   className="bg-white rounded-xl shadow-lg p-6"
+                  role="article"
                 >
-                  <div className="flex justify-center mb-4">
+                  <div className="flex justify-center mb-4" aria-hidden="true">
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
@@ -268,10 +265,10 @@ export default function WhyEstenovePage() {
         </section>
 
         {/* Journey Steps Section */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-white" aria-labelledby="journey-steps-heading">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              <h2 id="journey-steps-heading" className="text-4xl font-bold text-gray-900 mb-4">
                 Your Hair Restoration Journey
               </h2>
               <p className="text-xl text-gray-600">
@@ -286,6 +283,7 @@ export default function WhyEstenovePage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                   className="bg-white rounded-xl shadow-lg p-6"
+                  role="article"
                 >
                   <div className="flex justify-center mb-4">
                     <img
@@ -305,10 +303,10 @@ export default function WhyEstenovePage() {
         </section>
 
         {/* Advanced Techniques Section */}
-        <section className="py-20 bg-blue-50">
+        <section className="py-20 bg-blue-50" aria-labelledby="advanced-techniques-heading">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              <h2 id="advanced-techniques-heading" className="text-4xl font-bold text-gray-900 mb-4">
                 Advanced Hair Restoration Techniques
               </h2>
               <p className="text-xl text-gray-600">
@@ -323,6 +321,7 @@ export default function WhyEstenovePage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                   className="bg-white rounded-xl overflow-hidden shadow-lg"
+                  role="article"
                 >
                   <img
                     src={technique.image}
@@ -342,10 +341,10 @@ export default function WhyEstenovePage() {
         </section>
 
         {/* Press Section */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-white" aria-labelledby="press-features-heading">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              <h2 id="press-features-heading" className="text-4xl font-bold text-gray-900 mb-4">
                 Featured In Global Media
               </h2>
               <p className="text-xl text-gray-600">
@@ -361,6 +360,7 @@ export default function WhyEstenovePage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                   className="grayscale hover:grayscale-0 transition-all"
+                  aria-label={press.name}
                 >
                   <img
                     src={press.logo}
@@ -377,10 +377,10 @@ export default function WhyEstenovePage() {
         <GlobalReach />
 
         {/* Testimonials Section */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-white" aria-labelledby="testimonials-heading">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              <h2 id="testimonials-heading" className="text-4xl font-bold text-gray-900 mb-4">
                 Patient Success Stories
               </h2>
               <p className="text-xl text-gray-600">
@@ -421,6 +421,7 @@ export default function WhyEstenovePage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                   className="bg-white rounded-xl shadow-lg overflow-hidden"
+                  role="article"
                 >
                   <div className="relative h-48">
                     <img
@@ -461,19 +462,22 @@ export default function WhyEstenovePage() {
           className="py-20"
           backgroundImage="/images/clinic-hero.jpg"
           containerClassName="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+          aria-label="Call to Action"
         >
           <h2 className="text-4xl font-bold mb-6">
             Start Your Journey with Este Nove Today
           </h2>
-          <p className="text-xl mb-8 text-blue-100">
+          <p className="text-xl mb-8 text-white">
             Take the first step towards restoring your confidence
           </p>
-          <div className="flex justify-center space-x-4">
+          <div className="flex justify-center space-x-4" role="group" aria-label="Action buttons">
             <motion.a
               href="/consultation"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="inline-flex items-center px-8 py-3 border-2 border-white bg-white text-navy-900 rounded-full text-lg font-medium shadow-lg hover:bg-opacity-90 hover:border-opacity-90 transition-all"
+              role="button"
+              aria-label="Book Free Consultation"
             >
               Book Free Consultation
             </motion.a>
@@ -482,6 +486,8 @@ export default function WhyEstenovePage() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="inline-flex items-center px-8 py-3 border-2 border-white rounded-full text-lg font-medium shadow-lg hover:bg-white hover:text-navy-900 transition-all"
+              role="button"
+              aria-label="Contact Us"
             >
               Contact Us
             </motion.a>

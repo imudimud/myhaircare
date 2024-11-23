@@ -99,7 +99,7 @@ export default function Navbar({ isOpen, setIsOpen }: NavbarProps) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setIsOpen(false)}
-            className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40 lg:hidden"
+            className="fixed inset-0 bg-black/20 backdrop-blur-sm z-30 lg:hidden"
           />
           
           {/* Sidebar */}
@@ -107,7 +107,9 @@ export default function Navbar({ isOpen, setIsOpen }: NavbarProps) {
             initial="closed"
             animate="open"
             exit="closed"
-            className="fixed left-0 top-[72px] h-[calc(100vh-72px)] w-64 bg-navy-900 text-white overflow-y-auto z-50 shadow-xl"
+            className="fixed left-0 top-[72px] h-[calc(100vh-72px)] w-64 bg-navy-900 text-white overflow-y-auto z-40 shadow-xl lg:shadow-none"
+            role="navigation"
+            aria-label="Main navigation"
           >
             <div className="flex flex-col h-full">
               {/* Close button - mobile only */}

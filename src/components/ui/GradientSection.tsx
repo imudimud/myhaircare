@@ -5,6 +5,7 @@ interface GradientSectionProps extends React.HTMLAttributes<HTMLDivElement> {
   backgroundImage?: string;
   children: React.ReactNode;
   containerClassName?: string;
+  'aria-label'?: string;
 }
 
 export function GradientSection({
@@ -20,10 +21,12 @@ export function GradientSection({
         "relative bg-gradient-to-br from-navy-900 to-navy-800 text-white",
         className
       )}
+      role="region"
+      aria-label={props['aria-label'] || 'Content Section'}
       {...props}
     >
       {backgroundImage && (
-        <div className="absolute inset-0">
+        <div className="absolute inset-0" aria-hidden="true">
           <img
             src={backgroundImage}
             alt=""
