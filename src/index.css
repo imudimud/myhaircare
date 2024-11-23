@@ -4,30 +4,30 @@
 
 :root {
   /* Primary colors with improved contrast */
-  --color-primary: #0c1e47; /* Darkest blue for backgrounds */
-  --color-primary-light: #1a365d;
-  --color-primary-dark: #0a1735;
+  --color-primary: #1a56db; /* Darker blue for better contrast */
+  --color-primary-light: #3b82f6;
+  --color-primary-dark: #1e40af;
   
   /* Text colors with WCAG 2.1 compliant contrast ratios */
-  --color-text-primary: #ffffff;
-  --color-text-secondary: #ffffff;
-  --color-text-tertiary: #ffffff;
+  --color-text-primary: #111827; /* Dark gray for main text */
+  --color-text-secondary: #374151; /* Medium gray for secondary text */
+  --color-text-tertiary: #6b7280; /* Light gray for tertiary text */
   
   /* Background colors */
-  --color-bg-primary: #0c1e47;
-  --color-bg-secondary: #1a365d;
-  --color-bg-tertiary: #0a1735;
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f3f4f6;
+  --color-bg-tertiary: #e5e7eb;
 }
 
 /* Base styles with accessibility improvements */
 @layer base {
   html {
     @apply antialiased;
-    scroll-behavior: smooth;
   }
   
   body {
-    @apply bg-blue-950 text-white;
+    @apply bg-white text-gray-900;
+    color: var(--color-text-primary);
   }
 
   /* Improved focus styles for keyboard navigation */
@@ -60,68 +60,7 @@
   }
 }
 
-/* Component styles */
-@layer components {
-  .btn-primary {
-    @apply bg-blue-600 text-white px-6 py-3 rounded-lg
-           hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
-           disabled:opacity-50 disabled:cursor-not-allowed
-           transition-colors duration-200;
-  }
-
-  .btn-secondary {
-    @apply bg-white text-blue-900 px-6 py-3 rounded-lg
-           hover:bg-blue-50 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
-           disabled:opacity-50 disabled:cursor-not-allowed
-           transition-colors duration-200;
-  }
-
-  .btn-outline {
-    @apply bg-transparent text-white border-2 border-white
-           px-6 py-3 rounded-lg hover:bg-white/10
-           focus:ring-2 focus:ring-white focus:ring-offset-2
-           disabled:opacity-50 disabled:cursor-not-allowed
-           transition-colors duration-200;
-  }
-
-  .nav-link {
-    @apply text-white/80 hover:text-white transition-colors;
-  }
-
-  .gradient-text {
-    @apply bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent;
-  }
-
-  .hero-gradient {
-    @apply bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800;
-  }
-
-  /* Section styles */
-  .section-gradient {
-    @apply bg-gradient-to-b from-blue-900 to-blue-800 text-white py-16;
-  }
-
-  .section-transparent {
-    @apply bg-transparent text-white py-16;
-  }
-
-  .section-white {
-    @apply bg-white text-blue-950 py-16;
-  }
-
-  /* Navbar specific styles */
-  .navbar {
-    @apply bg-navbar-gradient text-white;
-  }
-
-  /* Scroll button */
-  .scroll-button {
-    @apply bg-transparent text-white hover:bg-white/10 
-           rounded-full p-2 transition-colors duration-200;
-  }
-}
-
-/* Utility classes */
+/* Utility classes for accessible text */
 @layer utilities {
   .text-accessible {
     @apply text-gray-900;
@@ -131,10 +70,7 @@
     @apply text-gray-700;
   }
 
-  .focus-ring {
-    @apply focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2;
-  }
-
+  /* Skip to main content link - visible only when focused */
   .skip-to-content {
     @apply sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 
            focus:bg-white focus:p-4 focus:text-blue-700;
@@ -146,6 +82,14 @@
 
   .animate-slide-up {
     animation: slideUp 0.8s ease-out;
+  }
+
+  .animate-slide-down {
+    animation: slideDown 0.8s ease-out;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.5s ease-out;
   }
 }
 
@@ -160,11 +104,33 @@
 
 @keyframes slideUp {
   from {
-    transform: translateY(20px);
     opacity: 0;
+    transform: translateY(20px);
   }
   to {
-    transform: translateY(0);
     opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
