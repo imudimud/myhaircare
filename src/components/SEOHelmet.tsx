@@ -32,7 +32,7 @@ export function SEOHelmet({
   breadcrumbs,
   structuredData = [],
 }: SEOHelmetProps) {
-  const { t, i18n } = useTranslation();
+  const { t, currentLanguage } = useTranslation();
   const location = useLocation();
   const siteUrl = import.meta.env.VITE_SITE_URL || 'https://myhaircare.com';
 
@@ -86,7 +86,7 @@ export function SEOHelmet({
       <meta property="og:type" content="website" />
       <meta property="og:url" content={pageUrl} />
       <meta property="og:image" content={imageUrl} />
-      <meta property="og:locale" content={i18n.language} />
+      <meta property="og:locale" content={currentLanguage} />
 
       {/* Twitter Card Tags */}
       <meta name="twitter:card" content="summary_large_image" />

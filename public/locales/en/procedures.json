@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "title": "Hair Transplant Procedures | Estenove",
+    "description": "Discover our advanced hair transplant procedures including Sapphire FUE, DHI, and Stem Cell treatments. Learn about our cutting-edge techniques.",
+    "keywords": "hair transplant, FUE, DHI, stem cell, hair restoration"
+  },
+  "nav_title": "Hair Procedures",
+  "nav_sapphire": "Sapphire FUE",
+  "nav_stemCell": "Stem Cell Therapy",
+  "nav_dhi": "DHI Transplant",
+  "hero": {
+    "title": "Advanced Hair Transplant Procedures",
+    "subtitle": "Experience the latest in hair restoration technology with our state-of-the-art procedures"
+  },
+  "types": {
+    "title": "Our Procedures",
+    "subtitle": "Choose from our range of advanced hair transplant procedures",
+    "sapphireFue": {
+      "title": "Sapphire FUE",
+      "description": "Advanced follicular unit extraction using precision sapphire blades",
+      "route": "/procedures/sapphire-fue"
+    },
+    "dhi": {
+      "title": "DHI Technique",
+      "description": "Direct hair implantation for natural-looking results",
+      "route": "/procedures/dhi"
+    },
+    "stemCell": {
+      "title": "Stem Cell Treatment",
+      "description": "Innovative stem cell therapy for enhanced hair growth",
+      "route": "/procedures/stem-cell"
+    }
+  },
+  "features": {
+    "title": "Why Choose Our Procedures",
+    "expertise": {
+      "title": "Expert Team",
+      "description": "Highly skilled surgeons with years of experience"
+    },
+    "technology": {
+      "title": "Advanced Technology",
+      "description": "State-of-the-art equipment and techniques"
+    },
+    "results": {
+      "title": "Proven Results",
+      "description": "High success rate with natural-looking outcomes"
+    },
+    "support": {
+      "title": "Comprehensive Support",
+      "description": "Full support throughout your treatment journey"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "procedureTime": {
+      "question": "How long does the procedure take?",
+      "answer": "The procedure typically takes 6-8 hours, depending on the number of grafts needed."
+    },
+    "resultsTime": {
+      "question": "When will I see results?",
+      "answer": "Initial results are visible after 3-4 months, with full results appearing after 12-18 months."
+    }
+  }
+}

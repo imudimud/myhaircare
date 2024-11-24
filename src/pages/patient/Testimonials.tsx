@@ -13,7 +13,6 @@ export default function PatientTestimonials() {
         titleKey="patient.testimonials.meta.title"
         descriptionKey="patient.testimonials.meta.description"
         keywordsKey="patient.testimonials.meta.keywords"
-        path="/patient/testimonials"
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -1,93 +1,46 @@
 import i18next from 'i18next';
-import { Namespace, SupportedLanguage } from '../i18n';
 
-interface LoadTranslationOptions {
-  namespace: Namespace;
-  language?: SupportedLanguage;
-  fallback?: boolean;
+interface TranslationNamespaces {
+  common: any;
+  home: any;
+  procedures: any;
+  contact: any;
 }
 
-const loadedNamespaces = new Set<string>();
+type LanguageCode = 'en' | 'tr';
 
-/**
- * Dynamically loads translation namespaces
- */
-export const loadTranslation = async ({ 
-  namespace, 
-  language, 
-  fallback = true 
-}: LoadTranslationOptions): Promise<void> => {
+const loadNamespace = async (lang: LanguageCode, namespace: keyof TranslationNamespaces) => {
   try {
-    const key = `${language || i18next.language}:${namespace}`;
-    
-    // Skip if already loaded
-    if (loadedNamespaces.has(key)) {
-      return;
-    }
-
-    // Load the namespace
-    await i18next.loadNamespaces(namespace);
-    loadedNamespaces.add(key);
-
-    // Load fallback language if needed
-    if (fallback && language !== 'en') {
-      await loadTranslation({
-        namespace,
-        language: 'en',
-        fallback: false
-      });
-    }
+    const module = await import(`../locales/${lang}/${namespace}.json`);
+    return { [namespace]: module.default };
   } catch (error) {
-    console.error(`Failed to load translation namespace: ${namespace}`, error);
-    // Attempt to load English as fallback
-    if (language !== 'en' && fallback) {
-      await loadTranslation({
-        namespace,
-        language: 'en',
-        fallback: false
-      });
-    }
+    console.error(`Failed to load ${namespace} translations for ${lang}:`, error);
+    return { [namespace]: {} };
   }
 };
 
-/**
- * Preloads translations for a specific route
- */
-export const preloadRouteTranslations = async (
-  route: string,
-  language?: SupportedLanguage
-): Promise<void> => {
-  // Map routes to their required namespaces
-  const routeNamespaces: Record<string, Namespace[]> = {
-    '/': ['home', 'common'],
-    '/about': ['about', 'common'],
-    '/procedures': ['procedures', 'common'],
-    '/contact': ['contact', 'common'],
-  };
+export const loadTranslations = async (lang: LanguageCode): Promise<Partial<TranslationNamespaces>> => {
+  const namespaces: (keyof TranslationNamespaces)[] = [
+    'common',
+    'home',
+    'procedures',
+    'contact'
+  ];
 
-  const namespaces = routeNamespaces[route] || ['common'];
-  
-  await Promise.all(
-    namespaces.map(namespace =>
-      loadTranslation({ namespace, language })
-    )
+  const translations = await Promise.all(
+    namespaces.map(namespace => loadNamespace(lang, namespace))
   );
+
+  return translations.reduce((acc, curr) => ({ ...acc, ...curr }), {});
 };
 
-/**
- * Checks if a namespace is already loaded
- */
-export const isNamespaceLoaded = (
-  namespace: Namespace,
-  language?: SupportedLanguage
-): boolean => {
-  const key = `${language || i18next.language}:${namespace}`;
-  return loadedNamespaces.has(key);
-};
-
-/**
- * Clears the namespace cache
- */
-export const clearNamespaceCache = (): void => {
-  loadedNamespaces.clear();
+export const preloadTranslations = async (lang: LanguageCode): Promise<void> => {
+  try {
+    const translations = await loadTranslations(lang);
+    Object.entries(translations).forEach(([namespace, content]) => {
+      i18next.addResourceBundle(lang, namespace, content, true, true);
+    });
+  } catch (error) {
+    console.error('Failed to preload translations:', error);
+  }
 };

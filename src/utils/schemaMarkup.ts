@@ -16,6 +16,7 @@ interface Doctor {
 interface MedicalProcedure {
   name: string;
   description: string;
+  procedureType?: string;
   benefits: string[] | { [key: string]: string };
   risks: string[];
   preparation: string[];

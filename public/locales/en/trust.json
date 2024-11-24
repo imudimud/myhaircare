@@ -1,0 +1,76 @@
+{
+  "meta": {
+    "title": "Why Choose Estenove | Leading Hair Restoration Clinic",
+    "description": "Discover why Estenove is a trusted leader in hair restoration, featuring expert surgeons, advanced technology, and proven results.",
+    "keywords": "hair restoration clinic, hair transplant experts, trusted medical team, advanced technology"
+  },
+  "nav_title": "Why Choose Us",
+  "nav_whyEstenove": "Why Estenove",
+  "nav_certifications": "Our Certifications",
+  "hero": {
+    "title": "Why Choose Estenove",
+    "subtitle": "Setting the standard in hair restoration"
+  },
+  "expertise": {
+    "title": "Our Expertise",
+    "subtitle": "World-class medical team",
+    "items": {
+      "experience": {
+        "title": "Years of Experience",
+        "description": "Over 20 years of specialized experience"
+      },
+      "certification": {
+        "title": "Medical Certification",
+        "description": "Internationally certified medical team"
+      },
+      "research": {
+        "title": "Research & Innovation",
+        "description": "Continuous advancement in techniques"
+      },
+      "results": {
+        "title": "Proven Results",
+        "description": "Thousands of successful procedures"
+      }
+    }
+  },
+  "technology": {
+    "title": "Advanced Technology",
+    "subtitle": "State-of-the-art equipment",
+    "features": {
+      "equipment": {
+        "title": "Modern Equipment",
+        "description": "Latest medical technology"
+      },
+      "techniques": {
+        "title": "Advanced Techniques",
+        "description": "Innovative surgical methods"
+      },
+      "facilities": {
+        "title": "Modern Facilities",
+        "description": "Purpose-built medical centers"
+      }
+    }
+  },
+  "routes": {
+    "whyEstenove": "/why-estenove",
+    "certifications": "/trust"
+  },
+  "certifications": {
+    "title": "Our Certifications",
+    "subtitle": "Internationally recognized standards",
+    "items": {
+      "medical": {
+        "title": "Medical Certifications",
+        "description": "Highest level of medical accreditation"
+      },
+      "quality": {
+        "title": "Quality Standards",
+        "description": "ISO certified facilities and processes"
+      },
+      "safety": {
+        "title": "Safety Protocols",
+        "description": "Rigorous safety standards"
+      }
+    }
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "title": "Book a Consultation | Estenove Hair Restoration",
+    "description": "Schedule your personalized hair restoration consultation with our expert medical team.",
+    "keywords": "hair transplant consultation, book appointment, free consultation, hair restoration assessment"
+  },
+  "hero": {
+    "title": "Book Your Consultation",
+    "subtitle": "Take the first step towards your transformation"
+  },
+  "process": {
+    "title": "Consultation Process",
+    "subtitle": "What to expect",
+    "steps": {
+      "assessment": {
+        "title": "Initial Assessment",
+        "description": "Comprehensive evaluation of your needs"
+      },
+      "planning": {
+        "title": "Treatment Planning",
+        "description": "Customized solution design"
+      },
+      "discussion": {
+        "title": "Detailed Discussion",
+        "description": "Review options and procedures"
+      },
+      "scheduling": {
+        "title": "Treatment Scheduling",
+        "description": "Plan your procedure timeline"
+      }
+    }
+  },
+  "form": {
+    "title": "Consultation Form",
+    "subtitle": "Tell us about yourself",
+    "fields": {
+      "name": {
+        "label": "Full Name",
+        "placeholder": "Enter your full name"
+      },
+      "email": {
+        "label": "Email Address",
+        "placeholder": "Enter your email"
+      },
+      "phone": {
+        "label": "Phone Number",
+        "placeholder": "Enter your phone number"
+      },
+      "age": {
+        "label": "Age",
+        "placeholder": "Enter your age"
+      },
+      "concerns": {
+        "label": "Your Concerns",
+        "placeholder": "Describe your hair concerns"
+      },
+      "preferredDate": {
+        "label": "Preferred Date",
+        "placeholder": "Select preferred date"
+      },
+      "preferredTime": {
+        "label": "Preferred Time",
+        "placeholder": "Select preferred time"
+      }
+    },
+    "submit": "Schedule Consultation",
+    "success": "Thank you! We'll contact you shortly to confirm your consultation.",
+    "error": "There was an error submitting the form. Please try again."
+  },
+  "contact": {
+    "title": "Contact Information",
+    "subtitle": "Get in touch with us",
+    "details": {
+      "phone": {
+        "label": "Phone",
+        "value": "+1 (555) 123-4567"
+      },
+      "email": {
+        "label": "Email",
+        "value": "consultations@estenove.com"
+      },
+      "address": {
+        "label": "Address",
+        "value": "123 Medical Center Drive, Suite 100"
+      }
+    }
+  },
+  "faq": {
+    "title": "Consultation FAQs",
+    "subtitle": "Common questions about consultations",
+    "questions": {
+      "duration": {
+        "question": "How long is the consultation?",
+        "answer": "Consultations typically last 45-60 minutes"
+      },
+      "cost": {
+        "question": "Is there a consultation fee?",
+        "answer": "Initial consultations are complimentary"
+      },
+      "preparation": {
+        "question": "How should I prepare?",
+        "answer": "No special preparation needed, just bring your questions"
+      }
+    }
+  }
+}

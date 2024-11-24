@@ -1,4 +1,8 @@
 {
+  "languages": {
+    "en": "English",
+    "fr": "Français"
+  },
   "nav": {
     "home": "Home",
     "about": {

@@ -1,0 +1,85 @@
+{
+  "meta": {
+    "title": "Medical Information | Estenove",
+    "description": "Learn about our medical protocols, safety standards, and scientific approach to hair transplantation.",
+    "keywords": "hair transplant medical, safety standards, medical protocols, hair restoration science"
+  },
+  "hero": {
+    "title": "Medical Excellence",
+    "subtitle": "Our commitment to the highest medical standards"
+  },
+  "standards": {
+    "title": "Safety Standards",
+    "subtitle": "Industry-leading medical protocols",
+    "items": {
+      "certification": {
+        "title": "Medical Certification",
+        "description": "All procedures performed by certified medical professionals"
+      },
+      "sterilization": {
+        "title": "Sterilization",
+        "description": "State-of-the-art sterilization protocols for all equipment"
+      },
+      "monitoring": {
+        "title": "Patient Monitoring",
+        "description": "Continuous monitoring throughout the procedure"
+      },
+      "facilities": {
+        "title": "Medical Facilities",
+        "description": "Modern, fully-equipped medical facilities"
+      }
+    }
+  },
+  "protocols": {
+    "title": "Care Protocols",
+    "subtitle": "Comprehensive medical care guidelines",
+    "preOperation": {
+      "title": "Pre-Operation",
+      "description": "Essential steps before your procedure"
+    },
+    "operation": {
+      "title": "Operation",
+      "description": "What happens during the procedure"
+    },
+    "postOperation": {
+      "title": "Post-Operation",
+      "description": "Recovery and aftercare guidelines"
+    }
+  },
+  "safety": {
+    "title": "Safety & Risks",
+    "subtitle": "Understanding the procedure",
+    "sections": {
+      "risks": {
+        "title": "Potential Risks",
+        "description": "Understanding and minimizing risks"
+      },
+      "precautions": {
+        "title": "Precautions",
+        "description": "Steps we take to ensure your safety"
+      },
+      "monitoring": {
+        "title": "Monitoring",
+        "description": "Continuous care throughout your journey"
+      }
+    }
+  },
+  "requirements": {
+    "title": "Medical Requirements",
+    "subtitle": "Ensuring you're ready for the procedure",
+    "items": {
+      "age": {
+        "title": "Age Requirements",
+        "description": "Minimum age and considerations"
+      },
+      "health": {
+        "title": "Health Status",
+        "description": "Required health conditions"
+      },
+      "medications": {
+        "title": "Medications",
+        "description": "Important medication guidelines"
+      }
+    }
+  }
+}

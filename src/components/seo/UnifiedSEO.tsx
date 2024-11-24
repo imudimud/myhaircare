@@ -24,8 +24,7 @@ export default function UnifiedSEO({
   ogImage = '/images/og-default.jpg',
   structuredData
 }: UnifiedSEOProps) {
-  const { i18n, t } = useTranslation();
-  const currentLanguage = i18n.language;
+  const { t, currentLanguage } = useTranslation();
   const isDefault = currentLanguage === 'en';
 
   // Base configuration

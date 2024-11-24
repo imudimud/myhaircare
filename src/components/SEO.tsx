@@ -25,7 +25,7 @@ export default function SEO({
   canonicalUrl,
   schema,
 }: SEOProps) {
-  const { t, i18n } = useTranslation();
+  const { t, currentLanguage } = useTranslation();
   const location = useLocation();
   const siteUrl = process.env.REACT_APP_SITE_URL || 'https://myhaircare.com';
 
@@ -57,7 +57,7 @@ export default function SEO({
   return (
     <Helmet>
       {/* Basic Meta Tags */}
-      <html lang={i18n.language} />
+      <html lang={currentLanguage} />
       <title>{seo.title}</title>
       <meta name="description" content={seo.description} />
       {keywords && <meta name="keywords" content={seo.keywords} />}

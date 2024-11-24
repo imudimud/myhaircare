@@ -52,7 +52,7 @@ const faqs = [
   }
 ];
 
-const StemCellPage: React.FC = () => {
+export default function StemCell() {
   const { t } = useTranslation('procedures');
 
   // Generate medical procedure schema
@@ -369,6 +369,4 @@ const StemCellPage: React.FC = () => {
       </section>
     </Layout>
   );
-};
-
-export default StemCellPage;
+}

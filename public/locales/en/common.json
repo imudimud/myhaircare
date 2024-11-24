@@ -1,0 +1,22 @@
+{
+  "languages": {
+    "en": "English",
+    "fr": "French"
+  },
+  "nav": {
+    "menu": "Menu",
+    "close": "Close Menu"
+  },
+  "buttons": {
+    "language": "Language",
+    "bookConsultation": "Book Consultation",
+    "learnMore": "Learn More",
+    "contactUs": "Contact Us",
+    "whatsapp": "WhatsApp"
+  },
+  "contact": {
+    "whatsapp": {
+      "url": "https://wa.me/1234567890"
+    }
+  }
+}

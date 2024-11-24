@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "title": "Procédures de Greffe de Cheveux | Estenove",
+    "description": "Découvrez nos procédures avancées de greffe de cheveux, y compris FUE Saphir, DHI et traitements par cellules souches. Découvrez nos techniques de pointe.",
+    "keywords": "greffe de cheveux, FUE, DHI, cellules souches, restauration capillaire"
+  },
+  "hero": {
+    "title": "Procédures Avancées de Greffe de Cheveux",
+    "subtitle": "Découvrez les dernières technologies en matière de restauration capillaire avec nos procédures de pointe"
+  },
+  "types": {
+    "title": "Nos Procédures",
+    "subtitle": "Choisissez parmi notre gamme de procédures avancées de greffe de cheveux",
+    "sapphireFue": {
+      "title": "FUE Saphir",
+      "description": "Extraction avancée d'unités folliculaires utilisant des lames en saphir de précision"
+    },
+    "dhi": {
+      "title": "Technique DHI",
+      "description": "Implantation directe des cheveux pour des résultats naturels"
+    },
+    "stemCell": {
+      "title": "Traitement par Cellules Souches",
+      "description": "Thérapie innovante par cellules souches pour une croissance capillaire améliorée"
+    }
+  },
+  "features": {
+    "title": "Pourquoi Choisir Nos Procédures",
+    "expertise": {
+      "title": "Équipe Expert",
+      "description": "Chirurgiens hautement qualifiés avec des années d'expérience"
+    },
+    "technology": {
+      "title": "Technologie Avancée",
+      "description": "Équipement et techniques de pointe"
+    },
+    "results": {
+      "title": "Résultats Prouvés",
+      "description": "Taux de réussite élevé avec des résultats naturels"
+    },
+    "support": {
+      "title": "Support Complet",
+      "description": "Accompagnement complet tout au long de votre parcours de traitement"
+    }
+  },
+  "faq": {
+    "title": "Questions Fréquemment Posées",
+    "procedureTime": {
+      "question": "Combien de temps dure la procédure ?",
+      "answer": "La procédure dure généralement 6 à 8 heures, selon le nombre de greffons nécessaires."
+    },
+    "resultsTime": {
+      "question": "Quand verrai-je les résultats ?",
+      "answer": "Les premiers résultats sont visibles après 3-4 mois, les résultats complets apparaissant après 12-18 mois."
+    }
+  }
+}

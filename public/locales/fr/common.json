@@ -1,0 +1,35 @@
+{
+  "languages": {
+    "en": "Anglais",
+    "fr": "Français"
+  },
+  "nav": {
+    "menu": "Menu",
+    "home": "Accueil",
+    "procedures": "Procédures",
+    "patient": "Patient",
+    "medical": "Médical",
+    "education": "Éducation",
+    "trust": "Confiance",
+    "consultation": "Consultation"
+  },
+  "procedures": {
+    "sapphire": "Sapphire FUE",
+    "stemCell": "Cellules Souches",
+    "dhi": "DHI"
+  },
+  "patient": {
+    "beforeAfter": "Avant & Après",
+    "testimonials": "Témoignages"
+  },
+  "trust": {
+    "whyEstenove": "Pourquoi Estenove",
+    "certifications": "Certifications"
+  },
+  "buttons": {
+    "language": "Langue",
+    "bookConsultation": "Prendre Rendez-vous",
+    "learnMore": "En Savoir Plus",
+    "contactUs": "Contactez-nous"
+  }
+}

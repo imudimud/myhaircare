@@ -1,0 +1,63 @@
+{
+  "meta": {
+    "title": "Patient Resources | Estenove",
+    "description": "Comprehensive resources for hair transplant patients. View before & after gallery, testimonials, and learn about the patient journey.",
+    "keywords": "patient resources, before after gallery, testimonials, hair transplant results"
+  },
+  "nav_title": "Patient Resources",
+  "nav_beforeAfter": "Before & After Gallery",
+  "nav_testimonials": "Patient Testimonials",
+  "hero": {
+    "title": "Patient Resources",
+    "subtitle": "Everything you need to know about your hair restoration journey"
+  },
+  "gallery": {
+    "title": "Before & After Gallery",
+    "subtitle": "Real results from our satisfied patients",
+    "route": "/patient/before-after",
+    "filters": {
+      "all": "All",
+      "sapphireFue": "Sapphire FUE",
+      "dhi": "DHI",
+      "stemCell": "Stem Cell"
+    }
+  },
+  "testimonials": {
+    "title": "Patient Testimonials",
+    "subtitle": "Hear from our patients about their experiences",
+    "route": "/patient/testimonials"
+  },
+  "journey": {
+    "title": "Patient Journey",
+    "subtitle": "What to expect during your treatment",
+    "steps": {
+      "consultation": {
+        "title": "Initial Consultation",
+        "description": "Meet with our experts to discuss your needs"
+      },
+      "planning": {
+        "title": "Treatment Planning",
+        "description": "Develop your personalized treatment plan"
+      },
+      "procedure": {
+        "title": "The Procedure",
+        "description": "Experience our state-of-the-art treatment"
+      },
+      "aftercare": {
+        "title": "Aftercare",
+        "description": "Comprehensive post-procedure support"
+      }
+    }
+  },
+  "faq": {
+    "title": "Patient FAQs",
+    "recovery": {
+      "question": "What is the recovery time?",
+      "answer": "Most patients return to work within 3-4 days after the procedure."
+    },
+    "results": {
+      "question": "When will I see results?",
+      "answer": "Initial growth begins at 3-4 months, with full results visible after 12-18 months."
+    }
+  }
+}

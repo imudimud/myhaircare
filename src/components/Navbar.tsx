@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from '../hooks/useTranslation';
 import { motion, AnimatePresence } from 'framer-motion';
+import { LanguageSwitcher } from './LanguageSwitcher';
 import { 
   Menu, 
   X, 
@@ -50,27 +51,29 @@ const navItems: NavItem[] = [
     ]
   },
   {
-    key: 'about',
-    path: '/about',
+    key: 'medical',
+    path: '/medical',
+    icon: Heart
+  },
+  {
+    key: 'education',
+    path: '/education',
+    icon: Book
+  },
+  {
+    key: 'trust',
+    path: '/trust',
     icon: Info,
     children: [
-      { key: 'main', path: '/about', icon: Info },
-      { key: 'why', path: '/about/why', icon: Info },
-      { key: 'trust', path: '/about/trust', icon: Info }
+      { key: 'whyEstenove', path: '/why-estenove', icon: Info },
+      { key: 'certifications', path: '/trust', icon: Info }
     ]
   },
   {
-    key: 'medical',
-    path: '/medical',
-    icon: Heart,
-    children: [
-      { key: 'guidelines', path: '/medical/guidelines', icon: Heart },
-      { key: 'safety', path: '/medical/safety', icon: Heart },
-      { key: 'research', path: '/medical/research', icon: Heart }
-    ]
-  },
-  { key: 'education', path: '/education', icon: Book },
-  { key: 'contact', path: '/contact', icon: Phone }
+    key: 'consultation',
+    path: '/consultation',
+    icon: MessageCircle
+  }
 ];
 
 export default function Navbar() {
@@ -85,91 +88,102 @@ export default function Navbar() {
   };
 
   const renderNavItem = (item: NavItem, isMobile: boolean = false) => {
+    const active = isActive(item.path);
     const hasChildren = item.children && item.children.length > 0;
-    const isItemActive = isActive(item.path);
-    const isSubmenuOpen = openSubmenu === item.key;
-    const Icon = item.icon;
 
     return (
       <div key={item.key} className={`relative ${isMobile ? '' : 'group'}`}>
-        <div className="flex items-center">
-          <Link
-            to={hasChildren ? '#' : item.path}
-            className={`
-              flex items-center px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200
-              ${isItemActive 
-                ? 'text-blue-600 bg-blue-50' 
-                : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
-              }
-            `}
-            onClick={() => {
-              if (hasChildren) {
-                setOpenSubmenu(isSubmenuOpen ? null : item.key);
-              } else {
-                setIsMobileMenuOpen(false);
-              }
-            }}
+        {hasChildren ? (
+          <button
+            onClick={() => isMobile && setOpenSubmenu(openSubmenu === item.key ? null : item.key)}
+            className={`flex items-center px-4 py-2 text-sm font-medium rounded-md w-full ${
+              active
+                ? 'bg-blue-50 text-blue-600'
+                : 'text-gray-600 hover:text-blue-600 hover:bg-blue-50'
+            }`}
           >
-            <Icon className="w-5 h-5 mr-2" aria-hidden="true" />
-            <span>{t(`nav.${item.key}.title`) || t(`nav.${item.key}`)}</span>
-            {hasChildren && (
-              isMobile ? (
-                <ChevronRight
-                  className={`ml-auto w-5 h-5 transition-transform duration-200 ${
-                    isSubmenuOpen ? 'rotate-90' : ''
-                  }`}
-                />
-              ) : (
-                <ChevronDown
-                  className={`ml-1 w-4 h-4 transition-transform duration-200 ${
-                    isSubmenuOpen ? 'rotate-180' : ''
-                  }`}
-                />
-              )
+            <item.icon className="h-5 w-5 mr-2" />
+            <span>{t(`nav.${item.key}`)}</span>
+            {isMobile ? (
+              <ChevronRight
+                className={`ml-auto w-5 h-5 transition-transform duration-200 ${
+                  openSubmenu === item.key ? 'rotate-90' : ''
+                }`}
+              />
+            ) : (
+              <ChevronDown className="ml-1 h-4 w-4" />
             )}
+          </button>
+        ) : (
+          <Link
+            to={item.path}
+            className={`flex items-center px-4 py-2 text-sm font-medium rounded-md ${
+              active
+                ? 'bg-blue-50 text-blue-600'
+                : 'text-gray-600 hover:text-blue-600 hover:bg-blue-50'
+            }`}
+            onClick={() => isMobile && setIsMobileMenuOpen(false)}
+          >
+            <item.icon className="h-5 w-5 mr-2" />
+            <span>{t(`nav.${item.key}`)}</span>
           </Link>
-        </div>
-
-        {/* Submenu */}
+        )}
+        
         {hasChildren && (
-          <AnimatePresence>
-            {(isSubmenuOpen || (!isMobile && openSubmenu === item.key)) && (
-              <motion.div
-                initial={{ opacity: 0, y: isMobile ? 0 : -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: isMobile ? 0 : -10 }}
-                className={`
-                  ${isMobile 
-                    ? 'mt-2 ml-4 space-y-1' 
-                    : 'absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50'
-                  }
-                `}
-              >
-                {item.children.map((child) => (
+          isMobile ? (
+            <AnimatePresence>
+              {openSubmenu === item.key && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: 'auto' }}
+                  exit={{ opacity: 0, height: 0 }}
+                  className="mt-2 ml-4 space-y-1"
+                >
+                  {(item.children as NavItem[]).map((child) => (
+                    <Link
+                      key={child.key}
+                      to={child.path}
+                      className={`block px-4 py-2 text-sm ${
+                        isActive(child.path)
+                          ? 'bg-blue-50 text-blue-600'
+                          : 'text-gray-600 hover:text-blue-600 hover:bg-blue-50'
+                      }`}
+                      onClick={() => {
+                        setOpenSubmenu(null);
+                        setIsMobileMenuOpen(false);
+                      }}
+                    >
+                      <div className="flex items-center">
+                        <child.icon className="h-4 w-4 mr-2" />
+                        <span>{t(`nav.${item.key}_${child.key}`)}</span>
+                      </div>
+                    </Link>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          ) : (
+            <div className="hidden group-hover:block absolute left-0 mt-1 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50">
+              <div className="py-1">
+                {(item.children as NavItem[]).map((child) => (
                   <Link
                     key={child.key}
                     to={child.path}
-                    className={`
-                      block px-4 py-2 text-sm rounded-md transition-colors
-                      ${location.pathname === child.path
-                        ? 'text-blue-600 bg-blue-50'
-                        : 'text-gray-700 hover:bg-gray-50 hover:text-blue-600'
-                      }
-                    `}
-                    onClick={() => {
-                      setOpenSubmenu(null);
-                      setIsMobileMenuOpen(false);
-                    }}
+                    className={`block px-4 py-2 text-sm ${
+                      isActive(child.path)
+                        ? 'bg-blue-50 text-blue-600'
+                        : 'text-gray-600 hover:text-blue-600 hover:bg-blue-50'
+                    }`}
                   >
                     <div className="flex items-center">
-                      <child.icon className="w-4 h-4 mr-2" aria-hidden="true" />
-                      <span>{t(`nav.${item.key}.${child.key}`)}</span>
+                      <child.icon className="h-4 w-4 mr-2" />
+                      <span>{t(`nav.${item.key}_${child.key}`)}</span>
                     </div>
                   </Link>
                 ))}
-              </motion.div>
-            )}
-          </AnimatePresence>
+              </div>
+            </div>
+          )
         )}
       </div>
     );
@@ -187,7 +201,8 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex md:items-center md:space-x-4">
+          <div className="hidden md:flex items-center space-x-4">
+            <LanguageSwitcher />
             {navItems.map((item) => renderNavItem(item))}
             
             {/* WhatsApp Button */}
@@ -228,6 +243,9 @@ export default function Navbar() {
             className="md:hidden bg-white border-t border-gray-200"
           >
             <div className="px-2 pt-2 pb-3 space-y-1">
+              <div className="px-4 py-2">
+                <LanguageSwitcher />
+              </div>
               {navItems.map((item) => renderNavItem(item, true))}
               
               {/* Mobile WhatsApp Button */}

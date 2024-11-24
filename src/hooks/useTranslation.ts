@@ -1,82 +1,45 @@
 import { useTranslation as useI18nTranslation } from 'react-i18next';
 import { useCallback } from 'react';
-import { SUPPORTED_LANGUAGES, type SupportedLanguage, type Namespace, loadNamespace } from '../i18n';
+import { type SupportedLanguage, type Namespace, SUPPORTED_LANGUAGES } from '../i18n';
 
 interface UseTranslationReturn {
   t: (key: string, options?: any) => string;
-  i18n: {
-    language: SupportedLanguage;
-    changeLanguage: (lng: string) => Promise<string>;
-    loadNamespaces: (ns: Namespace | Namespace[]) => Promise<void>;
-  };
-  toggleLanguage: () => Promise<void>;
-  isNamespaceLoaded: (ns: Namespace) => boolean;
-  loadNamespace: (ns: Namespace) => Promise<void>;
+  currentLanguage: SupportedLanguage;
+  changeLanguage: (lng: SupportedLanguage) => Promise<boolean>;
+  loadNamespace: (ns: Namespace) => Promise<boolean>;
 }
 
-export function useTranslation(ns: Namespace = 'common'): UseTranslationReturn {
+export function useTranslation(ns: string = 'common'): UseTranslationReturn {
   const { t, i18n } = useI18nTranslation(ns);
 
-  const toggleLanguage = useCallback(async () => {
+  const changeLanguage = useCallback(async (lng: SupportedLanguage) => {
     try {
-      const currentLang = i18n.language as SupportedLanguage;
-      if (!SUPPORTED_LANGUAGES.includes(currentLang)) {
-        console.warn(`Current language ${currentLang} is not in supported languages. Defaulting to 'en'`);
-        await i18n.changeLanguage('en');
-        return;
-      }
-
-      const nextLang = currentLang === 'en' ? 'fr' : 'en';
-      
-      // Pre-load namespaces for the next language
-      const activeNamespaces = i18n.reportNamespaces?.getUsedNamespaces() || [];
-      await Promise.all(
-        activeNamespaces.map(async (namespace) => {
-          if (!i18n.hasLoadedNamespace(namespace, nextLang)) {
-            await loadNamespace(namespace as Namespace, nextLang);
-          }
-        })
-      );
-
-      await i18n.changeLanguage(nextLang);
+      await i18n.changeLanguage(lng);
+      return true;
     } catch (error) {
-      console.error('Error switching language:', error);
-      // Fallback to English if there's an error
-      if (i18n.language !== 'en') {
-        await i18n.changeLanguage('en');
-      }
-    }
-  }, [i18n]);
-
-  const isNamespaceLoaded = useCallback((ns: Namespace): boolean => {
-    try {
-      return i18n.hasLoadedNamespace(ns);
-    } catch (error) {
-      console.error(`Error checking namespace ${ns}:`, error);
+      console.error('Failed to change language:', error);
       return false;
     }
   }, [i18n]);
 
-  const loadNamespaceWrapper = useCallback(async (ns: Namespace): Promise<void> => {
+  const loadNamespaceCallback = useCallback(async (namespace: Namespace) => {
     try {
-      if (!isNamespaceLoaded(ns)) {
-        await loadNamespace(ns);
-      }
+      await i18n.loadNamespaces(namespace);
+      return true;
     } catch (error) {
-      console.error(`Error loading namespace ${ns}:`, error);
-      throw error; // Re-throw to let the component handle the error
+      console.error('Failed to load namespace:', error);
+      return false;
     }
-  }, [isNamespaceLoaded]);
+  }, [i18n]);
+
+  const currentLanguage = SUPPORTED_LANGUAGES.includes(i18n.language as SupportedLanguage)
+    ? (i18n.language as SupportedLanguage)
+    : 'en';
 
   return {
     t,
-    i18n: {
-      language: i18n.language as SupportedLanguage,
-      changeLanguage: i18n.changeLanguage,
-      loadNamespaces: i18n.loadNamespaces,
-    },
-    toggleLanguage,
-    isNamespaceLoaded,
-    loadNamespace: loadNamespaceWrapper,
+    currentLanguage,
+    changeLanguage,
+    loadNamespace: loadNamespaceCallback,
   };
 }

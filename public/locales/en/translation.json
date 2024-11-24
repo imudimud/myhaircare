@@ -1,0 +1,36 @@
+{
+  "nav": {
+    "home": "Home",
+    "procedures": "Procedures",
+    "patient": "Patient Resources",
+    "medical": "Medical Information",
+    "education": "Education",
+    "trust": "Why Choose Us",
+    "consultation": "Book Consultation",
+    "menu": "Menu",
+    "close": "Close Menu",
+    "procedures_sapphire": "Sapphire FUE",
+    "procedures_stemCell": "Stem Cell Therapy",
+    "procedures_dhi": "DHI Transplant",
+    "patient_beforeAfter": "Before & After Gallery",
+    "patient_testimonials": "Patient Testimonials",
+    "trust_whyEstenove": "Why Estenove",
+    "trust_certifications": "Our Certifications"
+  },
+  "languages": {
+    "en": "English",
+    "fr": "French"
+  },
+  "buttons": {
+    "language": "Language",
+    "bookConsultation": "Book Consultation",
+    "learnMore": "Learn More",
+    "contactUs": "Contact Us",
+    "whatsapp": "WhatsApp"
+  },
+  "contact": {
+    "whatsapp": {
+      "url": "https://wa.me/1234567890"
+    }
+  }
+}

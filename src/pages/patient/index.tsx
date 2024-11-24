@@ -24,8 +24,7 @@ const resources = [
 ];
 
 const PatientResourcesPage: React.FC = () => {
-  const { t, getCurrentLanguage } = useTranslation('patient');
-  const currentLang = getCurrentLanguage();
+  const { t } = useTranslation('patient');
 
   return (
     <>

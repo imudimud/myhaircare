@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "title": "Hair Transplant Education | Estenove",
+    "description": "Comprehensive educational resources about hair transplantation, hair loss, and treatment options.",
+    "keywords": "hair transplant education, hair loss information, treatment options, hair restoration knowledge"
+  },
+  "hero": {
+    "title": "Educational Resources",
+    "subtitle": "Understanding hair loss and restoration"
+  },
+  "topics": {
+    "title": "Educational Topics",
+    "subtitle": "Explore our comprehensive resources",
+    "categories": {
+      "hairLoss": {
+        "title": "Understanding Hair Loss",
+        "description": "Learn about the causes and types of hair loss"
+      },
+      "treatments": {
+        "title": "Treatment Options",
+        "description": "Explore different hair restoration methods"
+      },
+      "procedures": {
+        "title": "Procedure Details",
+        "description": "In-depth information about our procedures"
+      },
+      "aftercare": {
+        "title": "Aftercare Guide",
+        "description": "Essential care instructions after treatment"
+      }
+    }
+  },
+  "resources": {
+    "title": "Learning Resources",
+    "subtitle": "Tools to help you understand better",
+    "types": {
+      "articles": {
+        "title": "Articles",
+        "description": "In-depth articles about hair restoration"
+      },
+      "videos": {
+        "title": "Video Library",
+        "description": "Educational videos and procedure demonstrations"
+      },
+      "guides": {
+        "title": "Patient Guides",
+        "description": "Comprehensive guides for patients"
+      },
+      "research": {
+        "title": "Research Papers",
+        "description": "Scientific publications and studies"
+      }
+    }
+  },
+  "faq": {
+    "title": "Common Questions",
+    "subtitle": "Answers to frequently asked questions",
+    "categories": {
+      "general": "General Information",
+      "medical": "Medical Aspects",
+      "technical": "Technical Details",
+      "aftercare": "Aftercare"
+    }
+  },
+  "consultation": {
+    "title": "Book a Consultation",
+    "subtitle": "Get personalized answers to your questions",
+    "cta": {
+      "title": "Ready to Learn More?",
+      "description": "Schedule a consultation with our experts"
+    }
+  }
+}

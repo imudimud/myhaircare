@@ -63,9 +63,9 @@ const ProceduresPage: React.FC = () => {
   return (
     <>
       <SEOHelmet
-        title={t('procedures.title')}
-        description={t('procedures.description')}
-        keywords={t('procedures.keywords')}
+        titleKey="meta.title"
+        descriptionKey="meta.description"
+        keywordsKey="meta.keywords"
       />
       <div className="min-h-screen">
         {/* Hero Section */}
@@ -77,7 +77,7 @@ const ProceduresPage: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 className="text-5xl md:text-6xl font-bold mb-6"
               >
-                {t('procedures.hero.title')}
+                {t('hero.title')}
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -85,7 +85,7 @@ const ProceduresPage: React.FC = () => {
                 transition={{ delay: 0.2 }}
                 className="text-xl text-blue-100 mb-8"
               >
-                {t('procedures.hero.subtitle')}
+                {t('hero.subtitle')}
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -97,7 +97,7 @@ const ProceduresPage: React.FC = () => {
                   to="/consultation"
                   className="inline-flex items-center px-8 py-4 border border-transparent rounded-full text-lg font-medium text-blue-600 bg-white hover:bg-blue-50"
                 >
-                  {t('buttons.bookConsultation')}
+                  {t('common:buttons.bookConsultation')}
                 </Link>
               </motion.div>
             </div>
@@ -109,10 +109,10 @@ const ProceduresPage: React.FC = () => {
           <div className="mb-16">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                {t('procedures.types.title')}
+                {t('types.title')}
               </h2>
               <p className="text-xl text-gray-600">
-                {t('procedures.types.subtitle')}
+                {t('types.subtitle')}
               </p>
             </div>
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -128,10 +128,10 @@ const ProceduresPage: React.FC = () => {
                       <procedure.icon className="h-6 w-6 text-blue-600" />
                     </div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                      {t(`procedures.types.${procedure.key}.title`)}
+                      {t(`types.${procedure.key}.title`)}
                     </h3>
                     <p className="text-gray-600">
-                      {t(`procedures.types.${procedure.key}.description`)}
+                      {t(`types.${procedure.key}.description`)}
                     </p>
                   </motion.div>
                 </Link>
@@ -142,7 +142,7 @@ const ProceduresPage: React.FC = () => {
           {/* Features Section */}
           <div className="bg-white rounded-2xl p-8 mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">
-              {t('procedures.features.title')}
+              {t('features.title')}
             </h2>
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
               {features.map((feature) => (
@@ -156,10 +156,10 @@ const ProceduresPage: React.FC = () => {
                     <feature.icon className="h-8 w-8 text-blue-600" />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    {t(`procedures.features.${feature.key}.title`)}
+                    {t(`features.${feature.key}.title`)}
                   </h3>
                   <p className="text-gray-600">
-                    {t(`procedures.features.${feature.key}.description`)}
+                    {t(`features.${feature.key}.description`)}
                   </p>
                 </motion.div>
               ))}
@@ -169,16 +169,16 @@ const ProceduresPage: React.FC = () => {
           {/* FAQ Section */}
           <div className="bg-white rounded-2xl p-8">
             <h2 className="text-3xl font-bold text-center mb-12">
-              {t('procedures.faq.title')}
+              {t('faq.title')}
             </h2>
             <div className="max-w-3xl mx-auto divide-y">
               {faqs.map((faq) => (
                 <div key={faq.key} className="py-6">
                   <h3 className="text-lg font-medium text-gray-900">
-                    {t(`procedures.faq.items.${faq.key}.question`)}
+                    {t(`faq.${faq.key}.question`)}
                   </h3>
                   <p className="mt-2 text-gray-600">
-                    {t(`procedures.faq.items.${faq.key}.answer`)}
+                    {t(`faq.${faq.key}.answer`)}
                   </p>
                 </div>
               ))}
